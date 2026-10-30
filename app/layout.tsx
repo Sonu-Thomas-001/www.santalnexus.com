@@ -125,6 +125,7 @@ export default function RootLayout({
   return (
     <html
       lang="en-IN"
+      suppressHydrationWarning
       className={`${plusJakartaSans.variable} ${playfairDisplay.variable} ${caveat.variable}`}
     >
       <head>
@@ -133,7 +134,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body>
+      <body suppressHydrationWarning>
         <Preloader />
         <a href="#mainContent" className="skip-link">
           Skip to main content
