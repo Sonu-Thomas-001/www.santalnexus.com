@@ -78,6 +78,7 @@ html {
   scroll-padding-top: var(--header-height);
   font-size: 16px;
   -webkit-text-size-adjust: 100%;
+  background-color: #0d1e16;
 }
 
 body {
@@ -338,7 +339,7 @@ button, input, select, textarea {
    4. Header & Navigation Bar (Floating Luxury Command Island)
    -------------------------------------------------------------------------- */
 .floating-header-wrapper {
-  position: sticky;
+  position: fixed;
   top: 14px;
   left: 0;
   right: 0;
@@ -949,7 +950,7 @@ button, input, select, textarea {
    -------------------------------------------------------------------------- */
 .hero-section {
   position: relative;
-  min-height: clamp(580px, 80vh, 720px);
+  min-height: clamp(620px, 86vh, 760px);
   display: flex;
   align-items: center;
   background-color: var(--color-dark);
@@ -992,8 +993,8 @@ button, input, select, textarea {
   position: relative;
   z-index: 3;
   width: 100%;
-  padding-top: var(--space-xl);
-  padding-bottom: var(--space-xl);
+  padding-top: clamp(6.75rem, 11vw, 8.5rem);
+  padding-bottom: clamp(3.5rem, 6vw, 4.5rem);
 }
 
 .hero-content {
@@ -7536,7 +7537,7 @@ body.is-page-transitioning {
   justify-content: center;
   background: radial-gradient(circle at 50% 30%, #152c21 0%, #0d1e16 50%, #070f0b 100%);
   color: var(--color-white);
-  padding: 4rem 1.25rem;
+  padding: clamp(6.5rem, 11vw, 8.5rem) 1.25rem 4rem;
   position: relative;
   overflow: hidden;
 }
