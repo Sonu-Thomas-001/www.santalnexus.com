@@ -34,7 +34,7 @@ export default function ContactPage() {
         <div className="page-hero-overlay"></div>
 
         <div className="container page-hero-container">
-          <div className="page-hero-content reveal-on-scroll">
+          <div className="page-hero-content">
             <span className="contact-hero-eyebrow">CONTACT US</span>
             <h1 className="page-hero-title">Get in Touch</h1>
             <p className="page-hero-subtitle">

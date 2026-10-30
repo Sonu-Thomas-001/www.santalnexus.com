@@ -14,7 +14,7 @@ export default function TermsOfServicePage() {
       {/* Header Banner */}
       <section className="legal-hero-banner" aria-label="Terms of Service Header">
         <div className="container">
-          <div className="legal-hero-content reveal-on-scroll">
+          <div className="legal-hero-content">
             <nav className="contact-breadcrumb" aria-label="Breadcrumb">
               <ol>
                 <li><Link href="/">Home</Link></li>

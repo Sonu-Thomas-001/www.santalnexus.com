@@ -104,7 +104,7 @@ export default function SupportPage() {
       {/* Hero Banner */}
       <section className="legal-hero-banner" aria-label="Support Desk Header">
         <div className="container">
-          <div className="legal-hero-content reveal-on-scroll">
+          <div className="legal-hero-content">
             <nav className="contact-breadcrumb" aria-label="Breadcrumb">
               <ol>
                 <li><Link href="/">Home</Link></li>

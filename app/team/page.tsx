@@ -32,7 +32,7 @@ export default function TeamPage() {
         <div className="page-hero-overlay"></div>
 
         <div className="container page-hero-container">
-          <div className="page-hero-content reveal-on-scroll">
+          <div className="page-hero-content">
             <span className="team-hero-eyebrow">OUR TEAM</span>
             <h1 className="page-hero-title">Strong People. Global Vision.</h1>
             <p className="page-hero-subtitle">

@@ -37,7 +37,7 @@ export default function ExportServicesPage() {
         <div className="page-hero-overlay"></div>
 
         <div className="container page-hero-container">
-          <div className="page-hero-content reveal-on-scroll">
+          <div className="page-hero-content">
             <nav className="about-breadcrumb" aria-label="Breadcrumb">
               <ol>
                 <li>
