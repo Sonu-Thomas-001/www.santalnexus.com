@@ -2938,395 +2938,8 @@ textarea.form-control {
 }
 
 /* --------------------------------------------------------------------------
-   15. Footer Section (Modern Stylish UI/UX Redesign)
+   15. Footer Section (Superseded by Section 32: Agricultural Enterprise Footer)
    -------------------------------------------------------------------------- */
-.site-footer {
-  background: #0B130E;
-  color: var(--color-text-light);
-  border-top: 1px solid rgba(215, 180, 90, 0.22);
-  box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.45);
-  padding-top: clamp(4rem, 6vw, 5.5rem);
-  padding-bottom: 2.25rem;
-  position: relative;
-  overflow: hidden;
-}
-
-.site-footer::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 15%;
-  right: 15%;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(215, 180, 90, 0.6), transparent);
-  pointer-events: none;
-}
-
-.footer-grid {
-  display: grid;
-  grid-template-columns: 1.25fr 0.85fr 0.95fr 1.35fr;
-  gap: clamp(1.5rem, 2.5vw, 3rem);
-  margin-bottom: 3.5rem;
-}
-
-/* Col 1: Brand Hub */
-.footer-col-brand .footer-brand-link {
-  display: inline-block;
-  margin-bottom: 1.35rem;
-  transition: opacity var(--transition-fast), transform var(--transition-fast);
-}
-
-.footer-col-brand .footer-brand-link:hover {
-  opacity: 0.95;
-  transform: translateY(-1px);
-}
-
-.footer-brand-text {
-  font-size: 0.925rem;
-  color: rgba(255, 255, 255, 0.72);
-  line-height: 1.7;
-  max-width: 360px;
-  margin-bottom: 1.5rem;
-}
-
-.footer-slogan-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.6rem;
-  padding: 0.45rem 1rem;
-  background: rgba(215, 180, 90, 0.08);
-  border: 1px solid rgba(215, 180, 90, 0.28);
-  border-radius: var(--radius-full);
-  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.1), 0 4px 14px rgba(0, 0, 0, 0.25);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-}
-
-.slogan-pulse-dot {
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: #25D366;
-  box-shadow: 0 0 10px #25D366;
-  animation: pulseDot 2s infinite ease-in-out;
-}
-
-@keyframes pulseDot {
-  0%, 100% {
-    transform: scale(1);
-    opacity: 1;
-  }
-  50% {
-    transform: scale(1.35);
-    opacity: 0.7;
-  }
-}
-
-.slogan-text {
-  font-size: 0.75rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.09em;
-  color: var(--color-gold-light);
-}
-
-/* Column Headings */
-.footer-col-title {
-  font-family: var(--font-serif);
-  font-size: 1.2rem;
-  color: var(--color-white);
-  font-weight: 700;
-  margin-bottom: 1.35rem;
-  position: relative;
-  display: inline-block;
-  padding-bottom: 0.65rem;
-}
-
-.footer-col-title::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 34px;
-  height: 2px;
-  background: linear-gradient(90deg, #D7B45A, rgba(215, 180, 90, 0.2));
-  border-radius: 2px;
-}
-
-/* Col 2: Navigation Links (Two Column Layout) */
-.footer-links-list {
-  list-style: none;
-  display: grid;
-  grid-auto-flow: column;
-  grid-template-rows: repeat(4, auto);
-  column-gap: 1.75rem;
-  row-gap: 0.45rem;
-}
-
-.footer-link-item {
-  display: inline-flex;
-  align-items: center;
-  color: rgba(255, 255, 255, 0.72);
-  font-size: 0.925rem;
-  font-weight: 500;
-  padding: 0.35rem 0.65rem;
-  border-radius: var(--radius-sm);
-  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
-  position: relative;
-  white-space: nowrap;
-}
-
-.footer-link-item::before {
-  content: '›';
-  font-size: 1.1rem;
-  color: var(--color-gold);
-  margin-right: 0.45rem;
-  opacity: 0;
-  transform: translateX(-4px);
-  transition: all 0.2s ease;
-}
-
-.footer-link-item:hover {
-  color: var(--color-gold-light);
-  background: rgba(215, 180, 90, 0.08);
-  transform: translateX(4px);
-}
-
-.footer-link-item:hover::before {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-/* Col 3: Trade Inquiries Glass Cards */
-.footer-contact-cards {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-  margin-bottom: 1.5rem;
-}
-
-.footer-contact-card {
-  display: flex;
-  align-items: center;
-  gap: 0.85rem;
-  padding: 0.75rem 1rem;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.01) 100%);
-  border: 1px solid rgba(215, 180, 90, 0.16);
-  border-radius: var(--radius-md);
-  text-decoration: none;
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
-}
-
-a.footer-contact-card:hover {
-  background: linear-gradient(135deg, rgba(215, 180, 90, 0.14) 0%, rgba(215, 180, 90, 0.04) 100%);
-  border-color: rgba(215, 180, 90, 0.38);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
-}
-
-.contact-card-icon {
-  width: 36px;
-  height: 36px;
-  border-radius: 10px;
-  background: rgba(215, 180, 90, 0.12);
-  border: 1px solid rgba(215, 180, 90, 0.24);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  transition: all 0.25s ease;
-}
-
-.contact-card-icon svg {
-  width: 17px;
-  height: 17px;
-  color: var(--color-gold);
-  transition: transform 0.2s ease;
-}
-
-a.footer-contact-card:hover .contact-card-icon {
-  background: var(--color-gold);
-  border-color: var(--color-gold);
-}
-
-a.footer-contact-card:hover .contact-card-icon svg {
-  color: var(--color-dark);
-  transform: scale(1.08);
-}
-
-.contact-card-info {
-  display: flex;
-  flex-direction: column;
-  gap: 0.15rem;
-}
-
-.contact-card-info .card-label {
-  font-size: 0.7rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: rgba(255, 255, 255, 0.48);
-}
-
-.contact-card-info .card-value {
-  font-size: 0.885rem;
-  font-weight: 500;
-  color: rgba(255, 255, 255, 0.9);
-  line-height: 1.35;
-  transition: color 0.2s ease;
-}
-
-a.footer-contact-card .card-value {
-  color: var(--color-gold-light);
-  font-weight: 600;
-}
-
-a.footer-contact-card:hover .card-value {
-  color: var(--color-white);
-}
-
-/* Social Strip & Motto */
-.footer-social-strip {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1.25rem;
-  padding-top: 1.25rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-  flex-wrap: wrap;
-}
-
-.social-icons-group {
-  display: flex;
-  align-items: center;
-  gap: 0.55rem;
-}
-
-.footer-social-btn {
-  width: 38px;
-  height: 38px;
-  border-radius: 10px;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(215, 180, 90, 0.22);
-  color: rgba(255, 255, 255, 0.85);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-}
-
-.footer-social-btn:hover {
-  background: linear-gradient(135deg, #E8CA7D 0%, #D7B45A 100%);
-  color: var(--color-dark);
-  border-color: var(--color-gold-light);
-  transform: translateY(-3px);
-  box-shadow: 0 6px 18px rgba(215, 180, 90, 0.4);
-}
-
-.footer-motto-badge .motto-script {
-  font-family: 'Caveat', cursive;
-  font-size: 1.55rem;
-  font-weight: 700;
-  line-height: 1.1;
-  color: var(--color-gold-light);
-  display: inline-block;
-  transform: rotate(-2deg);
-  text-shadow: 0 2px 14px rgba(215, 180, 90, 0.28);
-}
-
-/* Bottom Bar */
-.footer-bottom-bar {
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-  padding-top: 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 1.25rem;
-}
-
-.footer-copy {
-  font-size: 0.85rem;
-  color: rgba(255, 255, 255, 0.65);
-  margin: 0;
-}
-
-.footer-legal-links {
-  display: inline-flex;
-  align-items: center;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.75rem;
-}
-
-.footer-legal-link {
-  color: rgba(255, 255, 255, 0.68);
-  font-size: 0.825rem;
-  text-decoration: none;
-  transition: color var(--transition-fast);
-}
-
-.footer-legal-link:hover {
-  color: var(--color-gold);
-  text-decoration: underline;
-}
-
-.footer-legal-links .dot-sep {
-  color: rgba(215, 180, 90, 0.4);
-  font-size: 0.75rem;
-}
-
-.footer-location-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.4rem 0.95rem;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(215, 180, 90, 0.16);
-  border-radius: var(--radius-full);
-  font-size: 0.8rem;
-  color: rgba(255, 255, 255, 0.62);
-  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.06);
-}
-
-.footer-location-pill svg {
-  color: var(--color-gold);
-  flex-shrink: 0;
-}
-
-.back-to-top-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.5rem 1.15rem;
-  background: rgba(215, 180, 90, 0.08);
-  border: 1px solid rgba(215, 180, 90, 0.28);
-  border-radius: var(--radius-full);
-  color: var(--color-gold-light);
-  font-size: 0.825rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.25s ease;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-}
-
-.back-to-top-btn svg {
-  transition: transform 0.2s ease;
-}
-
-.back-to-top-btn:hover {
-  background: linear-gradient(135deg, #E8CA7D 0%, #D7B45A 100%);
-  border-color: transparent;
-  color: var(--color-dark);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(215, 180, 90, 0.4);
-}
-
-.back-to-top-btn:hover svg {
-  transform: translateY(-2px);
-}
 
 /* Floating Scroll to Top Button */
 .floating-scroll-top {
@@ -3807,14 +3420,6 @@ html.js-animations-active [data-reveal].is-revealed {
     gap: 1.25rem;
   }
 
-  .footer-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-  }
-
-  .footer-col-brand {
-    grid-column: span 2;
-  }
 }
 
 /* Mobile Screens (max-width: 640px) */
@@ -3889,20 +3494,6 @@ html.js-animations-active [data-reveal].is-revealed {
     padding: clamp(6.5rem, 14vw, 8rem) 0 clamp(2.5rem, 5vw, 3.5rem);
   }
 
-  .footer-grid {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-
-  .footer-col-brand {
-    grid-column: span 1;
-  }
-
-  .footer-social-strip {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1.25rem;
-  }
 
   .hero-actions {
     flex-direction: column;
@@ -3926,16 +3517,6 @@ html.js-animations-active [data-reveal].is-revealed {
     width: 100%;
   }
 
-  .footer-bottom-bar {
-    flex-direction: column;
-    text-align: center;
-    gap: 1rem;
-  }
-
-  .back-to-top-btn {
-    width: 100%;
-    justify-content: center;
-  }
 }
 
 /* Extra Small Mobile Screens (max-width: 480px) */
@@ -7079,6 +6660,7 @@ html.js-animations-active [data-reveal].is-revealed {
     width: 100%;
     justify-content: center;
   }
+}
 
 @media (max-width: 768px) {
   .contact-info-panel {
@@ -9163,13 +8745,29 @@ a.escalation-contact-row:hover {
 }
 
 /* ==========================================================================
-   32. Agricultural Enterprise Footer (Harvest Assurance Strip & 5-Column Architecture)
+   32. Agricultural Enterprise Footer (Harvest Assurance Strip & 4-Column Architecture)
    ========================================================================== */
 .site-footer {
+  padding: 0;
+  margin: 0;
   background-color: #070F0B;
   color: #C5D5CB;
   position: relative;
   overflow: hidden;
+  border-top: none;
+  box-shadow: none;
+}
+
+.site-footer::before {
+  display: none !important;
+}
+
+.footer-logo-img {
+  height: 48px;
+  width: auto;
+  max-height: 52px;
+  object-fit: contain;
+  display: block;
 }
 
 /* 1. Pre-Footer Harvest Assurance Strip */
@@ -9302,15 +8900,20 @@ a.escalation-contact-row:hover {
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 0.6rem;
+  gap: 0.65rem;
 }
 
 .footer-link-item {
   color: #9AB0A4;
-  font-size: 0.865rem;
+  font-size: 0.875rem;
   text-decoration: none;
   transition: all 0.2s ease;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+}
+
+.footer-link-item::before {
+  display: none !important;
 }
 
 .footer-link-item:hover {
@@ -9356,23 +8959,28 @@ a.escalation-contact-row:hover {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
-  background: #25D366;
+  gap: 0.55rem;
+  background: linear-gradient(135deg, #187741 0%, #115e32 100%);
+  border: 1px solid rgba(37, 211, 102, 0.45);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.12);
   color: #FFFFFF;
-  padding: 0.55rem 0.95rem;
-  border-radius: 6px;
-  font-size: 0.8rem;
+  padding: 0.6rem 1.15rem;
+  border-radius: 8px;
+  font-size: 0.825rem;
   font-weight: 700;
+  letter-spacing: 0.01em;
   text-decoration: none;
-  margin-top: 0.4rem;
+  margin-top: 0.5rem;
   width: fit-content;
-  transition: all 0.2s ease;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .footer-whatsapp-cta:hover {
-  background: #20BD5A;
+  background: linear-gradient(135deg, #1f8e4e 0%, #15743e 100%);
+  border-color: rgba(37, 211, 102, 0.8);
   transform: translateY(-2px);
-  box-shadow: 0 4px 14px rgba(37, 211, 102, 0.35);
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  color: #FFFFFF;
 }
 
 /* 3. Footer Bottom Bar */

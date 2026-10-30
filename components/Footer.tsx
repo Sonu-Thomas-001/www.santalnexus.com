@@ -74,7 +74,7 @@ export default function Footer() {
                   <img
                     src="/assets/logos/santal-nexus-dark.png"
                     alt="Santal Nexus Logo"
-                    className="brand-logo-img"
+                    className="footer-logo-img"
                     width={190}
                     height={52}
                     loading="lazy"
