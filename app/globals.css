@@ -3504,6 +3504,51 @@ html.js-animations-active [data-reveal].is-revealed {
 .delay-4 { --reveal-delay: 0.4s; }
 .delay-5 { --reveal-delay: 0.5s; }
 
+/* Native CSS Stagger Delays for Grid Children (Zero JS Injection / 100% Hydration Safe) */
+.capability-grid > :nth-child(1),
+.products-grid > :nth-child(1),
+.services-grid > :nth-child(1),
+.export-grid > :nth-child(1),
+.team-grid > :nth-child(1),
+.culture-grid > :nth-child(1),
+.features-grid > :nth-child(1),
+.dept-cards-grid > :nth-child(1) {
+  --reveal-delay: 0s;
+}
+
+.capability-grid > :nth-child(2),
+.products-grid > :nth-child(2),
+.services-grid > :nth-child(2),
+.export-grid > :nth-child(2),
+.team-grid > :nth-child(2),
+.culture-grid > :nth-child(2),
+.features-grid > :nth-child(2),
+.dept-cards-grid > :nth-child(2) {
+  --reveal-delay: 0.08s;
+}
+
+.capability-grid > :nth-child(3),
+.products-grid > :nth-child(3),
+.services-grid > :nth-child(3),
+.export-grid > :nth-child(3),
+.team-grid > :nth-child(3),
+.culture-grid > :nth-child(3),
+.features-grid > :nth-child(3),
+.dept-cards-grid > :nth-child(3) {
+  --reveal-delay: 0.16s;
+}
+
+.capability-grid > :nth-child(4),
+.products-grid > :nth-child(4),
+.services-grid > :nth-child(4),
+.export-grid > :nth-child(4),
+.team-grid > :nth-child(4),
+.culture-grid > :nth-child(4),
+.features-grid > :nth-child(4),
+.dept-cards-grid > :nth-child(4) {
+  --reveal-delay: 0.24s;
+}
+
 /* Reduced Motion Preference */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
