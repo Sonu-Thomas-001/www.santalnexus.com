@@ -170,8 +170,7 @@ export default function Footer() {
           <p className="footer-copy">&copy; {currentYear} Santal Nexus. All rights reserved.</p>
 
           <div className="footer-port-status-pill">
-            <span className="dot-green"></span>
-            <span>Gateway: VOC Tuticorin Sea Port &bull; Madurai Air Cargo</span>
+            <span>Website designed and All rights reserved by MidCell Studios</span>
           </div>
 
           <button
