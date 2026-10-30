@@ -1,6 +1,6 @@
-# SANTAL NEXUS — Corporate Website & Trade Portal
+# SANTAL NEXUS — Next.js TypeScript Web Portal & Export Platform
 
-A production-ready, ultra-fast static corporate web portal for **Santal Nexus**, an India-based fresh fruits and vegetables trading enterprise specializing in direct-from-farm sourcing, wholesale supply coordination, cold-chain logistics, and cross-border international exports.
+A modern, high-performance web portal built with **Next.js (App Router)**, **TypeScript**, and **Vanilla CSS** for **Santal Nexus**, an India-based fresh fruits and vegetables trading enterprise specializing in direct-from-farm sourcing, wholesale supply coordination, cold-chain logistics, and cross-border international exports.
 
 - **Brand Slogan:** *Expanding Beyond Borders*
 - **Registered Base:** Building No. 391/3, Opp. UCO Bank, Dindigul Main Road, T. Vadiapatti, Madurai – 625218, Tamil Nadu, India
@@ -10,104 +10,89 @@ A production-ready, ultra-fast static corporate web portal for **Santal Nexus**,
 
 ---
 
-## 1. Multi-Page Architecture
+## 1. Project Architecture (Next.js App Router & TypeScript)
 
 ```
 www.santalnexus.com/
-├── .gitignore                   # Version control ignore definitions
-├── index.html                   # Primary corporate homepage & trade summary
-├── about.html                   # Company profile, heritage, vision & values
-├── products.html                # Comprehensive produce catalog & seasonality
-├── export-services.html         # Export logistics, quality compliance & RFQ builder
-├── team.html                    # Leadership profiles, organizational culture & roles
-├── contact.html                 # Trade office details, interactive lead wizard & maps
-├── css/
-│   └── styles.css               # Vanilla CSS3 modular design system & brand tokens
-├── js/
-│   └── main.js                  # Vanilla ES6+ interactions, preloader & page transitions
-├── assets/
-│   ├── images/                  # High-resolution optimized photographic assets
-│   │   ├── team/                # Leadership & core staff photography
-│   │   └── ...                  # Farm, crop, packing, and reefer vessel photography
-│   └── logos/                   # Vector and transparent brand lockups
-├── images/                      # High-resolution master design reference mockups
-├── favicon.svg                  # Scalable SVG vector browser icon
-├── robots.txt                   # Search crawler indexing rules
-├── sitemap.xml                  # Canonical XML sitemap with all subpages
-└── README.md                    # Technical documentation & deployment manual
+├── app/
+│   ├── layout.tsx               # Root Layout, Metadata, Google Fonts & JSON-LD
+│   ├── page.tsx                 # Homepage: Hero, Trust Strip, Produce, Services & Form
+│   ├── globals.css              # Custom properties, design tokens & responsive CSS
+│   ├── about/
+│   │   └── page.tsx             # Heritage, Story, Vision, Mission & Sourcing Hub
+│   ├── products/
+│   │   └── page.tsx             # Full Produce Catalogue, Filter Tabs & Packaging Specs
+│   ├── export-services/
+│   │   └── page.tsx             # Corridors, Reefer Specs, Incoterms & RFQ Form
+│   ├── team/
+│   │   └── page.tsx             # Leadership Profiles, Desks, Values & Founder Quote
+│   └── contact/
+│       └── page.tsx             # Trade Office, Interactive Form, Desk Routing & Map
+├── components/
+│   ├── Header.tsx               # Responsive Header, Drawer & Scrolled Nav
+│   ├── Footer.tsx               # Corporate Footer & Trade Inquiries
+│   ├── Preloader.tsx            # Emerald-and-gold entrance animation
+│   ├── ContactForm.tsx          # Dual-channel WhatsApp/Email validated form
+│   ├── ExportRfqForm.tsx        # Multi-parameter Export RFQ Generator
+│   ├── FaqAccordion.tsx         # Accessible Collapsible Trade FAQs
+│   ├── ProductFilter.tsx        # Filterable Produce Grid & WhatsApp Actions
+│   ├── ScrollReveal.tsx         # IntersectionObserver micro-reveal animations
+│   ├── WhatsAppButton.tsx       # Floating quick-inquiry WhatsApp button
+│   └── BackToTop.tsx            # Smooth floating back-to-top button
+├── data/
+│   ├── products.ts              # Typed produce catalogue data
+│   ├── team.ts                  # Typed team & operational desks data
+│   ├── exportCorridors.ts       # Typed shipping corridors, incoterms & reefers
+│   └── faq.ts                   # Trade, quality & logistics FAQs
+├── public/                      # Static assets served at root
+│   ├── assets/
+│   │   ├── images/              # High-resolution photographic assets
+│   │   └── logos/               # Brand vectors & logo variants
+│   ├── favicon.svg              # Scalable SVG favicon
+│   ├── robots.txt               # Search engine crawler policies
+│   └── sitemap.xml              # XML Sitemap
+├── next.config.mjs              # Next.js optimization configuration
+├── tsconfig.json                # TypeScript strict configuration
+└── package.json                 # Scripts and dependencies
 ```
 
 ---
 
-## 2. Key Features & Visual Design
+## 2. Key Features
 
-- **Branded Preloader Experience:**
-  - Implements an ambient emerald-and-gold preloader displaying the corporate emblem, spinning gold indicator, and animated branding tagline.
-  - Features an asynchronous asset listener with automatic safety fallback timeout.
-
-- **Cinematic Page Transitions:**
-  - Smooth page navigation transitions with hardware-accelerated dissolves.
-  - Fully compatible with browser Back/Forward Cache (`bfcache` / `pageshow`) to eliminate white flashes or stuck loaders.
-  - Automatically respects user OS accessibility settings (`prefers-reduced-motion`).
-
-- **Scroll-Triggered Reveal Animations:**
-  - Micro-animations for section titles, benefit cards, product categories, and milestone numbers using modern `IntersectionObserver` triggers.
-
-- **Dual-Channel Lead Capture:**
-  - Interactive quote forms on Homepage, Contact, and Export Services pages.
-  - Direct WhatsApp API link generator sending pre-formatted business RFQs directly to company leadership (+91 99946 40141).
-  - Corporate email mailto fallback for enterprise buyers.
-
-- **Strict Vanilla Stack (Zero Dependencies):**
-  - Built exclusively with semantic HTML5, Vanilla CSS3 (Custom Properties, Flexbox, Grid), and Vanilla ES6+ JavaScript.
-  - Loads in milliseconds with 0kb external framework baggage.
+- **Next.js App Router + TypeScript:** Modern type-safe architecture with static prerendering for near-instant page loads.
+- **Dual-Channel Lead Capture:** Interactive quote and RFQ forms that automatically generate structured WhatsApp inquiries (+91 99946 40141) and direct email fallbacks.
+- **Dynamic Produce Filtering:** Instant filtering between Vegetables, Fruits, Leafy Greens, and Exotics with specifications and packaging sizes.
+- **Export Logistics Hub:** Complete breakdown of shipping corridors (Malaysia, Singapore, GCC, Europe), Incoterms (FOB, CIF, CFR), and Reefer container capacities.
+- **SEO & Social Optimization:** Schema.org JSON-LD structured data, OpenGraph tags, and semantic HTML5 hierarchy.
 
 ---
 
-## 3. Local Development & Preview
+## 3. Local Development
 
-Because this is a pure static website with no build step required, you can run and test it instantly:
-
-### Option A: Python 3 HTTP Server (Recommended)
+### Run Development Server
 ```bash
-python -m http.server 8000
+npm run dev
 ```
-Then visit `http://localhost:8000` in any browser.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-### Option B: Node.js `serve` / `npx http-server`
+### Build for Production
 ```bash
-npx http-server -p 8000
+npm run build
 ```
 
-### Option C: VS Code Live Server
-Right-click on `index.html` and select **"Open with Live Server"**.
+### Start Production Server
+```bash
+npm start
+```
 
 ---
 
 ## 4. Production Deployment
 
-This repository is optimized for one-click static hosting on any modern CDN:
+This project is ready for one-click deployment to **Vercel**, **Cloudflare Pages**, or **AWS/DigitalOcean Node server**:
 
-### Cloudflare Pages (Recommended)
-1. Push to GitHub.
-2. Link the repository in [Cloudflare Dashboard](https://dash.cloudflare.com/) > **Workers & Pages**.
-3. Set Framework Preset: `None`, Build Command: *(blank)*, Output Directory: `/`.
-4. Add custom domain `www.santalnexus.com`.
-
-### Vercel
-```bash
-npx vercel
-```
-Or import the GitHub repository into your Vercel dashboard.
-
-### Netlify
-1. Drag and drop the folder into [Netlify Drop](https://app.netlify.com/drop) or link via GitHub.
-2. Publish directory: `.`
-
----
-
-## 5. Maintenance & Content Updates
-
-- **Contact Phone & WhatsApp:** Update the telephone links in HTML files and the `WHATSAPP_PHONE_DIGITS` constant in `js/main.js`.
-- **Primary Email:** Update mailto links across HTML files and `PRIMARY_EMAIL` in `js/main.js`.
-- **Address & Corporate Data:** Centralized in the footer and Schema.org JSON-LD structured data tags located in each page's `<head>`.
+### Vercel Deployment (Recommended)
+1. Push code to GitHub.
+2. Import project in Vercel.
+3. Next.js preset will automatically detect build settings.
