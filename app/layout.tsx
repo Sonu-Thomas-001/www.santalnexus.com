@@ -11,6 +11,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Preloader from '@/components/Preloader';
 import ScrollReveal from '@/components/ScrollReveal';
+import PageTransition from '@/components/PageTransition';
 import WhatsAppButton from '@/components/WhatsAppButton';
 import BackToTop from '@/components/BackToTop';
 import CookieConsent from '@/components/CookieConsent';
@@ -142,7 +143,9 @@ export default function RootLayout({
           Skip to main content
         </a>
         <Header />
-        <main id="mainContent">{children}</main>
+        <main id="mainContent">
+          <PageTransition>{children}</PageTransition>
+        </main>
         <Footer />
         <WhatsAppButton />
         <BackToTop />

@@ -3451,11 +3451,11 @@ a.footer-contact-card:hover .card-value {
 html.js-animations-active .reveal-on-scroll,
 html.js-animations-active [data-reveal] {
   opacity: 0;
-  transform: translateY(32px);
-  filter: blur(4px);
-  transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1),
-              transform 0.75s cubic-bezier(0.16, 1, 0.3, 1),
-              filter 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: translateY(28px);
+  filter: blur(3px);
+  transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+              filter 0.8s cubic-bezier(0.22, 1, 0.36, 1);
   transition-delay: var(--reveal-delay, 0s);
   will-change: opacity, transform, filter;
   backface-visibility: hidden;
@@ -3464,22 +3464,22 @@ html.js-animations-active [data-reveal] {
 /* Directional and Style Variants */
 html.js-animations-active .reveal-on-scroll.reveal-fade-left,
 html.js-animations-active [data-reveal="left"] {
-  transform: translateX(-40px);
+  transform: translateX(-36px);
 }
 
 html.js-animations-active .reveal-on-scroll.reveal-fade-right,
 html.js-animations-active [data-reveal="right"] {
-  transform: translateX(40px);
+  transform: translateX(36px);
 }
 
 html.js-animations-active .reveal-on-scroll.reveal-fade-down,
 html.js-animations-active [data-reveal="down"] {
-  transform: translateY(-32px);
+  transform: translateY(-28px);
 }
 
 html.js-animations-active .reveal-on-scroll.reveal-zoom,
 html.js-animations-active [data-reveal="zoom"] {
-  transform: scale(0.92);
+  transform: scale(0.94);
 }
 
 /* Revealed State */
@@ -7389,135 +7389,277 @@ html.js-animations-active [data-reveal].is-revealed {
 }
 
 /* ==========================================================================
-   22. Preloader & Smooth Page Transitions
+   22. Redesigned Luxury Preloader & Smooth Page Switching Transitions
    ========================================================================== */
 
-/* Preloader Base */
-.site-preloader {
+/* Full-Screen Preloader Curtain */
+.luxury-preloader-curtain {
   position: fixed;
   inset: 0;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(circle at center, #15271e 0%, #0c1811 60%, #060c09 100%);
-  z-index: 999999;
+  width: 100vw;
+  height: 100vh;
+  background: radial-gradient(circle at 50% 45%, #143224 0%, #0d1e16 55%, #050d09 100%);
+  z-index: 9999999;
   display: flex;
   align-items: center;
   justify-content: center;
-  opacity: 1;
-  visibility: visible;
-  transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1),
-              visibility 0.5s cubic-bezier(0.16, 1, 0.3, 1),
-              transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-  will-change: opacity, transform, visibility;
+  overflow: hidden;
+  will-change: transform, opacity;
+  transition: transform 0.75s cubic-bezier(0.76, 0, 0.24, 1),
+              opacity 0.65s cubic-bezier(0.76, 0, 0.24, 1);
 }
 
-.site-preloader.preloader-hidden {
-  opacity: 0;
-  visibility: hidden;
+.luxury-preloader-curtain.curtain-exit {
+  transform: translateY(-100%);
+  opacity: 0.95;
   pointer-events: none;
-  transform: translateY(-8px);
 }
 
-.preloader-inner {
+.preloader-backdrop-glow {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: clamp(340px, 60vw, 680px);
+  height: clamp(340px, 60vw, 680px);
+  background: radial-gradient(circle, rgba(215, 180, 90, 0.15) 0%, rgba(16, 39, 29, 0) 70%);
+  filter: blur(50px);
+  pointer-events: none;
+  animation: preloaderAuraPulse 3s ease-in-out infinite alternate;
+}
+
+@keyframes preloaderAuraPulse {
+  0% { transform: translate(-50%, -50%) scale(0.9); opacity: 0.6; }
+  100% { transform: translate(-50%, -50%) scale(1.15); opacity: 1; }
+}
+
+.preloader-content-core {
+  position: relative;
+  z-index: 2;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  gap: 1.5rem;
-  max-width: 320px;
-  padding: 1.5rem;
-  animation: preloaderPulseIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  width: 100%;
+  max-width: 440px;
+  padding: 0 1.5rem;
+  animation: preloaderContentEntrance 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
-.preloader-logo {
-  max-width: 200px;
-  height: auto;
-  filter: drop-shadow(0 4px 16px rgba(0, 0, 0, 0.45));
+@keyframes preloaderContentEntrance {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scale(0.96);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
 }
 
-.preloader-spinner-wrap {
-  width: 52px;
-  height: 52px;
+/* Emblem Crest & Logo */
+.preloader-crest-wrapper {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 2rem;
 }
 
-.preloader-spinner {
-  width: 44px;
-  height: 44px;
-  border: 2px solid rgba(215, 180, 90, 0.18);
-  border-top-color: var(--color-gold);
-  border-right-color: var(--color-gold-light);
+.preloader-ambient-ring {
+  position: absolute;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
-  animation: preloaderSpin 0.9s cubic-bezier(0.5, 0.1, 0.4, 0.9) infinite;
-  box-shadow: 0 0 15px rgba(215, 180, 90, 0.25);
+  border: 1px dashed rgba(215, 180, 90, 0.28);
+  animation: preloaderSpin 18s linear infinite;
 }
 
-.preloader-tagline {
+.preloader-ambient-ring-inner {
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: 1px solid rgba(215, 180, 90, 0.15);
+}
+
+.preloader-brand-logo {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 0.5rem 1rem;
+}
+
+.preloader-logo-img {
+  width: auto;
+  height: 52px;
+  max-height: 58px;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 20px rgba(0, 0, 0, 0.6));
+}
+
+.logo-gold-shimmer {
+  position: absolute;
+  top: 0;
+  left: -150%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.3) 50%,
+    transparent 100%
+  );
+  transform: skewX(-25deg);
+  animation: shimmerSweep 2.2s infinite;
+}
+
+@keyframes shimmerSweep {
+  0% { left: -150%; }
+  100% { left: 200%; }
+}
+
+/* Progress Console */
+.preloader-progress-console {
+  width: 100%;
+  max-width: 360px;
+  margin-bottom: 1.75rem;
+}
+
+.preloader-status-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.6rem;
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+}
+
+.preloader-status-msg {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  font-family: var(--font-sans);
-  font-size: 0.82rem;
-  font-weight: 600;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: var(--color-gold);
-  opacity: 0.9;
+  gap: 0.45rem;
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 500;
+  letter-spacing: 0.02em;
 }
 
-.preloader-dot {
-  width: 6px;
-  height: 6px;
-  background-color: var(--color-gold);
+.preloader-live-pulse {
+  width: 7px;
+  height: 7px;
   border-radius: 50%;
-  box-shadow: 0 0 8px var(--color-gold);
-  animation: preloaderBlink 1.4s ease-in-out infinite;
+  background-color: #25D366;
+  box-shadow: 0 0 8px #25D366;
+  animation: pulseDot 1.4s infinite;
 }
 
-@keyframes preloaderSpin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+.preloader-percentage {
+  font-family: var(--font-mono, monospace);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--color-gold);
+  letter-spacing: 0.05em;
 }
 
-@keyframes preloaderPulseIn {
+.preloader-track-bar {
+  width: 100%;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 9999px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.5) inset;
+}
+
+.preloader-fill-gauge {
+  height: 100%;
+  background: linear-gradient(90deg, #B5933C, #D7B45A 60%, #FFF2B2 100%);
+  border-radius: 9999px;
+  position: relative;
+  box-shadow: 0 0 10px rgba(215, 180, 90, 0.6);
+  transition: width 0.1s linear;
+}
+
+.fill-gauge-spark {
+  position: absolute;
+  right: 0;
+  top: -2px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  box-shadow: 0 0 10px #FFFFFF, 0 0 16px var(--color-gold);
+}
+
+/* Trust Signals at Bottom */
+.preloader-trust-badges {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: rgba(255, 255, 255, 0.6);
+  text-transform: uppercase;
+}
+
+.preloader-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.preloader-badge svg {
+  color: var(--color-gold);
+}
+
+.preloader-badge-sep {
+  color: rgba(215, 180, 90, 0.4);
+}
+
+/* --------------------------------------------------------------------------
+   Page Switching Transitions (Top Beam & Viewport Reveal)
+   -------------------------------------------------------------------------- */
+.page-switch-progress-beam {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #B5933C 0%, #D7B45A 50%, #FFF2B2 100%);
+  z-index: 999999;
+  box-shadow: 0 0 12px rgba(215, 180, 90, 0.7);
+  pointer-events: none;
+}
+
+.page-switch-viewport {
+  animation: pageViewEntrance 0.35s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  will-change: opacity, transform;
+}
+
+@keyframes pageViewEntrance {
   0% {
     opacity: 0;
-    transform: scale(0.92);
+    transform: translateY(12px);
   }
   100% {
     opacity: 1;
-    transform: scale(1);
+    transform: translateY(0);
   }
-}
-
-@keyframes preloaderBlink {
-  0%, 100% { opacity: 0.4; transform: scale(0.85); }
-  50% { opacity: 1; transform: scale(1.15); }
-}
-
-/* Page Transition Curtain & Body Fade */
-body {
-  transition: opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1),
-              transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-body.is-page-transitioning {
-  opacity: 0;
-  transform: translateY(-8px);
-  pointer-events: none;
 }
 
 /* Reduced Motion Override */
 @media (prefers-reduced-motion: reduce) {
-  .site-preloader {
+  .luxury-preloader-curtain {
     display: none !important;
   }
-  body.is-page-transitioning {
-    opacity: 1 !important;
-    transform: none !important;
+  .page-switch-progress-beam {
+    display: none !important;
+  }
+  .page-switch-viewport {
+    animation: none !important;
   }
 }
 
