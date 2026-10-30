@@ -68,9 +68,9 @@ export default function HomePage() {
       </section>
 
       {/* ====================================================================
-           SECTION 2: TRUST & BUSINESS CAPABILITY STRIP
+           SECTION 2: CERTIFIED AGRICULTURAL TRUST & PORT GATEWAYS
            ==================================================================== */}
-      <section className="capability-strip" aria-label="Business Capabilities">
+      <section className="capability-strip" aria-label="Agricultural Certifications and Trade Capabilities">
         <div className="container">
           <div className="capability-grid">
             <div className="capability-item reveal-on-scroll">
@@ -81,50 +81,53 @@ export default function HomePage() {
                 </svg>
               </div>
               <div className="capability-text">
-                <h3>Quality-Focused Sourcing</h3>
-                <p>Product selection aligned with agreed specifications.</p>
+                <span className="cert-subtitle">Govt. of India Recognized</span>
+                <h3>APEDA Registered Exporter</h3>
+                <p>Official RCMC merchant exporter registration for fresh fruits &amp; vegetables with full compliance.</p>
               </div>
             </div>
 
             <div className="capability-item reveal-on-scroll">
               <div className="capability-icon-wrap" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="m11 17 2 2a1 1 0 0 0 1.4 0l4.3-4.3a1 1 0 0 0 0-1.4l-2-2" />
-                  <path d="m13 7-2-2a1 1 0 0 0-1.4 0L5.3 9.3a1 1 0 0 0 0 1.4l2 2" />
-                  <path d="m8.5 8.5 7 7" />
-                  <path d="M14 14l3.5-3.5" />
+                  <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z" />
+                  <path d="m9 12 2 2 4-4" />
                 </svg>
               </div>
               <div className="capability-text">
-                <h3>Trusted Partnerships</h3>
-                <p>Relationships built on clear communication.</p>
+                <span className="cert-subtitle">Food Safety Standard</span>
+                <h3>FSSAI Central License</h3>
+                <p>Stringent compliance with hygienic farm-gate procurement, cold store handling, and packhouse sorting norms.</p>
               </div>
             </div>
 
             <div className="capability-item reveal-on-scroll">
               <div className="capability-icon-wrap" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <circle cx="12" cy="12" r="10" />
-                  <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
-                  <path d="M2 12h20" />
+                  <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z" />
+                  <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12" />
                 </svg>
               </div>
               <div className="capability-text">
-                <h3>Global Trade Ambition</h3>
-                <p>Exploring opportunities in international markets.</p>
+                <span className="cert-subtitle">Plant Quarantine Clearance</span>
+                <h3>Phytosanitary Pre-Inspection</h3>
+                <p>Directorate of Plant Protection certification. Lab tested for zero quarantine pests &amp; pesticide residue levels.</p>
               </div>
             </div>
 
             <div className="capability-item reveal-on-scroll">
               <div className="capability-icon-wrap" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <rect x="2" y="7" width="20" height="14" rx="2" ry="2" />
-                  <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+                  <rect x="1" y="3" width="15" height="13"></rect>
+                  <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+                  <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                  <circle cx="18.5" cy="18.5" r="2.5"></circle>
                 </svg>
               </div>
               <div className="capability-text">
-                <h3>Professional Coordination</h3>
-                <p>Buyer-focused enquiry and order coordination.</p>
+                <span className="cert-subtitle">Cold-Chain Maritime Access</span>
+                <h3>VOC Tuticorin Sea Port</h3>
+                <p>24-hour maritime reefer connectivity via VOC Port Tuticorin, Chennai Port, and Madurai Air Cargo terminals.</p>
               </div>
             </div>
           </div>
@@ -300,15 +303,19 @@ export default function HomePage() {
               <div className="product-image-wrap">
                 <picture>
                   <source srcSet="/assets/images/fresh-vegetables.webp" type="image/webp" />
-                  <img src="/assets/images/fresh-vegetables.jpg" alt="Crisp fresh vegetables including broccoli, bell peppers, tomatoes and cucumbers" width={1200} height={896} loading="lazy" />
+                  <img src="/assets/images/fresh-vegetables.jpg" alt="Crisp fresh vegetables including shallots, drumsticks, chillies and tomatoes" width={1200} height={896} loading="lazy" />
                 </picture>
-                <span className="product-badge">Category A</span>
+                <span className="product-badge">Farm Staples &amp; Vegetables</span>
               </div>
               <div className="product-body">
-                <h3>Fresh Vegetables</h3>
-                <p>Sourcing discussions for fresh vegetables based on buyer specifications and seasonal availability.</p>
-                <Link href="/products" className="product-action-btn" aria-label="View Fresh Vegetables">
-                  <span>View Catalogue</span>
+                <h3>Fresh Regional Vegetables</h3>
+                <p>Direct farm-gate sourcing of Small Red Onions (Sambar Shallots), export-cut Moringa Drumsticks, G4 Green Chillies, and Gherkins calibrated to international buyer specifications.</p>
+                <div className="product-meta-pills">
+                  <span className="meta-pill">Madurai &amp; Dindigul Origin</span>
+                  <span className="meta-pill">Graded &amp; Sorted</span>
+                </div>
+                <Link href="/products" className="product-action-btn" aria-label="View Farm Staples and Vegetables">
+                  <span>View Catalog Matrix</span>
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                     <line x1="5" y1="12" x2="19" y2="12"></line>
                     <polyline points="12 5 19 12 12 19"></polyline>
@@ -321,15 +328,19 @@ export default function HomePage() {
               <div className="product-image-wrap">
                 <picture>
                   <source srcSet="/assets/images/fresh-fruits.webp" type="image/webp" />
-                  <img src="/assets/images/fresh-fruits.jpg" alt="Fresh tropical and citrus fruits including mangoes, pineapple, oranges, and bananas" width={1200} height={896} loading="lazy" />
+                  <img src="/assets/images/fresh-fruits.jpg" alt="Fresh tropical fruits including Cavendish G9 bananas, mangoes, and pomegranates" width={1200} height={896} loading="lazy" />
                 </picture>
-                <span className="product-badge">Category B</span>
+                <span className="product-badge">Tropical Orchard Fruits</span>
               </div>
               <div className="product-body">
-                <h3>Fresh Fruits</h3>
-                <p>Fresh fruit sourcing based on product type, availability and order requirements.</p>
-                <Link href="/products" className="product-action-btn" aria-label="View Fresh Fruits">
-                  <span>View Catalogue</span>
+                <h3>Tropical Orchard Fruits</h3>
+                <p>Premium Cavendish G9 Bananas (+13.5°C reefer calibrated), GI-tagged Alphonso &amp; Banganapalli Mangoes, Bhagwa Pomegranates, and crisp Taiwan Pink Guavas.</p>
+                <div className="product-meta-pills">
+                  <span className="meta-pill">Reefer Ready</span>
+                  <span className="meta-pill">Optical Sizing</span>
+                </div>
+                <Link href="/products" className="product-action-btn" aria-label="View Tropical Orchard Fruits">
+                  <span>View Catalog Matrix</span>
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                     <line x1="5" y1="12" x2="19" y2="12"></line>
                     <polyline points="12 5 19 12 12 19"></polyline>
@@ -342,15 +353,19 @@ export default function HomePage() {
               <div className="product-image-wrap">
                 <picture>
                   <source srcSet="/assets/images/seasonal-produce.webp" type="image/webp" />
-                  <img src="/assets/images/seasonal-produce.jpg" alt="Seasonal produce assortment and root vegetables on farm display" width={1200} height={896} loading="lazy" />
+                  <img src="/assets/images/seasonal-produce.jpg" alt="Fresh curry leaves, herbs and seasonal horticultural crops" width={1200} height={896} loading="lazy" />
                 </picture>
-                <span className="product-badge">Category C</span>
+                <span className="product-badge">Fresh Leafy Greens &amp; Herbs</span>
               </div>
               <div className="product-body">
-                <h3>Seasonal Produce</h3>
-                <p>Product opportunities that vary by season, sourcing conditions and buyer demand.</p>
-                <Link href="/products" className="product-action-btn" aria-label="View Seasonal Produce">
-                  <span>View Catalogue</span>
+                <h3>Leafy Greens &amp; Culinary Herbs</h3>
+                <p>Express morning harvest of high-aroma Curry Leaves, hydro-cooled Coriander bunches, Fresh Mint, and regional seasonal specialties dispatched for rapid air-cargo delivery.</p>
+                <div className="product-meta-pills">
+                  <span className="meta-pill">Air Cargo Dispatched</span>
+                  <span className="meta-pill">Hydro-Cooled</span>
+                </div>
+                <Link href="/products" className="product-action-btn" aria-label="View Leafy Greens and Herbs">
+                  <span>View Catalog Matrix</span>
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                     <line x1="5" y1="12" x2="19" y2="12"></line>
                     <polyline points="12 5 19 12 12 19"></polyline>
@@ -363,15 +378,19 @@ export default function HomePage() {
               <div className="product-image-wrap">
                 <picture>
                   <source srcSet="/assets/images/bulk-produce-crates.webp" type="image/webp" />
-                  <img src="/assets/images/bulk-produce-crates.jpg" alt="Commercial produce crates and boxes stacked in agricultural distribution facility" width={1200} height={896} loading="lazy" />
+                  <img src="/assets/images/bulk-produce-crates.jpg" alt="Commercial produce crates, packing facility and container loading" width={1200} height={896} loading="lazy" />
                 </picture>
-                <span className="product-badge">Category D</span>
+                <span className="product-badge">Custom Sourcing &amp; Procurement</span>
               </div>
               <div className="product-body">
-                <h3>Bulk Procurement</h3>
-                <p>Coordinated sourcing discussions for commercial quantities and recurring procurement needs.</p>
-                <Link href="/contact" className="product-action-btn" aria-label="Discuss Bulk Procurement">
-                  <span>Enquire Bulk</span>
+                <h3>Commercial Bulk Procurement</h3>
+                <p>Dedicated contract farming aggregation, custom CFB ventilated master cartons, brand labeling, and full container load (FCL) coordination under standard Incoterms.</p>
+                <div className="product-meta-pills">
+                  <span className="meta-pill">FCL Reefer Containers</span>
+                  <span className="meta-pill">FOB / CIF Trade</span>
+                </div>
+                <Link href="/contact" className="product-action-btn" aria-label="Enquire Bulk Procurement">
+                  <span>Enquire Container Load</span>
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                     <line x1="5" y1="12" x2="19" y2="12"></line>
                     <polyline points="12 5 19 12 12 19"></polyline>
