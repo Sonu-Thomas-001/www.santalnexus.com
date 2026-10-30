@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import ContactForm from '@/components/ContactForm';
+import PartnerMarquee from '@/components/PartnerMarquee';
 import { TEAM_MEMBERS } from '@/data/team';
 
 export default function HomePage() {
@@ -133,6 +134,11 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* ====================================================================
+           SECTION 2B: TRUSTED PARTNERS & CUSTOMER LIST (SCROLLING LOGO MARQUEE)
+           ==================================================================== */}
+      <PartnerMarquee />
 
       {/* ====================================================================
            SECTION 3: ABOUT SANTAL NEXUS
