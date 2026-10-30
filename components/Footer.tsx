@@ -40,14 +40,26 @@ export default function Footer() {
             <ul className="footer-links-list">
               <li><Link href="/" className="footer-link-item"><span>Home</span></Link></li>
               <li><Link href="/about" className="footer-link-item"><span>About Us</span></Link></li>
-              <li><Link href="/products" className="footer-link-item"><span>Products</span></Link></li>
+              <li><Link href="/products" className="footer-link-item"><span>Products Catalog</span></Link></li>
               <li><Link href="/export-services" className="footer-link-item"><span>Export Services</span></Link></li>
               <li><Link href="/team" className="footer-link-item"><span>Our Team</span></Link></li>
-              <li><Link href="/contact" className="footer-link-item"><span>Contact</span></Link></li>
+              <li><Link href="/contact" className="footer-link-item"><span>Contact Desk</span></Link></li>
             </ul>
           </div>
 
-          {/* Col 3: Trade Inquiries & Connect */}
+          {/* Col 3: Legal & Support Desk */}
+          <div className="footer-col footer-col-legal">
+            <h4 className="footer-col-title">Legal &amp; Support</h4>
+            <ul className="footer-links-list">
+              <li><Link href="/privacy-policy" className="footer-link-item"><span>Privacy Policy</span></Link></li>
+              <li><Link href="/terms-of-service" className="footer-link-item"><span>Terms of Service</span></Link></li>
+              <li><Link href="/cookie-policy" className="footer-link-item"><span>Cookie Policy</span></Link></li>
+              <li><Link href="/support" className="footer-link-item"><span>Help Center &amp; Support</span></Link></li>
+              <li><Link href="/maintenance" className="footer-link-item"><span>System Status</span></Link></li>
+            </ul>
+          </div>
+
+          {/* Col 4: Trade Inquiries & Connect */}
           <div className="footer-col footer-col-contact">
             <h4 className="footer-col-title">Trade Inquiries</h4>
             <div className="footer-contact-cards">
@@ -117,6 +129,17 @@ export default function Footer() {
         {/* Footer Bottom Bar */}
         <div className="footer-bottom-bar">
           <p className="footer-copy">&copy; {currentYear} Santal Nexus. All rights reserved.</p>
+
+          <div className="footer-legal-links">
+            <Link href="/privacy-policy" className="footer-legal-link">Privacy Policy</Link>
+            <span className="dot-sep">&bull;</span>
+            <Link href="/terms-of-service" className="footer-legal-link">Terms of Service</Link>
+            <span className="dot-sep">&bull;</span>
+            <Link href="/cookie-policy" className="footer-legal-link">Cookie Policy</Link>
+            <span className="dot-sep">&bull;</span>
+            <Link href="/support" className="footer-legal-link">Support Desk</Link>
+          </div>
+
           <div className="footer-location-pill">
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
               <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>

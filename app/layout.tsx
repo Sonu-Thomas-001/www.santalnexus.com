@@ -13,6 +13,8 @@ import Preloader from '@/components/Preloader';
 import ScrollReveal from '@/components/ScrollReveal';
 import WhatsAppButton from '@/components/WhatsAppButton';
 import BackToTop from '@/components/BackToTop';
+import CookieConsent from '@/components/CookieConsent';
+import OfflineIndicator from '@/components/OfflineIndicator';
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ['latin'],
@@ -144,6 +146,8 @@ export default function RootLayout({
         <Footer />
         <WhatsAppButton />
         <BackToTop />
+        <CookieConsent />
+        <OfflineIndicator />
         <ScrollReveal />
       </body>
     </html>
