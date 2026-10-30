@@ -9179,6 +9179,11 @@ a.escalation-contact-row:hover {
   border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
+.footer-port-status-pill strong {
+  font-weight: 700;
+  color: var(--color-white);
+}
+
 .footer-scroll-top-btn {
   background: transparent;
   border: 1px solid rgba(215, 180, 90, 0.3);

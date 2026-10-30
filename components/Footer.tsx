@@ -170,7 +170,7 @@ export default function Footer() {
           <p className="footer-copy">&copy; {currentYear} Santal Nexus. All rights reserved.</p>
 
           <div className="footer-port-status-pill">
-            <span>Website designed and All rights reserved by MidCell Studios</span>
+            <span>Website designed and All rights reserved by <strong>MidCell Studios</strong></span>
           </div>
 
           <button
