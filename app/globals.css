@@ -312,13 +312,20 @@ button, input, select, textarea {
 }
 
 .btn-whatsapp {
-  background-color: #25D366;
+  background: linear-gradient(135deg, #187741 0%, #115e32 100%);
   color: #FFFFFF;
+  border: 1px solid rgba(37, 211, 102, 0.45);
+  box-shadow: 0 4px 14px rgba(17, 94, 50, 0.35);
 }
 .btn-whatsapp:hover {
-  background-color: #20BD5A;
+  background: linear-gradient(135deg, #1f9452 0%, #16743e 100%);
+  border-color: #25D366;
+  color: #FFFFFF;
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.35);
+  box-shadow: 0 8px 22px rgba(37, 211, 102, 0.35);
+}
+.btn-whatsapp:active {
+  transform: translateY(0);
 }
 
 .btn-sm {
@@ -6950,6 +6957,24 @@ html.js-animations-active [data-reveal].is-revealed {
   max-width: 600px;
 }
 
+.contact-cta-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.15rem;
+  flex-shrink: 0;
+  flex-wrap: wrap;
+}
+
+.contact-cta-actions .btn {
+  padding: 0.85rem 1.75rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
 .btn-whatsapp-large {
   display: inline-flex;
   align-items: center;
@@ -6990,8 +7015,25 @@ html.js-animations-active [data-reveal].is-revealed {
   .contact-cta-box {
     flex-direction: column;
     text-align: center;
+    gap: 1.75rem;
+  }
+
+  .contact-cta-actions {
+    justify-content: center;
   }
 }
+
+@media (max-width: 640px) {
+  .contact-cta-actions {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.75rem;
+  }
+
+  .contact-cta-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
 
 @media (max-width: 768px) {
   .contact-info-panel {
