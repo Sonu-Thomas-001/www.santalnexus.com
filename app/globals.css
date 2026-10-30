@@ -407,29 +407,6 @@ button, input, select, textarea {
   transform: scale(1.02);
 }
 
-.brand-trust-tag {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  padding: 0.25rem 0.65rem;
-  background: rgba(215, 180, 90, 0.1);
-  border: 1px solid rgba(215, 180, 90, 0.22);
-  border-radius: 9999px;
-  font-size: 0.72rem;
-  font-weight: 700;
-  color: var(--color-gold);
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-}
-
-.trust-indicator-dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background-color: #25D366;
-  box-shadow: 0 0 6px #25D366;
-}
-
 /* Center Navigation Rail */
 .main-nav {
   display: flex;
@@ -814,11 +791,6 @@ button, input, select, textarea {
   display: none;
 }
 
-@media (max-width: 1100px) {
-  .brand-trust-tag {
-    display: none;
-  }
-}
 
 @media (max-width: 991px) {
   .floating-header-wrapper {

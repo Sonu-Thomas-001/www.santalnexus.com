@@ -82,11 +82,6 @@ export default function Header() {
               />
             </picture>
           </Link>
-
-          <div className="brand-trust-tag">
-            <span className="trust-indicator-dot"></span>
-            <span className="trust-text">APEDA &bull; VOC Port</span>
-          </div>
         </div>
 
         {/* Center: Main Navigation Rail */}
