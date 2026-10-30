@@ -90,19 +90,26 @@ export default function ContactForm({ compact = false }: ContactFormProps) {
     <div className="enquiry-form-card">
       {submittedStatus && (
         <div
-          className={`form-status-alert ${submittedStatus.type === 'success' ? 'form-status-success' : 'form-status-error'}`}
+          className={`form-status-alert form-status-${submittedStatus.type}`}
           role="alert"
-          style={{
-            padding: '1rem',
-            marginBottom: '1.25rem',
-            borderRadius: '6px',
-            backgroundColor: submittedStatus.type === 'success' ? 'rgba(46, 125, 50, 0.12)' : 'rgba(211, 47, 47, 0.12)',
-            border: `1px solid ${submittedStatus.type === 'success' ? '#2E7D32' : '#D32F2F'}`,
-            color: submittedStatus.type === 'success' ? '#1B5E20' : '#B71C1C',
-            fontSize: '0.9rem',
-          }}
         >
-          {submittedStatus.message}
+          <div className="status-alert-icon" aria-hidden="true">
+            {submittedStatus.type === 'success' ? (
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" width="20" height="20">
+                <polyline points="20 6 9 17 4 12" />
+              </svg>
+            ) : (
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" width="20" height="20">
+                <circle cx="12" cy="12" r="10" />
+                <line x1="12" y1="8" x2="12" y2="12" />
+                <line x1="12" y1="16" x2="12.01" y2="16" />
+              </svg>
+            )}
+          </div>
+          <div className="status-alert-body">
+            <strong>{submittedStatus.type === 'success' ? 'Trade Desk Notification' : 'Action Required'}</strong>
+            <p>{submittedStatus.message}</p>
+          </div>
         </div>
       )}
 
@@ -126,7 +133,16 @@ export default function ContactForm({ compact = false }: ContactFormProps) {
               }}
               required
             />
-            {errors.fullName && <span className="field-error-text" style={{ color: '#D32F2F', fontSize: '0.8rem', marginTop: '0.25rem', display: 'block' }}>{errors.fullName}</span>}
+            {errors.fullName && (
+              <span className="field-error-text">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="14" height="14" aria-hidden="true">
+                  <circle cx="12" cy="12" r="10" />
+                  <line x1="12" y1="8" x2="12" y2="12" />
+                  <line x1="12" y1="16" x2="12.01" y2="16" />
+                </svg>
+                {errors.fullName}
+              </span>
+            )}
           </div>
 
           {/* Business Email */}
@@ -147,7 +163,16 @@ export default function ContactForm({ compact = false }: ContactFormProps) {
               }}
               required
             />
-            {errors.businessEmail && <span className="field-error-text" style={{ color: '#D32F2F', fontSize: '0.8rem', marginTop: '0.25rem', display: 'block' }}>{errors.businessEmail}</span>}
+            {errors.businessEmail && (
+              <span className="field-error-text">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="14" height="14" aria-hidden="true">
+                  <circle cx="12" cy="12" r="10" />
+                  <line x1="12" y1="8" x2="12" y2="12" />
+                  <line x1="12" y1="16" x2="12.01" y2="16" />
+                </svg>
+                {errors.businessEmail}
+              </span>
+            )}
           </div>
 
           {/* Phone */}
@@ -242,17 +267,25 @@ export default function ContactForm({ compact = false }: ContactFormProps) {
               }}
               required
             />
-            {errors.requirements && <span className="field-error-text" style={{ color: '#D32F2F', fontSize: '0.8rem', marginTop: '0.25rem', display: 'block' }}>{errors.requirements}</span>}
+            {errors.requirements && (
+              <span className="field-error-text">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="14" height="14" aria-hidden="true">
+                  <circle cx="12" cy="12" r="10" />
+                  <line x1="12" y1="8" x2="12" y2="12" />
+                  <line x1="12" y1="16" x2="12.01" y2="16" />
+                </svg>
+                {errors.requirements}
+              </span>
+            )}
           </div>
         </div>
 
         {/* Action Buttons */}
-        <div className="form-actions-split" style={{ display: 'flex', gap: '1rem', marginTop: '1.5rem', flexWrap: 'wrap' }}>
+        <div className="form-actions-split">
           <button
             type="button"
-            className="btn btn-gold"
+            className="btn-form-whatsapp"
             onClick={handleWhatsAppSubmit}
-            style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', flex: '1 1 200px', justifyContent: 'center' }}
           >
             <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18" aria-hidden="true">
               <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.196 8.196 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m4.52 11.66c-.19.52-1.11 1.01-1.54 1.06-.41.05-.95.07-2.84-.71-1.61-.66-2.65-2.28-2.73-2.39-.08-.11-.64-.86-.64-1.64 0-.78.41-1.16.55-1.32.15-.16.32-.2.43-.2.11 0 .22 0 .31.01.1.01.24-.04.37.28.14.33.48 1.16.52 1.25.04.09.07.2.01.31-.05.11-.08.18-.16.27-.08.09-.17.2-.24.27-.08.08-.16.17-.07.33.09.16.41.67.88 1.09.61.54 1.12.71 1.28.79.16.08.26.07.35-.04.1-.11.41-.48.52-.64.11-.16.22-.14.37-.08.15.05.95.45 1.11.53.16.08.27.12.31.19.04.07.04.42-.15.94Z" />
@@ -262,8 +295,7 @@ export default function ContactForm({ compact = false }: ContactFormProps) {
 
           <button
             type="submit"
-            className="btn btn-outline-dark"
-            style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', flex: '1 1 200px', justifyContent: 'center' }}
+            className="btn-form-email"
           >
             <span>Submit via Email</span>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" width="16" height="16" aria-hidden="true">

@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function TeamPage() {
   return (
-    <>
+    <div className="page-team">
       {/* ====================================================================
            SECTION 1: HERO BANNER
            ==================================================================== */}
@@ -279,6 +279,6 @@ export default function TeamPage() {
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 }

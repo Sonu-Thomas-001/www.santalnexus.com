@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 
 export default function ProductsPage() {
   return (
-    <>
+    <div className="page-products">
       {/* ====================================================================
            SECTION 1: HERO BANNER
            ==================================================================== */}
@@ -208,6 +208,6 @@ export default function ProductsPage() {
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 }

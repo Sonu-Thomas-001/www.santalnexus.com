@@ -16,7 +16,7 @@ export default function ExportServicesPage() {
   const exportFaqs = FAQ_ITEMS.filter((f) => f.category === 'export' || f.category === 'quality' || f.category === 'payments');
 
   return (
-    <>
+    <div className="page-export">
       {/* ====================================================================
            SECTION 1: HERO BANNER
            ==================================================================== */}
@@ -355,6 +355,6 @@ export default function ExportServicesPage() {
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 }
