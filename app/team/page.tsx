@@ -53,60 +53,35 @@ export default function TeamPage() {
       </section>
 
       {/* ====================================================================
-           SECTION 2: PRIMARY TEAM GRID & CAPABILITY STRIP
+           SECTION 2: FOUNDER'S VISION STATEMENT (UPSIDE)
            ==================================================================== */}
-      <section className="section-padding team-section" id="team-members" aria-label="Leadership and Team Profiles">
+      <section className="team-founder-quote-section" aria-label="Founder's Statement">
         <div className="container">
-          <div className="team-grid">
-            {TEAM_MEMBERS.map((member) => (
-              <article key={member.id} className="team-card reveal-on-scroll">
-                <div className="team-image-wrap">
-                  <picture>
-                    <source srcSet={member.photoWebp} type="image/webp" />
-                    <img
-                      src={member.photoJpg}
-                      alt={`${member.name} - ${member.role}`}
-                      width={288}
-                      height={250}
-                      loading="lazy"
-                    />
-                  </picture>
-                </div>
-                <div className="team-body">
-                  <span className="team-badge">{member.badge}</span>
-                  <h2 className="team-name">{member.name}</h2>
-                  <p className="team-pillars">{member.pillars}</p>
-                  <p className="team-bio">{member.bio}</p>
-                  {member.desk && (
-                    <div style={{ marginTop: '0.75rem', paddingTop: '0.75rem', borderTop: '1px solid rgba(215, 180, 90, 0.2)', fontSize: '0.8rem', color: 'var(--color-gold-dark)', fontWeight: 600 }}>
-                      Desk: {member.desk}
-                    </div>
-                  )}
-                </div>
-              </article>
-            ))}
-          </div>
-
-          {/* Team Capability Highlights Strip */}
-          <div className="team-capability-strip reveal-on-scroll" style={{ marginTop: '3.5rem' }}>
-            {TEAM_PILLARS.map((pillar) => (
-              <div key={pillar.title} className="team-cap-item">
-                <div className="team-cap-icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-                    <path d="m9 12 2 2 4-4" />
-                  </svg>
-                </div>
-                <div className="team-cap-text">
-                  <h3 style={{ fontFamily: 'var(--font-sans)', fontSize: '1.05rem', fontWeight: 700, color: 'var(--color-gold)', marginBottom: '0.15rem' }}>
-                    {pillar.title}
-                  </h3>
-                  <p style={{ fontSize: '0.85rem', color: '#D7DDD7', marginBottom: 0 }}>
-                    {pillar.subtitle}
-                  </p>
-                </div>
+          <div className="founder-quote-box reveal-on-scroll">
+            <span className="section-eyebrow" style={{ color: 'var(--color-gold)', marginBottom: '1.25rem', display: 'inline-block' }}>
+              Founder&apos;s Vision
+            </span>
+            <div className="founder-quote-glyph" aria-hidden="true">&ldquo;</div>
+            <blockquote className="founder-quote-text">
+              Agriculture is far more than trade for us; it is a sacred trust between the farmer who nurtures the soil in Tamil Nadu and the global family who savors the harvest thousands of miles away.
+            </blockquote>
+            <div className="founder-quote-author">
+              <div className="founder-avatar-wrap">
+                <picture>
+                  <source srcSet="/assets/images/team/bala-chellapandiyan.webp" type="image/webp" />
+                  <img
+                    src="/assets/images/team/bala-chellapandiyan.jpg"
+                    alt="Bala Chellapandiyan - Founder & CEO"
+                    className="founder-avatar-img"
+                    width={90}
+                    height={90}
+                    loading="lazy"
+                  />
+                </picture>
               </div>
-            ))}
+              <span className="author-name">Bala Chellapandiyan</span>
+              <span className="author-title">Founder &amp; CEO · Santal Nexus</span>
+            </div>
           </div>
         </div>
       </section>
@@ -205,19 +180,68 @@ export default function TeamPage() {
       </section>
 
       {/* ====================================================================
-           SECTION 5: FOUNDER'S VISION STATEMENT
+           SECTION 5: PRIMARY TEAM GRID & CAPABILITY STRIP (AT LAST DOWN)
            ==================================================================== */}
-      <section className="team-founder-quote-section" aria-label="Founder's Statement">
+      <section className="section-padding team-section" id="team-members" aria-label="Leadership and Team Profiles">
         <div className="container">
-          <div className="founder-quote-box reveal-on-scroll">
-            <div className="founder-quote-glyph" aria-hidden="true">&ldquo;</div>
-            <blockquote className="founder-quote-text">
-              Agriculture is far more than trade for us; it is a sacred trust between the farmer who nurtures the soil in Tamil Nadu and the global family who savors the harvest thousands of miles away.
-            </blockquote>
-            <div className="founder-quote-author">
-              <span className="author-name">Bala Chellapandiyan</span>
-              <span className="author-title">Founder &amp; CEO · Santal Nexus</span>
-            </div>
+          <div className="section-intro-center reveal-on-scroll">
+            <span className="section-eyebrow">Our Team</span>
+            <h2 className="section-heading">Dedicated Leadership &amp; Trade Specialists</h2>
+            <p className="section-subtext">
+              Meet the specialists coordinating procurement, quality auditing, logistics, and partner relations at Santal Nexus.
+            </p>
+          </div>
+
+          <div className="team-grid">
+            {TEAM_MEMBERS.map((member) => (
+              <article key={member.id} className="team-card reveal-on-scroll">
+                <div className="team-image-wrap">
+                  <picture>
+                    <source srcSet={member.photoWebp} type="image/webp" />
+                    <img
+                      src={member.photoJpg}
+                      alt={`${member.name} - ${member.role}`}
+                      width={288}
+                      height={250}
+                      loading="lazy"
+                    />
+                  </picture>
+                </div>
+                <div className="team-body">
+                  <span className="team-badge">{member.badge}</span>
+                  <h2 className="team-name">{member.name}</h2>
+                  <p className="team-pillars">{member.pillars}</p>
+                  <p className="team-bio">{member.bio}</p>
+                  {member.desk && (
+                    <div style={{ marginTop: '0.75rem', paddingTop: '0.75rem', borderTop: '1px solid rgba(215, 180, 90, 0.2)', fontSize: '0.8rem', color: 'var(--color-gold-dark)', fontWeight: 600 }}>
+                      Desk: {member.desk}
+                    </div>
+                  )}
+                </div>
+              </article>
+            ))}
+          </div>
+
+          {/* Team Capability Highlights Strip */}
+          <div className="team-capability-strip reveal-on-scroll" style={{ marginTop: '3.5rem' }}>
+            {TEAM_PILLARS.map((pillar) => (
+              <div key={pillar.title} className="team-cap-item">
+                <div className="team-cap-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                    <path d="m9 12 2 2 4-4" />
+                  </svg>
+                </div>
+                <div className="team-cap-text">
+                  <h3 style={{ fontFamily: 'var(--font-sans)', fontSize: '1.05rem', fontWeight: 700, color: 'var(--color-gold)', marginBottom: '0.15rem' }}>
+                    {pillar.title}
+                  </h3>
+                  <p style={{ fontSize: '0.85rem', color: '#D7DDD7', marginBottom: 0 }}>
+                    {pillar.subtitle}
+                  </p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
