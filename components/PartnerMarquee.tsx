@@ -1,151 +1,239 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 
-interface Partner {
+export type PartnerCategoryKey = 'all' | 'hypermarket' | 'wholesale' | 'hospitality' | 'carriers' | 'compliance';
+
+export interface Partner {
   id: string;
   name: string;
-  category: string;
+  category: PartnerCategoryKey;
+  categoryLabel: string;
+  role: string;
   location: string;
   badge: string;
+  commodities: string;
   iconType: 'retail' | 'supermarket' | 'hub' | 'mart' | 'resort' | 'reefer' | 'shipping' | 'cert' | 'air' | 'agro';
 }
 
-// Track 1: Global Buyers, Hypermarket Retailers & Perishable Terminal Hubs
-const BUYER_PARTNERS: Partner[] = [
+export const PARTNERS_DATA: Partner[] = [
+  // 1. Hypermarket & Supermarket Retailers
   {
     id: 'lulu',
     name: 'LuLu Hypermarket Group',
-    category: 'Hypermarket & Retail Network',
+    category: 'hypermarket',
+    categoryLabel: 'Hypermarket & Retail',
+    role: 'GCC Retail Consignee Network',
     location: 'UAE · Saudi Arabia · Oman',
-    badge: 'GCC Retail Consignee',
+    badge: 'Verified Buyer',
+    commodities: 'Cavendish G9 Bananas · G4 Chillies · Fresh Veg',
     iconType: 'retail',
   },
   {
     id: 'al-maya',
     name: 'Al Maya Group',
-    category: 'Wholesale Supermarket Importer',
+    category: 'hypermarket',
+    categoryLabel: 'Hypermarket & Retail',
+    role: 'Supermarket Distributor & Importer',
     location: 'Dubai & Abu Dhabi, UAE',
-    badge: 'Supermarket Distributor',
+    badge: 'Supermarket Consignee',
+    commodities: 'Small Red Shallots · Fresh Veg · Drumsticks',
     iconType: 'supermarket',
-  },
-  {
-    id: 'pasir-panjang',
-    name: 'Pasir Panjang Wholesale Hub',
-    category: 'Perishable Produce Terminal',
-    location: 'Singapore Central Port',
-    badge: 'SE Asia Hub Buyer',
-    iconType: 'hub',
-  },
-  {
-    id: 'al-madina',
-    name: 'Al Madina Mart & Wholesale',
-    category: 'Fresh Produce Chain',
-    location: 'Doha, Qatar · Muscat, Oman',
-    badge: 'GCC Regional Importer',
-    iconType: 'mart',
-  },
-  {
-    id: 'maldives-resort',
-    name: 'Maldives Island Cargo Supply',
-    category: 'Hospitality & Luxury Resorts',
-    location: 'Malé, Republic of Maldives',
-    badge: 'Island Reefer Network',
-    iconType: 'resort',
   },
   {
     id: 'choithrams',
     name: 'Choithrams Supermarket Chain',
-    category: 'Retail & Distribution Hub',
+    category: 'hypermarket',
+    categoryLabel: 'Hypermarket & Retail',
+    role: 'Premium Retail Distribution Hub',
     location: 'Dubai & Sharjah, UAE',
-    badge: 'GCC Produce Consignee',
+    badge: 'Retail Consignee',
+    commodities: 'G9 Bananas · Pomegranates · Mangoes',
     iconType: 'supermarket',
+  },
+  {
+    id: 'al-madina',
+    name: 'Al Madina Mart & Wholesale',
+    category: 'hypermarket',
+    categoryLabel: 'Hypermarket & Retail',
+    role: 'Fresh Supermarket Chain Consignee',
+    location: 'Doha, Qatar · Muscat, Oman',
+    badge: 'GCC Regional Importer',
+    commodities: 'Daily Greens · Curry Leaves · Shallots',
+    iconType: 'mart',
+  },
+
+  // 2. Wholesale Terminal Produce Markets
+  {
+    id: 'pasir-panjang',
+    name: 'Pasir Panjang Wholesale Hub',
+    category: 'wholesale',
+    categoryLabel: 'Wholesale Terminals',
+    role: 'Perishable Produce Terminal Buyer',
+    location: 'Singapore Central Port',
+    badge: 'SE Asia Hub Buyer',
+    commodities: 'Shallots · G4 Green Chillies · Curry Leaves',
+    iconType: 'hub',
   },
   {
     id: 'ntuc-fairprice',
     name: 'Singapore Fresh Terminal',
-    category: 'Direct Supermarket Distribution',
-    location: 'Singapore Import Corridor',
+    category: 'wholesale',
+    categoryLabel: 'Wholesale Terminals',
+    role: 'Direct Wholesale Import Corridor',
+    location: 'Singapore Import Hub',
     badge: 'Pacific Trade Buyer',
+    commodities: 'Bananas · Moringa · Lemons',
     iconType: 'hub',
   },
   {
     id: 'koyambedu',
     name: 'Koyambedu Agro Consortium',
-    category: 'Terminal Wholesale Trading',
+    category: 'wholesale',
+    categoryLabel: 'Wholesale Terminals',
+    role: 'Terminal Wholesale Trading',
     location: 'Chennai, Tamil Nadu',
     badge: 'Domestic Wholesale Partner',
+    commodities: 'Daily Farm-Gate Bulk Dispatch',
     iconType: 'agro',
   },
-];
+  {
+    id: 'dindigul-central',
+    name: 'Dindigul Onion Trading Terminal',
+    category: 'wholesale',
+    categoryLabel: 'Wholesale Terminals',
+    role: 'Regional Agricultural Aggregation Hub',
+    location: 'Dindigul agrarian belt, TN',
+    badge: 'Farm-Gate Aggregator',
+    commodities: 'Bellary Onions · Dindigul Small Shallots',
+    iconType: 'agro',
+  },
 
-// Track 2: Ocean Freight Lines, Cold-Chain Reefers & Export Accreditations
-const CARRIER_STANDARDS: Partner[] = [
+  // 3. Hospitality & Island Reefer Networks
+  {
+    id: 'maldives-resort',
+    name: 'Maldives Island Cargo Supply',
+    category: 'hospitality',
+    categoryLabel: 'Hospitality & Resorts',
+    role: 'Hospitality & Luxury Resorts Network',
+    location: 'Malé, Republic of Maldives',
+    badge: 'Island Reefer Network',
+    commodities: 'Continuous Weekly Resort Cold Reefer Supply',
+    iconType: 'resort',
+  },
+  {
+    id: 'indian-ocean-feeder',
+    name: 'Indian Ocean Feeder Supply',
+    category: 'hospitality',
+    categoryLabel: 'Hospitality & Resorts',
+    role: 'Maritime Foodservice Provisioning',
+    location: 'Gulf of Mannar & Colombo Corridor',
+    badge: 'Marine Provisioning',
+    commodities: 'Fresh Fruits · Culinary Veg · Herbs',
+    iconType: 'shipping',
+  },
+
+  // 4. Ocean Reefer Carriers & Air Cargo Liners
   {
     id: 'maersk-reefer',
     name: 'Maersk Reefer Logistics',
-    category: 'Controlled-Atmosphere Maritime',
+    category: 'carriers',
+    categoryLabel: 'Freight & Reefer Liners',
+    role: 'Controlled-Atmosphere Maritime Freight',
     location: 'VOC Port Tuticorin Gateway',
-    badge: 'Cold-Chain Shipping Partner',
+    badge: 'Cold-Chain Shipping Line',
+    commodities: 'FCL CA Reefers (+13.5°C Bananas)',
     iconType: 'reefer',
   },
   {
     id: 'cma-cgm',
     name: 'CMA CGM Reefer Care',
-    category: 'Perishable Sea Freight Line',
+    category: 'carriers',
+    categoryLabel: 'Freight & Reefer Liners',
+    role: 'Perishable Sea Freight Line',
     location: 'Chennai Port & Colombo Hub',
-    badge: 'Maritime Container Line',
+    badge: 'Global Maritime Line',
+    commodities: 'Direct SE Asia & Gulf Maritime Reefers',
     iconType: 'shipping',
   },
   {
     id: 'msc-cold',
     name: 'MSC Mediterranean Cold Chain',
-    category: 'Global Reefer Fleet',
+    category: 'carriers',
+    categoryLabel: 'Freight & Reefer Liners',
+    role: 'Global Ocean Reefer Fleet',
     location: 'Tuticorin & Cochin Port Hubs',
     badge: 'Global Sea Freight',
+    commodities: 'Temperature-Logged Container Cargo',
     iconType: 'shipping',
-  },
-  {
-    id: 'apeda',
-    name: 'APEDA Govt. of India',
-    category: 'Agricultural Export Authority',
-    location: 'Ministry of Commerce & Industry',
-    badge: 'Registered RCMC Exporter',
-    iconType: 'cert',
-  },
-  {
-    id: 'fssai',
-    name: 'FSSAI Central Safety License',
-    category: 'Food Safety & Standards Authority',
-    location: 'Packhouse & Cold Store Norms',
-    badge: 'Food Safety Compliance',
-    iconType: 'cert',
-  },
-  {
-    id: 'quarantine',
-    name: 'Plant Quarantine Directorate',
-    category: 'Zero Quarantine Pests & Residues',
-    location: 'Phytosanitary Pre-Inspection',
-    badge: 'Phytosanitary Clearance',
-    iconType: 'cert',
   },
   {
     id: 'madurai-air',
     name: 'Madurai Air Cargo Complex',
-    category: 'Perishable Air Freight Terminal',
+    category: 'carriers',
+    categoryLabel: 'Freight & Reefer Liners',
+    role: 'Perishable Air Freight Terminal',
     location: 'Madurai International (IXM)',
     badge: 'Same-Day Air Freight',
+    commodities: 'Direct Air Shipments: Dubai & Singapore',
     iconType: 'air',
   },
   {
     id: 'voc-port',
     name: 'VOC Tuticorin Port Authority',
-    category: 'Deep-Water Container Terminal',
+    category: 'carriers',
+    categoryLabel: 'Freight & Reefer Liners',
+    role: 'Deep-Water Container Port Terminal',
     location: 'Gulf of Mannar Maritime Gateway',
     badge: '24h Reefer Plug-In',
+    commodities: 'Container Reefer Yard & Pre-Cooling Hub',
     iconType: 'shipping',
   },
+
+  // 5. Quality & Export Regulatory Bodies
+  {
+    id: 'apeda',
+    name: 'APEDA Govt. of India',
+    category: 'compliance',
+    categoryLabel: 'Export & Regulatory Bodies',
+    role: 'Agricultural Export Authority',
+    location: 'Ministry of Commerce & Industry',
+    badge: 'Registered RCMC Exporter',
+    commodities: 'Official Certificate of Export Registration',
+    iconType: 'cert',
+  },
+  {
+    id: 'fssai',
+    name: 'FSSAI Central Safety License',
+    category: 'compliance',
+    categoryLabel: 'Export & Regulatory Bodies',
+    role: 'Food Safety & Standards Authority',
+    location: 'Government of India',
+    badge: 'Food Safety Compliance',
+    commodities: 'Central Commercial Export & Sorting Standard',
+    iconType: 'cert',
+  },
+  {
+    id: 'quarantine',
+    name: 'Plant Quarantine Directorate',
+    category: 'compliance',
+    categoryLabel: 'Export & Regulatory Bodies',
+    role: 'Zero Quarantine Pests & Residues',
+    location: 'Phytosanitary Pre-Inspection',
+    badge: 'Phytosanitary Clearance',
+    commodities: 'Mandatory Lab Phytosanitary Health Certification',
+    iconType: 'cert',
+  },
+];
+
+const CATEGORIES: { key: PartnerCategoryKey; label: string; count: number }[] = [
+  { key: 'all', label: 'All Partners & Customers', count: PARTNERS_DATA.length },
+  { key: 'hypermarket', label: 'Hypermarket Chains', count: 4 },
+  { key: 'wholesale', label: 'Wholesale Terminals', count: 4 },
+  { key: 'hospitality', label: 'Hospitality & Resorts', count: 2 },
+  { key: 'carriers', label: 'Ocean & Air Liners', count: 5 },
+  { key: 'compliance', label: 'Export Authorities', count: 3 },
 ];
 
 function PartnerIcon({ type }: { type: Partner['iconType'] }) {
@@ -232,97 +320,249 @@ function PartnerIcon({ type }: { type: Partner['iconType'] }) {
   }
 }
 
-export default function PartnerMarquee() {
-  const row1List = [...BUYER_PARTNERS, ...BUYER_PARTNERS];
-  const row2List = [...CARRIER_STANDARDS, ...CARRIER_STANDARDS];
+export default function PartnerMarquee({ title, subtitle }: { title?: string; subtitle?: string }) {
+  const [activeCategory, setActiveCategory] = useState<PartnerCategoryKey>('all');
+  const [viewMode, setViewMode] = useState<'marquee' | 'grid'>('marquee');
+
+  // Filtered partners for grid or focused view
+  const filteredPartners = activeCategory === 'all'
+    ? PARTNERS_DATA
+    : PARTNERS_DATA.filter(p => p.category === activeCategory);
+
+  // For Continuous Marquee: Row 1 (Hypermarkets & Wholesale) and Row 2 (Carriers, Hospitality & Certifications)
+  const row1Buyers = PARTNERS_DATA.filter(p => p.category === 'hypermarket' || p.category === 'wholesale');
+  const row2Logistics = PARTNERS_DATA.filter(p => p.category === 'carriers' || p.category === 'compliance' || p.category === 'hospitality');
+
+  const row1List = [...row1Buyers, ...row1Buyers];
+  const row2List = [...row2Logistics, ...row2Logistics];
 
   return (
-    <section className="partners-marquee-section" aria-label="Our Trusted Trade Partners and Customer Network">
+    <section className="partners-marquee-section" aria-label="Our Trustable Partners and Customer List">
       <div className="container">
+        {/* Section Header */}
         <div className="partners-header text-center">
           <span className="partners-eyebrow">
             <span className="live-pulse-dot green"></span>
-            GLOBAL TRADE NETWORK &amp; LOGISTICS ECOSYSTEM
+            OUR TRUSTABLE PARTNERS (CUSTOMER &amp; TRADE LIST)
           </span>
           <h2 className="partners-heading">
-            Trusted by Leading Importers, <span className="text-gold">Hypermarket Chains</span> &amp; Freight Liners
+            {title ? title : (
+              <>
+                Our Trustable Partners: <span className="text-gold">Verified Customer &amp; Trade Ecosystem</span>
+              </>
+            )}
           </h2>
           <p className="partners-subheading">
-            Supplying regional wholesale markets, international retail chains, and luxury hospitality destinations with synchronized cold-chain maritime and air transit corridors.
+            {subtitle ? subtitle : (
+              'Supplying premier international hypermarket chains, regional wholesale produce terminals, and luxury island resort supply networks with synchronized ocean and air cold-chain corridors.'
+            )}
           </p>
+
+          {/* Interactive Category Filter Pills */}
+          <div className="partner-categories-bar" role="tablist" aria-label="Partner categories">
+            {CATEGORIES.map((cat) => {
+              const isActive = activeCategory === cat.key;
+              return (
+                <button
+                  key={cat.key}
+                  type="button"
+                  role="tab"
+                  aria-selected={isActive}
+                  className={`partner-cat-pill ${isActive ? 'active' : ''}`}
+                  onClick={() => {
+                    setActiveCategory(cat.key);
+                    // If user clicks a specific category, auto-switch to grid view for focused exploration
+                    if (cat.key !== 'all' && viewMode === 'marquee') {
+                      setViewMode('grid');
+                    }
+                  }}
+                >
+                  <span className="cat-name">{cat.label}</span>
+                  <span className="cat-count">{cat.count}</span>
+                </button>
+              );
+            })}
+          </div>
+
+          {/* View Mode Switcher (Marquee vs Categorized Grid) */}
+          <div className="partner-view-toggle-wrap">
+            <span className="view-toggle-label">Display Mode:</span>
+            <div className="partner-view-toggle">
+              <button
+                type="button"
+                className={`view-btn ${viewMode === 'marquee' ? 'active' : ''}`}
+                onClick={() => {
+                  setViewMode('marquee');
+                  setActiveCategory('all');
+                }}
+                title="Continuous Animated Marquee"
+              >
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+                  <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                </svg>
+                <span>Animated Marquee</span>
+              </button>
+
+              <button
+                type="button"
+                className={`view-btn ${viewMode === 'grid' ? 'active' : ''}`}
+                onClick={() => setViewMode('grid')}
+                title="Categorized Partner Directory Grid"
+              >
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+                  <rect x="3" y="3" width="7" height="7"></rect>
+                  <rect x="14" y="3" width="7" height="7"></rect>
+                  <rect x="14" y="14" width="7" height="7"></rect>
+                  <rect x="3" y="14" width="7" height="7"></rect>
+                </svg>
+                <span>Categorized Directory</span>
+              </button>
+            </div>
+          </div>
         </div>
       </div>
 
-      {/* Track 1: Global Consignees & Wholesale Hubs (Scrolling Left) */}
-      <div className="marquee-wrapper" role="region" aria-label="Global buyers and hypermarket networks">
-        <div className="marquee-fade-overlay left"></div>
-        <div className="marquee-fade-overlay right"></div>
+      {/* VIEW MODE 1: DUAL-TRACK ANIMATED MARQUEE */}
+      {viewMode === 'marquee' && (
+        <div className="partners-marquee-container">
+          {/* Track 1: Global Consignees, Retailers & Wholesale Hubs (Scrolling Left) */}
+          <div className="marquee-wrapper" role="region" aria-label="Customer list: Hypermarkets and wholesale buyers">
+            <div className="marquee-fade-overlay left"></div>
+            <div className="marquee-fade-overlay right"></div>
 
-        <div className="marquee-track marquee-track-left">
-          {row1List.map((partner, index) => (
-            <div
-              key={`buyer-${partner.id}-${index}`}
-              className="partner-card"
-              title={`${partner.name} - ${partner.category}`}
-            >
-              <div className="partner-card-inner">
-                <div className="partner-logo-emblem">
-                  <PartnerIcon type={partner.iconType} />
-                </div>
-                <div className="partner-info">
-                  <div className="partner-badge-chip">{partner.badge}</div>
-                  <h3 className="partner-name">{partner.name}</h3>
-                  <div className="partner-meta">
-                    <span className="partner-location">
-                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
-                        <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
-                        <circle cx="12" cy="10" r="3" />
-                      </svg>
-                      {partner.location}
-                    </span>
+            <div className="marquee-track marquee-track-left">
+              {row1List.map((partner, index) => (
+                <div
+                  key={`track1-${partner.id}-${index}`}
+                  className="partner-card"
+                  title={`${partner.name} - ${partner.role}`}
+                >
+                  <div className="partner-card-inner">
+                    <div className="partner-logo-emblem">
+                      <PartnerIcon type={partner.iconType} />
+                    </div>
+                    <div className="partner-info">
+                      <div className="partner-category-tag">{partner.categoryLabel}</div>
+                      <div className="partner-badge-chip">{partner.badge}</div>
+                      <h3 className="partner-name">{partner.name}</h3>
+                      <div className="partner-meta">
+                        <span className="partner-location">
+                          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+                            <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+                            <circle cx="12" cy="10" r="3" />
+                          </svg>
+                          {partner.location}
+                        </span>
+                      </div>
+                      <div className="partner-commodities-pill">
+                        <span>{partner.commodities}</span>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
+              ))}
             </div>
-          ))}
-        </div>
-      </div>
+          </div>
 
-      {/* Track 2: Ocean Freight Carriers, Air Cargo & Certifications (Scrolling Right / Reverse) */}
-      <div className="marquee-wrapper marquee-wrapper-reverse" role="region" aria-label="Freight carriers and quality standards">
-        <div className="marquee-fade-overlay left"></div>
-        <div className="marquee-fade-overlay right"></div>
+          {/* Track 2: Ocean Freight Carriers, Air Cargo & Certifications (Scrolling Right / Reverse) */}
+          <div className="marquee-wrapper marquee-wrapper-reverse" role="region" aria-label="Logistics carriers and quality certifications">
+            <div className="marquee-fade-overlay left"></div>
+            <div className="marquee-fade-overlay right"></div>
 
-        <div className="marquee-track marquee-track-right">
-          {row2List.map((carrier, index) => (
-            <div
-              key={`carrier-${carrier.id}-${index}`}
-              className="partner-card partner-card-gold"
-              title={`${carrier.name} - ${carrier.category}`}
-            >
-              <div className="partner-card-inner">
-                <div className="partner-logo-emblem emblem-gold">
-                  <PartnerIcon type={carrier.iconType} />
-                </div>
-                <div className="partner-info">
-                  <div className="partner-badge-chip chip-gold">{carrier.badge}</div>
-                  <h3 className="partner-name">{carrier.name}</h3>
-                  <div className="partner-meta">
-                    <span className="partner-location">
-                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
-                        <circle cx="12" cy="12" r="10" />
-                        <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
-                        <path d="M2 12h20" />
-                      </svg>
-                      {carrier.location}
-                    </span>
+            <div className="marquee-track marquee-track-right">
+              {row2List.map((carrier, index) => (
+                <div
+                  key={`track2-${carrier.id}-${index}`}
+                  className="partner-card partner-card-gold"
+                  title={`${carrier.name} - ${carrier.role}`}
+                >
+                  <div className="partner-card-inner">
+                    <div className="partner-logo-emblem emblem-gold">
+                      <PartnerIcon type={carrier.iconType} />
+                    </div>
+                    <div className="partner-info">
+                      <div className="partner-category-tag tag-gold">{carrier.categoryLabel}</div>
+                      <div className="partner-badge-chip chip-gold">{carrier.badge}</div>
+                      <h3 className="partner-name">{carrier.name}</h3>
+                      <div className="partner-meta">
+                        <span className="partner-location">
+                          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+                            <circle cx="12" cy="12" r="10" />
+                            <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
+                            <path d="M2 12h20" />
+                          </svg>
+                          {carrier.location}
+                        </span>
+                      </div>
+                      <div className="partner-commodities-pill pill-gold">
+                        <span>{carrier.commodities}</span>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
+              ))}
             </div>
-          ))}
+          </div>
         </div>
-      </div>
+      )}
+
+      {/* VIEW MODE 2: CATEGORIZED PARTNER & CUSTOMER DIRECTORY GRID */}
+      {viewMode === 'grid' && (
+        <div className="container">
+          <div className="partner-categorized-grid">
+            {filteredPartners.map((partner) => (
+              <div key={partner.id} className="category-partner-card">
+                <div className="category-partner-header">
+                  <div className="partner-logo-emblem">
+                    <PartnerIcon type={partner.iconType} />
+                  </div>
+                  <div className="category-badge-group">
+                    <span className="partner-category-tag">{partner.categoryLabel}</span>
+                    <span className="partner-badge-chip">{partner.badge}</span>
+                  </div>
+                </div>
+
+                <div className="category-partner-body">
+                  <h3 className="cat-partner-title">{partner.name}</h3>
+                  <p className="cat-partner-role">{partner.role}</p>
+
+                  <div className="cat-partner-location">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+                      <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+                      <circle cx="12" cy="10" r="3" />
+                    </svg>
+                    <span>{partner.location}</span>
+                  </div>
+
+                  <div className="cat-partner-commodities">
+                    <span className="commodities-heading">Core Scope &amp; Commodities:</span>
+                    <p>{partner.commodities}</p>
+                  </div>
+                </div>
+
+                <div className="category-partner-footer">
+                  <Link href="/contact" className="partner-inquire-link">
+                    <span>Enquire for this Corridor &rarr;</span>
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center" style={{ marginTop: '2.5rem' }}>
+            <button
+              type="button"
+              className="btn btn-outline-light btn-sm"
+              onClick={() => {
+                setActiveCategory('all');
+                setViewMode('marquee');
+              }}
+            >
+              <span>&larr; Switch to Continuous Animated Marquee</span>
+            </button>
+          </div>
+        </div>
+      )}
 
       {/* Trust Capability Metrics Underneath */}
       <div className="container">

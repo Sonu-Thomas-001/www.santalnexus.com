@@ -10029,3 +10029,273 @@ a.escalation-contact-row:hover {
     padding: 0.5rem 0;
   }
 }
+
+
+/* ==========================================================================
+   PARTNER CATEGORIES & DIRECTORY GRID ENHANCEMENTS
+   ========================================================================== */
+
+.partner-categories-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 1.5rem auto 1.25rem;
+  max-width: 980px;
+}
+
+.partner-cat-pill {
+  border: 1px solid rgba(215, 180, 90, 0.22);
+  background: rgba(255, 255, 255, 0.04);
+  color: rgba(255, 255, 255, 0.8);
+  border-radius: 9999px;
+  padding: 0.4rem 0.85rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.partner-cat-pill .cat-count {
+  font-size: 0.68rem;
+  font-weight: 800;
+  padding: 0.1rem 0.45rem;
+  border-radius: 9999px;
+  background: rgba(215, 180, 90, 0.15);
+  color: var(--color-gold);
+}
+
+.partner-cat-pill:hover {
+  background: rgba(215, 180, 90, 0.12);
+  border-color: rgba(215, 180, 90, 0.45);
+  color: var(--color-white);
+  transform: translateY(-1px);
+}
+
+.partner-cat-pill.active {
+  background: rgba(215, 180, 90, 0.22);
+  border-color: var(--color-gold);
+  color: var(--color-white);
+  box-shadow: 0 0 14px rgba(215, 180, 90, 0.28);
+}
+
+.partner-cat-pill.active .cat-count {
+  background: var(--color-gold);
+  color: #0d1e16;
+}
+
+/* View Mode Switcher */
+.partner-view-toggle-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.view-toggle-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.partner-view-toggle {
+  display: inline-flex;
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(215, 180, 90, 0.25);
+  border-radius: 9999px;
+  padding: 3px;
+}
+
+.partner-view-toggle .view-btn {
+  border: none;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.7);
+  padding: 0.35rem 0.85rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.partner-view-toggle .view-btn:hover {
+  color: var(--color-white);
+}
+
+.partner-view-toggle .view-btn.active {
+  background: var(--color-gold);
+  color: #0d1e16;
+  font-weight: 800;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Category Tag on Marquee Cards */
+.partner-category-tag {
+  font-size: 0.62rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #34d399;
+  display: block;
+  margin-bottom: 0.2rem;
+}
+
+.partner-category-tag.tag-gold {
+  color: var(--color-gold);
+}
+
+.partner-commodities-pill {
+  margin-top: 0.5rem;
+  font-size: 0.68rem;
+  color: rgba(255, 255, 255, 0.75);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 6px;
+  padding: 0.25rem 0.5rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.partner-commodities-pill.pill-gold {
+  border-color: rgba(215, 180, 90, 0.2);
+  color: #f7df94;
+}
+
+/* Categorized Partner Grid */
+.partner-categorized-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  gap: 1.25rem;
+  margin-top: 1rem;
+}
+
+.category-partner-card {
+  background: rgba(16, 39, 29, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(215, 180, 90, 0.22);
+  border-radius: 14px;
+  padding: 1.35rem;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+}
+
+.category-partner-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-gold);
+  background: rgba(16, 39, 29, 0.95);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45), 0 0 18px rgba(215, 180, 90, 0.2);
+}
+
+.category-partner-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.85rem;
+}
+
+.category-badge-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.25rem;
+}
+
+.cat-partner-title {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--color-white);
+  margin-bottom: 0.35rem;
+  line-height: 1.3;
+}
+
+.cat-partner-role {
+  font-size: 0.8rem;
+  color: var(--color-gold-light);
+  font-weight: 600;
+  margin-bottom: 0.65rem;
+}
+
+.cat-partner-location {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.65);
+  margin-bottom: 0.85rem;
+}
+
+.cat-partner-commodities {
+  background: rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(215, 180, 90, 0.15);
+  border-radius: 8px;
+  padding: 0.65rem 0.85rem;
+  margin-bottom: 1.15rem;
+}
+
+.commodities-heading {
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-gold);
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.cat-partner-commodities p {
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.45;
+  margin: 0;
+}
+
+.category-partner-footer {
+  margin-top: auto;
+  border-top: 1px solid rgba(215, 180, 90, 0.15);
+  padding-top: 0.75rem;
+}
+
+.partner-inquire-link {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--color-gold);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  transition: all 0.2s ease;
+}
+
+.partner-inquire-link:hover {
+  color: var(--color-gold-light);
+  transform: translateX(3px);
+}
+
+@media (max-width: 768px) {
+  .partner-categories-bar {
+    gap: 0.35rem;
+  }
+  .partner-cat-pill {
+    padding: 0.3rem 0.65rem;
+    font-size: 0.72rem;
+  }
+  .category-partner-card {
+    padding: 1rem;
+  }
+}

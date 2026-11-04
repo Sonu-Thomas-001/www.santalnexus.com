@@ -1,6 +1,7 @@
 import React from 'react';
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import PartnerMarquee from '@/components/PartnerMarquee';
 
 export const metadata: Metadata = {
   title: 'About Us | Trusted Partners in Global Fresh Produce',
@@ -449,7 +450,15 @@ export default function AboutPage() {
       </section>
 
       {/* ====================================================================
-           SECTION 7: MADURAI SOURCING STRIP
+           SECTION 7: OUR TRUSTABLE PARTNERS (CUSTOMER LIST)
+           ==================================================================== */}
+      <PartnerMarquee
+        title="Our Trustable Partners &amp; Customer Network"
+        subtitle="Supplying premier international hypermarket chains, regional wholesale produce terminals, and luxury island resort supply networks with synchronized ocean and air cold-chain corridors."
+      />
+
+      {/* ====================================================================
+           SECTION 8: MADURAI SOURCING STRIP
            ==================================================================== */}
       <section className="about-region-strip" aria-label="Madurai Sourcing Advantage">
         <div className="container">
@@ -484,7 +493,7 @@ export default function AboutPage() {
       </section>
 
       {/* ====================================================================
-           SECTION 8: CALL TO ACTION BANNER
+           SECTION 9: CALL TO ACTION BANNER
            ==================================================================== */}
       <section className="about-cta-section" aria-label="Partner With Us">
         <div className="container">
