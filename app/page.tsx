@@ -2,6 +2,9 @@ import React from 'react';
 import Link from 'next/link';
 import ContactForm from '@/components/ContactForm';
 import PartnerMarquee from '@/components/PartnerMarquee';
+import ProduceTicker from '@/components/ProduceTicker';
+import TradeRouteMarquee from '@/components/TradeRouteMarquee';
+import BrandRibbonMarquee from '@/components/BrandRibbonMarquee';
 import { TEAM_MEMBERS } from '@/data/team';
 
 export default function HomePage() {
@@ -244,6 +247,8 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      <ProduceTicker />
 
       {/* ====================================================================
            SECTION 4: PRODUCT CATEGORIES
@@ -586,6 +591,8 @@ export default function HomePage() {
             </div>
           </div>
 
+          <TradeRouteMarquee />
+
           <div className="export-showcase-box reveal-on-scroll">
             <div className="export-showcase-left">
               <span className="section-eyebrow no-rule">International Supply</span>
@@ -764,6 +771,8 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      <BrandRibbonMarquee />
 
       {/* ====================================================================
            SECTION 10: BUSINESS ENQUIRY CTA STRIP

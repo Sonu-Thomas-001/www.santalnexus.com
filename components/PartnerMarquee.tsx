@@ -9,10 +9,11 @@ interface Partner {
   category: string;
   location: string;
   badge: string;
-  iconType: 'retail' | 'supermarket' | 'hub' | 'mart' | 'resort' | 'reefer' | 'shipping' | 'agro';
+  iconType: 'retail' | 'supermarket' | 'hub' | 'mart' | 'resort' | 'reefer' | 'shipping' | 'cert' | 'air' | 'agro';
 }
 
-const PARTNERS: Partner[] = [
+// Track 1: Global Buyers, Hypermarket Retailers & Perishable Terminal Hubs
+const BUYER_PARTNERS: Partner[] = [
   {
     id: 'lulu',
     name: 'LuLu Hypermarket Group',
@@ -54,6 +55,34 @@ const PARTNERS: Partner[] = [
     iconType: 'resort',
   },
   {
+    id: 'choithrams',
+    name: 'Choithrams Supermarket Chain',
+    category: 'Retail & Distribution Hub',
+    location: 'Dubai & Sharjah, UAE',
+    badge: 'GCC Produce Consignee',
+    iconType: 'supermarket',
+  },
+  {
+    id: 'ntuc-fairprice',
+    name: 'Singapore Fresh Terminal',
+    category: 'Direct Supermarket Distribution',
+    location: 'Singapore Import Corridor',
+    badge: 'Pacific Trade Buyer',
+    iconType: 'hub',
+  },
+  {
+    id: 'koyambedu',
+    name: 'Koyambedu Agro Consortium',
+    category: 'Terminal Wholesale Trading',
+    location: 'Chennai, Tamil Nadu',
+    badge: 'Domestic Wholesale Partner',
+    iconType: 'agro',
+  },
+];
+
+// Track 2: Ocean Freight Lines, Cold-Chain Reefers & Export Accreditations
+const CARRIER_STANDARDS: Partner[] = [
+  {
     id: 'maersk-reefer',
     name: 'Maersk Reefer Logistics',
     category: 'Controlled-Atmosphere Maritime',
@@ -70,12 +99,52 @@ const PARTNERS: Partner[] = [
     iconType: 'shipping',
   },
   {
-    id: 'koyambedu',
-    name: 'Koyambedu Agro Consortium',
-    category: 'Terminal Wholesale Trading',
-    location: 'Chennai, Tamil Nadu',
-    badge: 'Domestic Wholesale Partner',
-    iconType: 'agro',
+    id: 'msc-cold',
+    name: 'MSC Mediterranean Cold Chain',
+    category: 'Global Reefer Fleet',
+    location: 'Tuticorin & Cochin Port Hubs',
+    badge: 'Global Sea Freight',
+    iconType: 'shipping',
+  },
+  {
+    id: 'apeda',
+    name: 'APEDA Govt. of India',
+    category: 'Agricultural Export Authority',
+    location: 'Ministry of Commerce & Industry',
+    badge: 'Registered RCMC Exporter',
+    iconType: 'cert',
+  },
+  {
+    id: 'fssai',
+    name: 'FSSAI Central Safety License',
+    category: 'Food Safety & Standards Authority',
+    location: 'Packhouse & Cold Store Norms',
+    badge: 'Food Safety Compliance',
+    iconType: 'cert',
+  },
+  {
+    id: 'quarantine',
+    name: 'Plant Quarantine Directorate',
+    category: 'Zero Quarantine Pests & Residues',
+    location: 'Phytosanitary Pre-Inspection',
+    badge: 'Phytosanitary Clearance',
+    iconType: 'cert',
+  },
+  {
+    id: 'madurai-air',
+    name: 'Madurai Air Cargo Complex',
+    category: 'Perishable Air Freight Terminal',
+    location: 'Madurai International (IXM)',
+    badge: 'Same-Day Air Freight',
+    iconType: 'air',
+  },
+  {
+    id: 'voc-port',
+    name: 'VOC Tuticorin Port Authority',
+    category: 'Deep-Water Container Terminal',
+    location: 'Gulf of Mannar Maritime Gateway',
+    badge: '24h Reefer Plug-In',
+    iconType: 'shipping',
   },
 ];
 
@@ -124,7 +193,7 @@ function PartnerIcon({ type }: { type: Partner['iconType'] }) {
       return (
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="partner-svg-icon" aria-hidden="true">
           <rect x="1" y="3" width="15" height="13"></rect>
-          <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+          <polygon points="16 8 20 8 23 11 23 16 16 16 8"></polygon>
           <circle cx="5.5" cy="18.5" r="2.5"></circle>
           <circle cx="18.5" cy="18.5" r="2.5"></circle>
           <path d="M5 8h4" />
@@ -139,6 +208,19 @@ function PartnerIcon({ type }: { type: Partner['iconType'] }) {
           <path d="M8 8h8" />
         </svg>
       );
+    case 'cert':
+      return (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="partner-svg-icon" aria-hidden="true">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+          <path d="m9 12 2 2 4-4" />
+        </svg>
+      );
+    case 'air':
+      return (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="partner-svg-icon" aria-hidden="true">
+          <path d="M17.8 19.2L16 11l3.5-3.5C21 6 21.5 4 21 3.5c-.5-.5-2.5 0-4 1.5L13.5 8.5 5.3 6.7c-.8-.2-1.6.2-1.9.9l-.4.9 5.5 3.5L5 15l-2.5-.5L1 16l3.5 2 2 3.5 1.5-1.5L7.5 17.5l3 3.5.9-.4c.7-.3 1.1-1.1.9-1.9z" />
+        </svg>
+      );
     case 'agro':
     default:
       return (
@@ -151,8 +233,8 @@ function PartnerIcon({ type }: { type: Partner['iconType'] }) {
 }
 
 export default function PartnerMarquee() {
-  // Duplicate partner array for seamless continuous infinite marquee scrolling
-  const marqueeList = [...PARTNERS, ...PARTNERS];
+  const row1List = [...BUYER_PARTNERS, ...BUYER_PARTNERS];
+  const row2List = [...CARRIER_STANDARDS, ...CARRIER_STANDARDS];
 
   return (
     <section className="partners-marquee-section" aria-label="Our Trusted Trade Partners and Customer Network">
@@ -160,26 +242,26 @@ export default function PartnerMarquee() {
         <div className="partners-header text-center">
           <span className="partners-eyebrow">
             <span className="live-pulse-dot green"></span>
-            GLOBAL TRADE NETWORK &amp; CLIENT PORTFOLIO
+            GLOBAL TRADE NETWORK &amp; LOGISTICS ECOSYSTEM
           </span>
           <h2 className="partners-heading">
             Trusted by Leading Importers, <span className="text-gold">Hypermarket Chains</span> &amp; Freight Liners
           </h2>
           <p className="partners-subheading">
-            Consistently supplying international supermarket retailers, regional wholesale markets, and luxury hospitality chains across the Middle East, Southeast Asia, and Indian transit corridors.
+            Supplying regional wholesale markets, international retail chains, and luxury hospitality destinations with synchronized cold-chain maritime and air transit corridors.
           </p>
         </div>
       </div>
 
-      {/* Infinite Scrolling Ticker Track */}
-      <div className="marquee-wrapper" role="region" aria-label="Scrolling list of trusted partners and clients">
+      {/* Track 1: Global Consignees & Wholesale Hubs (Scrolling Left) */}
+      <div className="marquee-wrapper" role="region" aria-label="Global buyers and hypermarket networks">
         <div className="marquee-fade-overlay left"></div>
         <div className="marquee-fade-overlay right"></div>
 
-        <div className="marquee-track">
-          {marqueeList.map((partner, index) => (
+        <div className="marquee-track marquee-track-left">
+          {row1List.map((partner, index) => (
             <div
-              key={`${partner.id}-${index}`}
+              key={`buyer-${partner.id}-${index}`}
               className="partner-card"
               title={`${partner.name} - ${partner.category}`}
             >
@@ -206,9 +288,45 @@ export default function PartnerMarquee() {
         </div>
       </div>
 
+      {/* Track 2: Ocean Freight Carriers, Air Cargo & Certifications (Scrolling Right / Reverse) */}
+      <div className="marquee-wrapper marquee-wrapper-reverse" role="region" aria-label="Freight carriers and quality standards">
+        <div className="marquee-fade-overlay left"></div>
+        <div className="marquee-fade-overlay right"></div>
+
+        <div className="marquee-track marquee-track-right">
+          {row2List.map((carrier, index) => (
+            <div
+              key={`carrier-${carrier.id}-${index}`}
+              className="partner-card partner-card-gold"
+              title={`${carrier.name} - ${carrier.category}`}
+            >
+              <div className="partner-card-inner">
+                <div className="partner-logo-emblem emblem-gold">
+                  <PartnerIcon type={carrier.iconType} />
+                </div>
+                <div className="partner-info">
+                  <div className="partner-badge-chip chip-gold">{carrier.badge}</div>
+                  <h3 className="partner-name">{carrier.name}</h3>
+                  <div className="partner-meta">
+                    <span className="partner-location">
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+                        <circle cx="12" cy="12" r="10" />
+                        <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
+                        <path d="M2 12h20" />
+                      </svg>
+                      {carrier.location}
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
       {/* Trust Capability Metrics Underneath */}
       <div className="container">
-        <div className="partner-trust-metrics reveal-on-scroll">
+        <div className="partner-trust-metrics">
           <div className="trust-metric-pill">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
               <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
