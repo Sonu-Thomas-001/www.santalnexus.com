@@ -157,7 +157,7 @@ export default function PartnerMarquee() {
   return (
     <section className="partners-marquee-section" aria-label="Our Trusted Trade Partners and Customer Network">
       <div className="container">
-        <div className="partners-header text-center reveal-on-scroll">
+        <div className="partners-header text-center">
           <span className="partners-eyebrow">
             <span className="live-pulse-dot green"></span>
             GLOBAL TRADE NETWORK &amp; CLIENT PORTFOLIO

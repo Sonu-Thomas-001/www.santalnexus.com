@@ -74,7 +74,7 @@ export default function HomePage() {
       <section className="capability-strip" aria-label="Agricultural Certifications and Trade Capabilities">
         <div className="container">
           <div className="capability-grid">
-            <div className="capability-item reveal-on-scroll">
+            <div className="capability-item">
               <div className="capability-icon-wrap" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
@@ -88,7 +88,7 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="capability-item reveal-on-scroll">
+            <div className="capability-item">
               <div className="capability-icon-wrap" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z" />
@@ -102,7 +102,7 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="capability-item reveal-on-scroll">
+            <div className="capability-item">
               <div className="capability-icon-wrap" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z" />
@@ -116,7 +116,7 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="capability-item reveal-on-scroll">
+            <div className="capability-item">
               <div className="capability-icon-wrap" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <rect x="1" y="3" width="15" height="13"></rect>
