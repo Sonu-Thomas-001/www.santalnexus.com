@@ -102,7 +102,7 @@ export default function ProductFilter() {
         <div className="produce-items-grid">
           {filteredItems.map((item) => {
             const whatsappMsg = `Hello Santal Nexus, I am enquiring about bulk supply / export for ${item.name}.`;
-            const whatsappUrl = `https://wa.me/919994640141?text=${encodeURIComponent(whatsappMsg)}`;
+            const whatsappUrl = `https://wa.me/919994845296?text=${encodeURIComponent(whatsappMsg)}`;
 
             return (
               <div key={item.id} className="produce-item-card reveal-on-scroll">
@@ -172,7 +172,7 @@ export default function ProductFilter() {
             </button>
 
             <a
-              href={`https://wa.me/919994640141?text=${encodeURIComponent(`Hello Santal Nexus, I am looking for a produce variety (${searchQuery || 'custom produce'}) not listed on your website. Can your trade desk source this?`)}`}
+              href={`https://wa.me/919994845296?text=${encodeURIComponent(`Hello Santal Nexus, I am looking for a produce variety (${searchQuery || 'custom produce'}) not listed on your website. Can your trade desk source this?`)}`}
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-outline-dark"

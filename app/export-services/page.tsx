@@ -332,7 +332,7 @@ export default function ExportServicesPage() {
               <span className="section-eyebrow no-rule">Let's Connect</span>
               <h2 className="about-cta-heading">Ready to Discuss a Commercial Export Shipment?</h2>
               <p className="about-cta-subtext">
-                Speak directly with Bala Chellapandiyan (+91 99946 40141) to receive detailed port schedules, packing specifications, or formal CIF quotations.
+                Speak directly with Bala Chellapandiyan (+91 99948 45296) to receive detailed port schedules, packing specifications, or formal CIF quotations.
               </p>
               <div className="about-cta-actions">
                 <a href="#export-rfq" className="btn btn-gold">
@@ -343,7 +343,7 @@ export default function ExportServicesPage() {
                   </svg>
                 </a>
                 <a
-                  href="https://wa.me/919994640141?text=Hello%20Santal%20Nexus%2C%20I%20would%20like%20to%20discuss%20an%20export%20inquiry."
+                  href="https://wa.me/919994845296?text=Hello%20Santal%20Nexus%2C%20I%20would%20like%20to%20discuss%20an%20export%20inquiry."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn btn-outline-light"

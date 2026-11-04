@@ -8,7 +8,7 @@ import { FAQ_ITEMS } from '@/data/faq';
 export const metadata: Metadata = {
   title: 'Contact Us | Trade Inquiries & Commercial Desk',
   description:
-    'Connect with Santal Nexus in Madurai, Tamil Nadu. Phone +91 99946 40141, official email santalnexus@gmail.com, direct WhatsApp, and trade enquiry desk.',
+    'Connect with Santal Nexus in Madurai, Tamil Nadu. Phone +91 99948 45296, official email info@santalnexus.com, direct WhatsApp, and trade enquiry desk.',
 };
 
 export default function ContactPage() {
@@ -77,7 +77,7 @@ export default function ContactPage() {
                   <div className="contact-item-details">
                     <span className="contact-item-label">Direct Phone / WhatsApp</span>
                     <div className="contact-item-value">
-                      <a href="tel:+919994640141" aria-label="Call +91 999 464 0141">+91 999-464-0141</a>
+                      <a href="tel:+919994845296" aria-label="Call +91 999 484 5296">+91 999-484-5296</a>
                     </div>
                   </div>
                 </div>
@@ -109,7 +109,7 @@ export default function ContactPage() {
                   <div className="contact-item-details">
                     <span className="contact-item-label">Official Email</span>
                     <div className="contact-item-value">
-                      <a href="mailto:santalnexus@gmail.com" aria-label="Email santalnexus@gmail.com">santalnexus@gmail.com</a>
+                      <a href="mailto:info@santalnexus.com" aria-label="Email info@santalnexus.com">info@santalnexus.com</a>
                     </div>
                   </div>
                 </div>
@@ -127,7 +127,7 @@ export default function ContactPage() {
                   <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" className="social-badge-btn linkedin" aria-label="Follow on LinkedIn">
                     <svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" /></svg>
                   </a>
-                  <a href="https://wa.me/919994640141" target="_blank" rel="noopener noreferrer" className="social-badge-btn whatsapp" aria-label="Direct WhatsApp">
+                  <a href="https://wa.me/919994845296" target="_blank" rel="noopener noreferrer" className="social-badge-btn whatsapp" aria-label="Direct WhatsApp">
                     <svg viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.196 8.196 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m4.52 11.66c-.19.52-1.11 1.01-1.54 1.06-.41.05-.95.07-2.84-.71-1.61-.66-2.65-2.28-2.73-2.39-.08-.11-.64-.86-.64-1.64 0-.78.41-1.16.55-1.32.15-.16.32-.2.43-.2.11 0 .22 0 .31.01.1.01.24-.04.37.28.14.33.48 1.16.52 1.25.04.09.07.2.01.31-.05.11-.08.18-.16.27-.08.09-.17.2-.24.27-.08.08-.16.17-.07.33.09.16.41.67.88 1.09.61.54 1.12.71 1.28.79.16.08.26.07.35-.04.1-.11.41-.48.52-.64.11-.16.22-.14.37-.08.15.05.95.45 1.11.53.16.08.27.12.31.19.04.07.04.42-.15.94Z" /></svg>
                   </a>
                 </div>
@@ -186,7 +186,7 @@ export default function ContactPage() {
               <p className="desk-desc">
                 For agricultural growers and Farmer Producer Organisations (FPOs) across South India seeking transparent procurement, fair pricing, and long-term contracts.
               </p>
-              <a href="mailto:santalnexus@gmail.com?subject=Grower%20Procurement%20Enrollment" className="desk-action-link">
+              <a href="mailto:info@santalnexus.com?subject=Grower%20Procurement%20Enrollment" className="desk-action-link">
                 <span>Join Grower Network</span>
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
               </a>
@@ -221,7 +221,7 @@ export default function ContactPage() {
                 <strong>Global Trade WhatsApp:</strong> 24/7 Response<br />
                 <strong>Port Dispatch:</strong> Active during reefer gate-in schedules.
               </p>
-              <a href="https://wa.me/919994640141" target="_blank" rel="noopener noreferrer" className="desk-action-link">
+              <a href="https://wa.me/919994845296" target="_blank" rel="noopener noreferrer" className="desk-action-link">
                 <span>24/7 WhatsApp Chat</span>
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
               </a>
@@ -335,12 +335,12 @@ export default function ContactPage() {
             <div className="contact-cta-text">
               <h3>Need Immediate Trade Pricing or Fruit/Veg Specs?</h3>
               <p>
-                Bala Chellapandiyan (+91 99946 40141) is available directly on WhatsApp for prompt quotation structures and harvest photos.
+                Bala Chellapandiyan (+91 99948 45296) is available directly on WhatsApp for prompt quotation structures and harvest photos.
               </p>
             </div>
             <div className="contact-cta-actions">
               <a
-                href="https://wa.me/919994640141?text=Hello%20Bala%20Chellapandiyan%2C%20I%20would%20like%20to%20enquire%20about%20produce%20pricing."
+                href="https://wa.me/919994845296?text=Hello%20Bala%20Chellapandiyan%2C%20I%20would%20like%20to%20enquire%20about%20produce%20pricing."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-whatsapp"
@@ -350,8 +350,8 @@ export default function ContactPage() {
                 </svg>
                 <span>Direct WhatsApp Chat</span>
               </a>
-              <a href="tel:+919994640141" className="btn btn-outline-light">
-                <span>Call +91 99946 40141</span>
+              <a href="tel:+919994845296" className="btn btn-outline-light">
+                <span>Call +91 99948 45296</span>
               </a>
             </div>
           </div>

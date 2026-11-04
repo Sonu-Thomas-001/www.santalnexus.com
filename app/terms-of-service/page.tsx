@@ -52,8 +52,8 @@ export default function TermsOfServicePage() {
             <div className="toc-support-card">
               <h5>Commercial Contract Inquiries?</h5>
               <p>Speak directly with our trade desks regarding customized Incoterms or contracts.</p>
-              <a href="tel:+919994640141" className="btn btn-gold btn-sm">
-                Call +91 99946 40141
+              <a href="tel:+919994845296" className="btn btn-gold btn-sm">
+                Call +91 99948 45296
               </a>
             </div>
           </aside>
@@ -147,7 +147,7 @@ export default function TermsOfServicePage() {
                 Santal Nexus Commercial Secretariat<br />
                 Building No. 391/3, Opp. UCO Bank, Dindigul Main Road,<br />
                 T. Vadiapatti, Madurai – 625218, Tamil Nadu, India<br />
-                <strong>Direct Desk:</strong> <a href="tel:+919994640141">+91 99946 40141</a> · <strong>Email:</strong> <a href="mailto:santalnexus@gmail.com">santalnexus@gmail.com</a>
+                <strong>Direct Desk:</strong> <a href="tel:+919994845296">+91 99948 45296</a> · <strong>Email:</strong> <a href="mailto:info@santalnexus.com">info@santalnexus.com</a>
               </div>
             </section>
           </article>

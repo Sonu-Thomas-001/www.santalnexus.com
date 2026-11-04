@@ -48,7 +48,7 @@ export default function Forbidden() {
 
           <div className="error-actions-group">
             <a
-              href="https://wa.me/919994640141?text=Hello%20Santal%20Nexus%2C%20I%20am%20requesting%20partner%20clearance%20for%20the%20commercial%20portal."
+              href="https://wa.me/919994845296?text=Hello%20Santal%20Nexus%2C%20I%20am%20requesting%20partner%20clearance%20for%20the%20commercial%20portal."
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-primary"
@@ -71,9 +71,9 @@ export default function Forbidden() {
 
           <div className="error-support-footer">
             <span>Direct Desk: </span>
-            <a href="tel:+919994640141">+91 99946 40141</a>
+            <a href="tel:+919994845296">+91 99948 45296</a>
             <span className="sep">•</span>
-            <a href="mailto:santalnexus@gmail.com">santalnexus@gmail.com</a>
+            <a href="mailto:info@santalnexus.com">info@santalnexus.com</a>
           </div>
         </div>
       </div>

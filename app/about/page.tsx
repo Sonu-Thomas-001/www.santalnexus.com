@@ -504,7 +504,7 @@ export default function AboutPage() {
                   </svg>
                 </Link>
                 <a
-                  href="https://wa.me/919994640141?text=Hello%20Santal%20Nexus%2C%20I%20would%20like%20to%20discuss%20fresh%20produce%20procurement."
+                  href="https://wa.me/919994845296?text=Hello%20Santal%20Nexus%2C%20I%20would%20like%20to%20discuss%20fresh%20produce%20procurement."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn btn-outline-light"

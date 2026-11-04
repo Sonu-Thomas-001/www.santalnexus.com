@@ -4,8 +4,8 @@ A modern, high-performance web portal built with **Next.js (App Router)**, **Typ
 
 - **Brand Slogan:** *Expanding Beyond Borders*
 - **Registered Base:** Building No. 391/3, Opp. UCO Bank, Dindigul Main Road, T. Vadiapatti, Madurai – 625218, Tamil Nadu, India
-- **Commercial Lead & Founder:** Bala Chellapandiyan (+91 99946 40141)
-- **Official Email:** `santalnexus@gmail.com`
+- **Commercial Lead & Founder:** Bala Chellapandiyan (+91 99948 45296)
+- **Official Email:** `info@santalnexus.com`
 - **Domain:** [https://www.santalnexus.com](https://www.santalnexus.com)
 
 ---
@@ -61,7 +61,7 @@ www.santalnexus.com/
 ## 2. Key Features
 
 - **Next.js App Router + TypeScript:** Modern type-safe architecture with static prerendering for near-instant page loads.
-- **Dual-Channel Lead Capture:** Interactive quote and RFQ forms that automatically generate structured WhatsApp inquiries (+91 99946 40141) and direct email fallbacks.
+- **Dual-Channel Lead Capture:** Interactive quote and RFQ forms that automatically generate structured WhatsApp inquiries (+91 99948 45296) and direct email fallbacks.
 - **Dynamic Produce Filtering:** Instant filtering between Vegetables, Fruits, Leafy Greens, and Exotics with specifications and packaging sizes.
 - **Export Logistics Hub:** Complete breakdown of shipping corridors (Malaysia, Singapore, GCC, Europe), Incoterms (FOB, CIF, CFR), and Reefer container capacities.
 - **SEO & Social Optimization:** Schema.org JSON-LD structured data, OpenGraph tags, and semantic HTML5 hierarchy.

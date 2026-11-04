@@ -256,7 +256,7 @@ export default function TeamPage() {
               </p>
             </div>
             <div className="careers-cta">
-              <a href="mailto:santalnexus@gmail.com?subject=Career%20Application%20at%20Santal%20Nexus" className="btn btn-gold">
+              <a href="mailto:info@santalnexus.com?subject=Career%20Application%20at%20Santal%20Nexus" className="btn btn-gold">
                 <span>Send Your Resume</span>
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                   <line x1="5" y1="12" x2="19" y2="12"></line>
@@ -289,7 +289,7 @@ export default function TeamPage() {
                 </svg>
               </Link>
               <a
-                href="https://wa.me/919994640141?text=Hello%20Santal%20Nexus%2C%20I%20would%20like%20to%20connect%20with%20your%20team."
+                href="https://wa.me/919994845296?text=Hello%20Santal%20Nexus%2C%20I%20would%20like%20to%20connect%20with%20your%20team."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-whatsapp"

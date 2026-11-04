@@ -49,8 +49,8 @@ export default function CookiePolicyPage() {
             <div className="toc-support-card">
               <h5>Privacy Desk</h5>
               <p>For inquiries regarding digital tracking or telemetry, connect with our compliance desk.</p>
-              <a href="mailto:santalnexus@gmail.com" className="btn btn-outline-dark btn-sm">
-                santalnexus@gmail.com
+              <a href="mailto:info@santalnexus.com" className="btn btn-outline-dark btn-sm">
+                info@santalnexus.com
               </a>
             </div>
           </aside>
@@ -135,7 +135,7 @@ export default function CookiePolicyPage() {
                 Santal Nexus Compliance Secretariat<br />
                 Building No. 391/3, Opp. UCO Bank, Dindigul Main Road,<br />
                 T. Vadiapatti, Madurai – 625218, Tamil Nadu, India<br />
-                <strong>Direct Desk:</strong> <a href="tel:+919994640141">+91 99946 40141</a> · <strong>Email:</strong> <a href="mailto:santalnexus@gmail.com">santalnexus@gmail.com</a>
+                <strong>Direct Desk:</strong> <a href="tel:+919994845296">+91 99948 45296</a> · <strong>Email:</strong> <a href="mailto:info@santalnexus.com">info@santalnexus.com</a>
               </div>
             </section>
           </article>

@@ -73,7 +73,7 @@ export default function OfflineIndicator() {
 
         {isOffline && (
           <a
-            href="tel:+919994640141"
+            href="tel:+919994845296"
             className="offline-call-btn"
             aria-label="Direct phone line"
           >

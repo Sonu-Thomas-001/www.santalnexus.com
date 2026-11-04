@@ -61,7 +61,7 @@ export default function ContactForm({ compact = false }: ContactFormProps) {
     ];
 
     const encoded = encodeURIComponent(messageLines.join('\n'));
-    window.open(`https://wa.me/919994640141?text=${encoded}`, '_blank', 'noopener,noreferrer');
+    window.open(`https://wa.me/919994845296?text=${encoded}`, '_blank', 'noopener,noreferrer');
 
     setSubmittedStatus({
       type: 'success',
@@ -78,7 +78,7 @@ export default function ContactForm({ compact = false }: ContactFormProps) {
       `Name: ${formData.fullName}\nEmail: ${formData.businessEmail}\nPhone: ${formData.phone}\nCategory: ${formData.enquiryType}\nDestination: ${formData.destination}\nQuantity: ${formData.quantity}\n\nRequirements:\n${formData.requirements}`
     );
 
-    window.location.href = `mailto:santalnexus@gmail.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:info@santalnexus.com?subject=${subject}&body=${body}`;
 
     setSubmittedStatus({
       type: 'success',
@@ -185,7 +185,7 @@ export default function ContactForm({ compact = false }: ContactFormProps) {
               id="phone"
               name="phone"
               className="form-input"
-              placeholder="e.g. +91 99946 40141"
+              placeholder="e.g. +91 99948 45296"
               value={formData.phone}
               onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
             />

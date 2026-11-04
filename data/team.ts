@@ -108,12 +108,12 @@ export const FUNCTIONAL_DESKS = [
     title: 'Corporate Admin & Talent Desk',
     lead: 'Lead: Mrs. Hemavathy · Operations HQ: Madurai',
     scope: 'Manages statutory registrations, APEDA trade compliance, workforce welfare, recruitment of field specialists, and operational governance.',
-    contact: 'Corporate Desk: santalnexus@gmail.com',
+    contact: 'Corporate Desk: info@santalnexus.com',
   },
   {
     title: 'Commercial Finance & Accounts Desk',
     lead: 'Lead: Mrs. Priya Shesan · Trade Finance Unit',
     scope: 'Oversees trade billing, Letter of Credit (LC) / TT coordination, timely farmer disbursements, shipping line invoicing, and financial documentation.',
-    contact: 'Accounts Desk: +91 99946 40141',
+    contact: 'Accounts Desk: +91 99948 45296',
   },
 ];

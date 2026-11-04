@@ -136,3 +136,4 @@ export default function ProduceTicker() {
     </section>
   );
 }
+

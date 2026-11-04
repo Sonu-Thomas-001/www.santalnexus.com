@@ -794,7 +794,7 @@ export default function HomePage() {
                 </svg>
               </Link>
               <a
-                href="https://wa.me/919994640141?text=Hello%20Santal%20Nexus%2C%20I%20would%20like%20to%20enquire%20about%20fresh%20produce%20sourcing."
+                href="https://wa.me/919994845296?text=Hello%20Santal%20Nexus%2C%20I%20would%20like%20to%20enquire%20about%20fresh%20produce%20sourcing."
                 className="btn btn-whatsapp"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -844,7 +844,7 @@ export default function HomePage() {
                   </div>
                   <div className="contact-item-text">
                     <span>Direct Telephone</span>
-                    <p><a href="tel:+919994640141">+91 99946 40141</a></p>
+                    <p><a href="tel:+919994845296">+91 99948 45296</a></p>
                   </div>
                 </div>
 
@@ -857,7 +857,7 @@ export default function HomePage() {
                   </div>
                   <div className="contact-item-text">
                     <span>Business Email</span>
-                    <p><a href="mailto:santalnexus@gmail.com">santalnexus@gmail.com</a></p>
+                    <p><a href="mailto:info@santalnexus.com">info@santalnexus.com</a></p>
                   </div>
                 </div>
 

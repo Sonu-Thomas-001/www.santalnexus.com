@@ -52,7 +52,7 @@ export default function PrivacyPolicyPage() {
             <div className="toc-support-card">
               <h5>Questions regarding your data?</h5>
               <p>Our designated compliance desk is available for official inquiries.</p>
-              <a href="mailto:santalnexus@gmail.com" className="btn btn-outline-dark btn-sm">
+              <a href="mailto:info@santalnexus.com" className="btn btn-outline-dark btn-sm">
                 Email Compliance Desk
               </a>
             </div>
@@ -66,7 +66,7 @@ export default function PrivacyPolicyPage() {
                 <strong>Santal Nexus</strong> (&ldquo;Company&rdquo;, &ldquo;we&rdquo;, &ldquo;us&rdquo;, or &ldquo;our&rdquo;) operates an agricultural trading, sourcing, and international export enterprise headquartered at <em>Building No. 391/3, Opp. UCO Bank, Dindigul Main Road, T. Vadiapatti, Madurai – 625218, Tamil Nadu, India</em>.
               </p>
               <p>
-                This Privacy Policy establishes how we collect, process, manage, and safeguard commercial information, representative credentials, and personal data gathered through <strong>santalnexus.com</strong>, official WhatsApp channels (+91 99946 40141), commercial emails, and international trade desks.
+                This Privacy Policy establishes how we collect, process, manage, and safeguard commercial information, representative credentials, and personal data gathered through <strong>santalnexus.com</strong>, official WhatsApp channels (+91 99948 45296), commercial emails, and international trade desks.
               </p>
             </section>
 
@@ -145,8 +145,8 @@ export default function PrivacyPolicyPage() {
                 Santal Nexus Export Desk<br />
                 Building No. 391/3, Opp. UCO Bank, Dindigul Main Road,<br />
                 T. Vadiapatti, Madurai – 625218, Tamil Nadu, India<br />
-                <strong>Direct Phone / WhatsApp:</strong> <a href="tel:+919994640141">+91 99946 40141</a><br />
-                <strong>Official Email:</strong> <a href="mailto:santalnexus@gmail.com">santalnexus@gmail.com</a>
+                <strong>Direct Phone / WhatsApp:</strong> <a href="tel:+919994845296">+91 99948 45296</a><br />
+                <strong>Official Email:</strong> <a href="mailto:info@santalnexus.com">info@santalnexus.com</a>
               </div>
             </section>
           </article>

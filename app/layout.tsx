@@ -101,8 +101,8 @@ const jsonLd = {
   image: 'https://www.santalnexus.com/assets/images/fresh-produce-hero.jpg',
   description:
     'India-based fresh fruits and vegetables trading business focused on B2B sourcing, wholesale supply coordination and international trade opportunities.',
-  telephone: '+919994640141',
-  email: 'santalnexus@gmail.com',
+  telephone: '+919994845296',
+  email: 'info@santalnexus.com',
   founder: {
     '@type': 'Person',
     name: 'Bala Chellapandiyan',

@@ -44,7 +44,7 @@ export default function ExportRfqForm() {
     }
 
     const encoded = encodeURIComponent(buildMessage());
-    window.open(`https://wa.me/919994640141?text=${encoded}`, '_blank', 'noopener,noreferrer');
+    window.open(`https://wa.me/919994845296?text=${encoded}`, '_blank', 'noopener,noreferrer');
     setFeedback('WhatsApp launched with your completed RFQ specifications.');
   };
 
@@ -58,8 +58,8 @@ export default function ExportRfqForm() {
     const subject = encodeURIComponent(`Export RFQ: ${rfq.produce} to ${rfq.destinationPort} - ${rfq.company}`);
     const body = encodeURIComponent(buildMessage());
 
-    window.location.href = `mailto:santalnexus@gmail.com?subject=${subject}&body=${body}`;
-    setFeedback('Email client opened with your RFQ details addressed to santalnexus@gmail.com.');
+    window.location.href = `mailto:info@santalnexus.com?subject=${subject}&body=${body}`;
+    setFeedback('Email client opened with your RFQ details addressed to info@santalnexus.com.');
   };
 
   return (

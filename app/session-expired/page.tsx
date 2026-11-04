@@ -90,8 +90,8 @@ export default function SessionExpiredPage() {
 
           <div className="error-support-footer">
             <span>Need active contract help? WhatsApp Dispatch: </span>
-            <a href="https://wa.me/919994640141" target="_blank" rel="noopener noreferrer">
-              +91 99946 40141
+            <a href="https://wa.me/919994845296" target="_blank" rel="noopener noreferrer">
+              +91 99948 45296
             </a>
           </div>
         </div>

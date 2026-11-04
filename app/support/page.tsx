@@ -39,7 +39,7 @@ export default function SupportPage() {
     ];
 
     const encoded = encodeURIComponent(messageLines.join('\n'));
-    window.open(`https://wa.me/919994640141?text=${encoded}`, '_blank', 'noopener,noreferrer');
+    window.open(`https://wa.me/919994845296?text=${encoded}`, '_blank', 'noopener,noreferrer');
     setSubmittedStatus('Support request launched on WhatsApp. Our dispatch lead will respond promptly.');
   };
 
@@ -56,7 +56,7 @@ export default function SupportPage() {
         </svg>
       ),
       actionText: 'Track Shipment & Loggers',
-      actionLink: 'https://wa.me/919994640141?text=Hello%20Santal%20Nexus%2C%20I%20would%20like%20to%20verify%20my%20container%20tracking%20and%20reefer%20telematics.',
+      actionLink: 'https://wa.me/919994845296?text=Hello%20Santal%20Nexus%2C%20I%20would%20like%20to%20verify%20my%20container%20tracking%20and%20reefer%20telematics.',
     },
     {
       title: 'Phytosanitary & APEDA Clearance',
@@ -71,7 +71,7 @@ export default function SupportPage() {
         </svg>
       ),
       actionText: 'Request Export Documents',
-      actionLink: 'https://wa.me/919994640141?text=Hello%20Santal%20Nexus%2C%20I%20need%20assistance%20with%20Phytosanitary%20or%20export%20documentation.',
+      actionLink: 'https://wa.me/919994845296?text=Hello%20Santal%20Nexus%2C%20I%20need%20assistance%20with%20Phytosanitary%20or%20export%20documentation.',
     },
     {
       title: 'Quality & Packhouse Calibration',
@@ -83,7 +83,7 @@ export default function SupportPage() {
         </svg>
       ),
       actionText: 'Inspect Quality Reports',
-      actionLink: 'https://wa.me/919994640141?text=Hello%20Santal%20Nexus%2C%20I%20have%20an%20inquiry%20regarding%20produce%20quality%20and%20packhouse%20inspection.',
+      actionLink: 'https://wa.me/919994845296?text=Hello%20Santal%20Nexus%2C%20I%20have%20an%20inquiry%20regarding%20produce%20quality%20and%20packhouse%20inspection.',
     },
     {
       title: 'Payment, LC & Contract Support',
@@ -95,7 +95,7 @@ export default function SupportPage() {
         </svg>
       ),
       actionText: 'Contact Banking Desk',
-      actionLink: 'https://wa.me/919994640141?text=Hello%20Santal%20Nexus%2C%20I%20need%20assistance%20with%20an%20LC%20or%20banking%20documentation.',
+      actionLink: 'https://wa.me/919994845296?text=Hello%20Santal%20Nexus%2C%20I%20need%20assistance%20with%20an%20LC%20or%20banking%20documentation.',
     },
   ];
 
@@ -168,7 +168,7 @@ export default function SupportPage() {
             </p>
 
             <div className="escalation-contacts-stack">
-              <a href="tel:+919994640141" className="escalation-contact-row">
+              <a href="tel:+919994845296" className="escalation-contact-row">
                 <div className="esc-icon" aria-hidden="true">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="20" height="20">
                     <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
@@ -176,11 +176,11 @@ export default function SupportPage() {
                 </div>
                 <div className="esc-info">
                   <span className="esc-label">24/7 Trade Hotline</span>
-                  <span className="esc-value">+91 99946 40141</span>
+                  <span className="esc-value">+91 99948 45296</span>
                 </div>
               </a>
 
-              <a href="mailto:santalnexus@gmail.com" className="escalation-contact-row">
+              <a href="mailto:info@santalnexus.com" className="escalation-contact-row">
                 <div className="esc-icon" aria-hidden="true">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="20" height="20">
                     <rect width="20" height="16" x="2" y="4" rx="2" />
@@ -189,7 +189,7 @@ export default function SupportPage() {
                 </div>
                 <div className="esc-info">
                   <span className="esc-label">Priority Trade Email</span>
-                  <span className="esc-value">santalnexus@gmail.com</span>
+                  <span className="esc-value">info@santalnexus.com</span>
                 </div>
               </a>
 
@@ -333,7 +333,7 @@ export default function SupportPage() {
                 </button>
 
                 <a
-                  href={`mailto:santalnexus@gmail.com?subject=${encodeURIComponent(`Support Request: ${ticketData.category} - ${ticketData.name}`)}&body=${encodeURIComponent(`Name: ${ticketData.name}\nEmail: ${ticketData.email}\nPhone: ${ticketData.phone}\nRef: ${ticketData.orderRef}\nPriority: ${ticketData.priority}\n\nDetails:\n${ticketData.description}`)}`}
+                  href={`mailto:info@santalnexus.com?subject=${encodeURIComponent(`Support Request: ${ticketData.category} - ${ticketData.name}`)}&body=${encodeURIComponent(`Name: ${ticketData.name}\nEmail: ${ticketData.email}\nPhone: ${ticketData.phone}\nRef: ${ticketData.orderRef}\nPriority: ${ticketData.priority}\n\nDetails:\n${ticketData.description}`)}`}
                   className="btn-form-email"
                 >
                   <span>Send Ticket via Email</span>
