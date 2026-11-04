@@ -18,8 +18,8 @@ export const TEAM_MEMBERS: TeamMember[] = [
     badge: 'FOUNDER & CEO',
     pillars: 'Vision | Strategy | Growth',
     bio: 'With a strong passion for agriculture, trade and global markets, Bala Chellapandiyan founded Santal Nexus to connect Indian fresh produce with the world. He leads the company\'s vision, strategy and business growth, ensuring long-term value for farmers, partners and customers.',
-    photoWebp: '/assets/images/team/bala-chellapandiyan.webp',
-    photoJpg: '/assets/images/team/bala-chellapandiyan.jpg',
+    photoWebp: '/assets/images/team/BalaChellapandiyan(Founder).jpeg',
+    photoJpg: '/assets/images/team/BalaChellapandiyan(Founder).jpeg',
     desk: 'Executive Management & Global Commercial Partnerships',
   },
   {

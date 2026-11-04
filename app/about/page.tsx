@@ -181,7 +181,114 @@ export default function AboutPage() {
       </section>
 
       {/* ====================================================================
-           SECTION 4: WHY CHOOSE US?
+           SECTION 4: FOUNDER & LEADERSHIP
+           ==================================================================== */}
+      <section className="section-padding about-founder-section" aria-label="Founder and Leadership">
+        <div className="container">
+          <div className="about-founder-grid">
+            {/* Left: Founder Portrait Card */}
+            <div className="founder-card-visual reveal-on-scroll">
+              <div className="founder-card-inner">
+                <div className="founder-card-photo-wrap">
+                  <img
+                    src="/assets/images/team/BalaChellapandiyan(Founder).jpeg"
+                    alt="Bala Chellapandiyan - Founder and CEO of Santal Nexus"
+                    width={480}
+                    height={420}
+                    loading="lazy"
+                  />
+                  <span className="founder-card-badge">Founder &amp; CEO</span>
+                </div>
+                <div className="founder-card-meta">
+                  <h3 className="founder-card-name">Bala Chellapandiyan</h3>
+                  <p className="founder-card-role">Founder &amp; Chief Executive Officer</p>
+                  <p className="founder-card-desk">
+                    Executive Leadership &bull; Direct Farm Sourcing &bull; Global Trade Partnerships
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Right: Leadership Narrative & Vision */}
+            <div className="about-founder-content reveal-on-scroll">
+              <div className="about-eyebrow-wrap">
+                <span className="gold-dash" aria-hidden="true"></span>
+                <span className="about-eyebrow">LEADERSHIP &amp; VISION</span>
+              </div>
+
+              <h2 className="about-founder-heading">
+                Rooted in Agriculture. Driven by Global Trust.
+              </h2>
+
+              <div className="founder-quote-callout">
+                <p>
+                  &ldquo;Agriculture is far more than trade for us; it is a sacred trust between the farmer who nurtures the soil in Tamil Nadu and the global family who savors the harvest thousands of miles away.&rdquo;
+                </p>
+              </div>
+
+              <div className="about-founder-bio">
+                <p>
+                  With an enduring commitment to Indian agriculture and rural farming livelihoods, Bala Chellapandiyan founded Santal Nexus to connect South India&apos;s fertile harvest corridors directly with high-demand domestic and international markets.
+                </p>
+                <p>
+                  Headquartered in Madurai, he steers strategic farm-gate procurement, strict sorting standards, and cold-chain integrity. Under his stewardship, Santal Nexus champions transparent trade relationships that guarantee equitable returns for local growers and dependable, export-grade produce for international partners.
+                </p>
+              </div>
+
+              <div className="founder-pillars-row">
+                <div className="founder-pillar-pill">
+                  <div className="founder-pillar-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                      <path d="m9 12 2 2 4-4" />
+                    </svg>
+                  </div>
+                  <span className="founder-pillar-text">Direct Farmer Alliances</span>
+                </div>
+
+                <div className="founder-pillar-pill">
+                  <div className="founder-pillar-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <circle cx="12" cy="12" r="10" />
+                      <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
+                      <path d="M2 12h20" />
+                    </svg>
+                  </div>
+                  <span className="founder-pillar-text">APEDA Certified Exporter</span>
+                </div>
+
+                <div className="founder-pillar-pill">
+                  <div className="founder-pillar-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <rect x="1" y="3" width="15" height="13"></rect>
+                      <polygon points="16 8 20 8 23 11 23 16 16 16 8"></polygon>
+                      <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                      <circle cx="18.5" cy="18.5" r="2.5"></circle>
+                    </svg>
+                  </div>
+                  <span className="founder-pillar-text">Cold-Chain Precision</span>
+                </div>
+              </div>
+
+              <div className="about-founder-actions">
+                <Link href="/team" className="btn btn-gold">
+                  <span>Meet Our Leadership Team</span>
+                  <svg className="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </Link>
+                <Link href="/contact" className="btn btn-outline-dark">
+                  <span>Connect with Trade Desk</span>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ====================================================================
+           SECTION 5: WHY CHOOSE US?
            ==================================================================== */}
       <section className="section-padding about-why-section" aria-label="Why Choose Santal Nexus">
         <div className="container">
@@ -272,7 +379,7 @@ export default function AboutPage() {
       </section>
 
       {/* ====================================================================
-           SECTION 5: OPERATIONAL PILLARS
+           SECTION 6: OPERATIONAL PILLARS
            ==================================================================== */}
       <section className="section-padding section-ivory about-pillars-section" aria-label="Our Operational Pillars">
         <div className="container">
@@ -342,7 +449,7 @@ export default function AboutPage() {
       </section>
 
       {/* ====================================================================
-           SECTION 6: MADURAI SOURCING STRIP
+           SECTION 7: MADURAI SOURCING STRIP
            ==================================================================== */}
       <section className="about-region-strip" aria-label="Madurai Sourcing Advantage">
         <div className="container">
@@ -377,7 +484,7 @@ export default function AboutPage() {
       </section>
 
       {/* ====================================================================
-           SECTION 7: CALL TO ACTION BANNER
+           SECTION 8: CALL TO ACTION BANNER
            ==================================================================== */}
       <section className="about-cta-section" aria-label="Partner With Us">
         <div className="container">

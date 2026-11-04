@@ -9216,3 +9216,286 @@ a.escalation-contact-row:hover {
   object-fit: cover;
   display: block;
 }
+
+/* ====================================================================
+   ABOUT US: FOUNDER SECTION & HOME CALLOUT
+   ==================================================================== */
+.about-founder-section {
+  background-color: #FAF8F5;
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  position: relative;
+  overflow: hidden;
+}
+
+.about-founder-grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.25fr;
+  gap: clamp(2.5rem, 5vw, 4.5rem);
+  align-items: center;
+}
+
+.founder-card-visual {
+  position: relative;
+}
+
+.founder-card-inner {
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 16px 40px -10px rgba(16, 39, 29, 0.16);
+  border: 1px solid rgba(215, 180, 90, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.founder-card-inner:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 48px -10px rgba(16, 39, 29, 0.22);
+}
+
+.founder-card-photo-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3.8;
+  overflow: hidden;
+  background-color: var(--color-primary-dark);
+}
+
+.founder-card-photo-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+  transition: transform 0.4s ease;
+}
+
+.founder-card-inner:hover .founder-card-photo-wrap img {
+  transform: scale(1.03);
+}
+
+.founder-card-badge {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background: linear-gradient(135deg, #F3D48B 0%, #D7B45A 100%);
+  color: var(--color-primary-dark);
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  padding: 0.35rem 0.85rem;
+  border-radius: 9999px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  text-transform: uppercase;
+}
+
+.founder-card-meta {
+  padding: 1.5rem 1.75rem 1.75rem;
+  text-align: center;
+  background: var(--color-white);
+  border-top: 1px solid rgba(215, 180, 90, 0.2);
+}
+
+.founder-card-name {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 0.25rem;
+}
+
+.founder-card-role {
+  font-size: 0.9rem;
+  color: var(--color-gold-dark);
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  margin-bottom: 0.75rem;
+}
+
+.founder-card-desk {
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+  line-height: 1.45;
+  border-top: 1px dashed rgba(215, 180, 90, 0.3);
+  padding-top: 0.75rem;
+  margin: 0;
+}
+
+.about-founder-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-founder-heading {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 3.2vw, 2.75rem);
+  color: var(--color-primary);
+  line-height: 1.25;
+  margin-top: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.founder-quote-callout {
+  background: linear-gradient(135deg, rgba(16, 39, 29, 0.04) 0%, rgba(215, 180, 90, 0.08) 100%);
+  border-left: 3px solid var(--color-gold);
+  border-radius: 0 12px 12px 0;
+  padding: 1.15rem 1.5rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.founder-quote-callout p {
+  font-family: var(--font-serif);
+  font-size: clamp(1.05rem, 1.4vw, 1.2rem);
+  font-style: italic;
+  color: var(--color-primary);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.about-founder-bio {
+  color: var(--color-text-muted);
+  font-size: 1rem;
+  line-height: 1.75;
+  margin-bottom: 1.75rem;
+}
+
+.about-founder-bio p {
+  margin-bottom: 0.85rem;
+}
+
+.about-founder-bio p:last-child {
+  margin-bottom: 0;
+}
+
+.founder-pillars-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.founder-pillar-pill {
+  background: var(--color-white);
+  border: 1px solid rgba(215, 180, 90, 0.3);
+  border-radius: 10px;
+  padding: 0.85rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.founder-pillar-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(215, 180, 90, 0.15);
+  color: var(--color-gold-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.founder-pillar-icon svg {
+  width: 16px;
+  height: 16px;
+}
+
+.founder-pillar-text {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  line-height: 1.35;
+}
+
+.about-founder-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+}
+
+/* Home Page: About Founder Callout */
+.about-founder-callout {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  background: var(--color-white);
+  border: 1px solid rgba(215, 180, 90, 0.3);
+  border-radius: 12px;
+  padding: 1.15rem 1.35rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+}
+
+.founder-callout-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid var(--color-gold);
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.founder-callout-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.founder-callout-content {
+  flex: 1;
+}
+
+.founder-callout-quote {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--color-primary);
+  margin-bottom: 0.4rem;
+}
+
+.founder-callout-author {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+
+.founder-callout-author strong {
+  color: var(--color-primary);
+  margin-right: 0.35rem;
+}
+
+.founder-callout-author span {
+  color: var(--color-gold-dark);
+  font-weight: 600;
+}
+
+@media (max-width: 991px) {
+  .about-founder-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  .founder-card-visual {
+    max-width: 440px;
+    margin: 0 auto;
+    width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .founder-pillars-row {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+  .about-founder-callout {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.85rem;
+  }
+}

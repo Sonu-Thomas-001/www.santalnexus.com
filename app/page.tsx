@@ -169,6 +169,27 @@ export default function HomePage() {
                 </p>
               </div>
 
+              {/* Founder Spotlight with Photo */}
+              <div className="about-founder-callout reveal-on-scroll">
+                <div className="founder-callout-avatar">
+                  <img
+                    src="/assets/images/team/BalaChellapandiyan(Founder).jpeg"
+                    alt="Bala Chellapandiyan - Founder & CEO"
+                    width={60}
+                    height={60}
+                    loading="lazy"
+                  />
+                </div>
+                <div className="founder-callout-content">
+                  <p className="founder-callout-quote">
+                    &ldquo;Connecting Indian fresh produce with global markets on a foundation of trust, quality, and direct farmer partnerships.&rdquo;
+                  </p>
+                  <div className="founder-callout-author">
+                    <strong>Bala Chellapandiyan</strong> &bull; <span>Founder &amp; CEO</span>
+                  </div>
+                </div>
+              </div>
+
               <div>
                 <Link href="/about" className="btn btn-outline-dark">
                   <span>Learn More About Us</span>

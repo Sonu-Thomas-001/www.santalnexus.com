@@ -67,17 +67,14 @@ export default function TeamPage() {
             </blockquote>
             <div className="founder-quote-author">
               <div className="founder-avatar-wrap">
-                <picture>
-                  <source srcSet="/assets/images/team/bala-chellapandiyan.webp" type="image/webp" />
-                  <img
-                    src="/assets/images/team/bala-chellapandiyan.jpg"
-                    alt="Bala Chellapandiyan - Founder & CEO"
-                    className="founder-avatar-img"
-                    width={90}
-                    height={90}
-                    loading="lazy"
-                  />
-                </picture>
+                <img
+                  src="/assets/images/team/BalaChellapandiyan(Founder).jpeg"
+                  alt="Bala Chellapandiyan - Founder & CEO"
+                  className="founder-avatar-img"
+                  width={90}
+                  height={90}
+                  loading="lazy"
+                />
               </div>
               <span className="author-name">Bala Chellapandiyan</span>
               <span className="author-title">Founder &amp; CEO · Santal Nexus</span>
