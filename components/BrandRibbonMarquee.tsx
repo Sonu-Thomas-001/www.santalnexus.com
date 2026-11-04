@@ -35,7 +35,7 @@ export default function BrandRibbonMarquee() {
         <div className="ribbon-track ribbon-track-left">
           {listA.map((item, idx) => (
             <span key={`ribbon-a-${idx}`} className="ribbon-item">
-              <span className="ribbon-star">&starf;</span>
+              <span className="ribbon-star">★</span>
               <span>{item}</span>
             </span>
           ))}
@@ -47,7 +47,7 @@ export default function BrandRibbonMarquee() {
         <div className="ribbon-track ribbon-track-right">
           {listB.map((item, idx) => (
             <span key={`ribbon-b-${idx}`} className="ribbon-item">
-              <span className="ribbon-gem">&diams;</span>
+              <span className="ribbon-gem">✦</span>
               <span>{item}</span>
             </span>
           ))}
