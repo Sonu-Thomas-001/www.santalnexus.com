@@ -100,8 +100,8 @@ export default function TeamPage() {
                   src="/assets/images/team/BalaChellapandiyan(Founder).jpeg"
                   alt="Bala Chellapandiyan - Founder & CEO"
                   className="founder-avatar-img"
-                  width={90}
-                  height={90}
+                  width={120}
+                  height={120}
                   loading="lazy"
                 />
               </div>

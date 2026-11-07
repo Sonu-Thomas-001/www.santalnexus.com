@@ -106,8 +106,8 @@ export default function HomePage() {
                     <img
                       src="/assets/images/team/BalaChellapandiyan(Founder).jpeg"
                       alt="Bala Chellapandiyan - Founder & CEO"
-                      width={64}
-                      height={64}
+                      width={110}
+                      height={110}
                       loading="lazy"
                     />
                   </div>
