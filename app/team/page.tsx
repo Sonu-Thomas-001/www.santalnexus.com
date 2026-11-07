@@ -63,7 +63,7 @@ export default function TeamPage() {
         <div className="container page-hero-container">
           <div className="page-hero-content">
             <span className="team-hero-eyebrow">OUR TEAM</span>
-            <h1 className="page-hero-title">Strong People. Global Vision.</h1>
+            <h1 className="page-hero-title">Dedicated Operations &amp; Trade Specialists</h1>
             <p className="page-hero-subtitle">
               Meet the dedicated team behind Santal Nexus, working together to bring the best of Indian fresh produce to the world.
             </p>
@@ -208,11 +208,11 @@ export default function TeamPage() {
       {/* ====================================================================
            SECTION 5: PRIMARY TEAM GRID & CAPABILITY STRIP (AT LAST DOWN)
            ==================================================================== */}
-      <section className="section-padding team-section" id="team-members" aria-label="Leadership and Team Profiles">
+      <section className="section-padding team-section" id="team-members" aria-label="Operations and Trade Specialists">
         <div className="container">
           <div className="section-intro-center reveal-on-scroll">
             <span className="section-eyebrow">Our Team</span>
-            <h2 className="section-heading">Dedicated Leadership &amp; Trade Specialists</h2>
+            <h2 className="section-heading">Dedicated Operations &amp; Trade Specialists</h2>
             <p className="section-subtext">
               Meet the specialists coordinating procurement, quality auditing, logistics, and partner relations at Santal Nexus.
             </p>

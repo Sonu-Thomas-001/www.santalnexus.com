@@ -2,8 +2,6 @@ import React from 'react';
 import Link from 'next/link';
 import ContactForm from '@/components/ContactForm';
 import PartnerMarquee from '@/components/PartnerMarquee';
-import ProduceTicker from '@/components/ProduceTicker';
-import TradeRouteMarquee from '@/components/TradeRouteMarquee';
 import BrandRibbonMarquee from '@/components/BrandRibbonMarquee';
 import { TEAM_MEMBERS } from '@/data/team';
 
@@ -252,8 +250,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
-      <ProduceTicker />
 
       {/* ====================================================================
            SECTION 4: PRODUCT CATEGORIES
@@ -596,8 +592,6 @@ export default function HomePage() {
             </div>
           </div>
 
-          <TradeRouteMarquee />
-
           <div className="export-showcase-box reveal-on-scroll">
             <div className="export-showcase-left">
               <span className="section-eyebrow no-rule">International Supply</span>
@@ -736,7 +730,7 @@ export default function HomePage() {
         <div className="container">
           <div className="section-intro-center reveal-on-scroll">
             <span className="section-eyebrow">Our Team</span>
-            <h2 className="section-heading">Strong People. Global Vision.</h2>
+            <h2 className="section-heading">Dedicated Operations &amp; Trade Specialists</h2>
             <p className="section-subtext">
               Meet the dedicated team behind Santal Nexus, working together to bring the best of Indian fresh produce to the world.
             </p>

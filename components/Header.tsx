@@ -76,8 +76,8 @@ export default function Header() {
                 src="/assets/logos/santal-nexus-dark.png"
                 alt="Santal Nexus Logo"
                 className="brand-logo-img"
-                width={240}
-                height={66}
+                width={180}
+                height={48}
                 loading="eager"
               />
             </picture>

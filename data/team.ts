@@ -10,17 +10,29 @@ export interface TeamMember {
   desk?: string;
 }
 
+export const FOUNDER: TeamMember = {
+  id: 'bala-chellapandiyan',
+  name: 'Bala Chellapandiyan',
+  role: 'Founder & CEO',
+  badge: 'FOUNDER & CEO',
+  pillars: 'Vision | Strategy | Growth',
+  bio: 'With a strong passion for agriculture, trade and global markets, Bala Chellapandiyan founded Santal Nexus to connect Indian fresh produce with the world. He leads the company\'s vision, strategy and business growth, ensuring long-term value for farmers, partners and customers.',
+  photoWebp: '/assets/images/team/bala-chellapandiyan.jpeg',
+  photoJpg: '/assets/images/team/bala-chellapandiyan.jpeg',
+  desk: 'Executive Management & Global Commercial Partnerships',
+};
+
 export const TEAM_MEMBERS: TeamMember[] = [
   {
-    id: 'bala-chellapandiyan',
-    name: 'Bala Chellapandiyan',
-    role: 'Founder & CEO',
-    badge: 'FOUNDER & CEO',
-    pillars: 'Vision | Strategy | Growth',
-    bio: 'With a strong passion for agriculture, trade and global markets, Bala Chellapandiyan founded Santal Nexus to connect Indian fresh produce with the world. He leads the company\'s vision, strategy and business growth, ensuring long-term value for farmers, partners and customers.',
-    photoWebp: '/assets/images/team/bala-chellapandiyan.jpeg',
-    photoJpg: '/assets/images/team/bala-chellapandiyan.jpeg',
-    desk: 'Executive Management & Global Commercial Partnerships',
+    id: 'hemavathy',
+    name: 'Mrs. Hemavathy',
+    role: 'Administration and HR Manager',
+    badge: 'ADMIN & HR',
+    pillars: 'People | Operations | Governance',
+    bio: 'Mrs. Hemavathy oversees day-to-day corporate administration, human resources, statutory compliance, and organizational welfare. She fosters an empowering, performance-driven culture supporting smooth operations across all departments.',
+    photoWebp: '/assets/images/team/hemavathy.jpeg',
+    photoJpg: '/assets/images/team/hemavathy.jpeg',
+    desk: 'Corporate Administration, Talent Acquisition & Statutory Compliance',
   },
   {
     id: 'ashish-bhosale',
@@ -34,28 +46,6 @@ export const TEAM_MEMBERS: TeamMember[] = [
     desk: 'Farm Procurement, Regional Clusters & Grower Alliances',
   },
   {
-    id: 'shanmugamani-anand',
-    name: 'Shanmugamani Anand',
-    role: 'Operations & Quality Management',
-    badge: 'OPERATIONS & QUALITY',
-    pillars: 'Post-Harvest | APEDA Grading | Cold-Chain',
-    bio: 'Shanmugamani Anand oversees packhouse operations, sizing calibrators, APEDA export sorting standards, and cold-chain precision. He ensures produce arrives in pristine condition at destination sea and air ports worldwide.',
-    photoWebp: '/assets/images/team/shanmugamani-anand.jpeg',
-    photoJpg: '/assets/images/team/shanmugamani-anand.jpeg',
-    desk: 'Packhouse Sorting, Quality Auditing & Cold-Chain Protocol',
-  },
-  {
-    id: 'hemavathy',
-    name: 'Mrs. Hemavathy',
-    role: 'Administration and HR Manager',
-    badge: 'ADMIN & HR',
-    pillars: 'People | Operations | Governance',
-    bio: 'Mrs. Hemavathy oversees day-to-day corporate administration, human resources, statutory compliance, and organizational welfare. She fosters an empowering, performance-driven culture supporting smooth operations across all departments.',
-    photoWebp: '/assets/images/team/hemavathy.jpeg',
-    photoJpg: '/assets/images/team/hemavathy.jpeg',
-    desk: 'Corporate Administration, Talent Acquisition & Statutory Compliance',
-  },
-  {
     id: 'priya-shesan',
     name: 'Mrs. Priya Shesan',
     role: 'Accounts and Finance Executive',
@@ -65,6 +55,17 @@ export const TEAM_MEMBERS: TeamMember[] = [
     photoWebp: '/assets/images/team/priya-shesan.jpeg',
     photoJpg: '/assets/images/team/priya-shesan.jpeg',
     desk: 'Commercial Finance, Trade Settlements & Accounts Coordination',
+  },
+  {
+    id: 'shanmugamani-anand',
+    name: 'Shanmugamani Anand',
+    role: 'Operations & Quality Management',
+    badge: 'OPERATIONS & QUALITY',
+    pillars: 'Post-Harvest | APEDA Grading | Cold-Chain',
+    bio: 'Shanmugamani Anand oversees packhouse operations, sizing calibrators, APEDA export sorting standards, and cold-chain precision. He ensures produce arrives in pristine condition at destination sea and air ports worldwide.',
+    photoWebp: '/assets/images/team/shanmugamani-anand.jpeg',
+    photoJpg: '/assets/images/team/shanmugamani-anand.jpeg',
+    desk: 'Packhouse Sorting, Quality Auditing & Cold-Chain Protocol',
   },
 ];
 
@@ -93,27 +94,27 @@ export const TEAM_PILLARS = [
 
 export const FUNCTIONAL_DESKS = [
   {
-    title: 'Farm Procurement & Agronomy Desk',
-    lead: 'Lead: Ashish Bhosale · Clusters: Madurai, Theni, Dindigul, Nilgiris',
-    scope: 'Manages direct relationships with over 150+ certified smallholder farmers, harvest scheduling, pre-harvest pesticide screening, and field grading.',
-    contact: 'Direct Farm Visits Available by Appointment',
-  },
-  {
-    title: 'Packhouse & Quality Assurance Desk',
-    lead: 'Lead: Shanmugamani Anand · Facilities: Madurai & Tuticorin Packhouse Corridors',
-    scope: 'Supervises post-harvest cleaning, sizing calibrators, hydro-cooling/forced-air cooling, APEDA packaging compliance, and cold room storage.',
-    contact: 'Stringent Pre-dispatch Inspection Protocols',
-  },
-  {
     title: 'Corporate Admin & Talent Desk',
     lead: 'Lead: Mrs. Hemavathy · Operations HQ: Madurai',
     scope: 'Manages statutory registrations, APEDA trade compliance, workforce welfare, recruitment of field specialists, and operational governance.',
     contact: 'Corporate Desk: info@santalnexus.com',
   },
   {
+    title: 'Farm Procurement & Agronomy Desk',
+    lead: 'Lead: Ashish Bhosale · Clusters: Madurai, Theni, Dindigul, Nilgiris',
+    scope: 'Manages direct relationships with over 150+ certified smallholder farmers, harvest scheduling, pre-harvest pesticide screening, and field grading.',
+    contact: 'Direct Farm Visits Available by Appointment',
+  },
+  {
     title: 'Commercial Finance & Accounts Desk',
     lead: 'Lead: Mrs. Priya Shesan · Trade Finance Unit',
     scope: 'Oversees trade billing, Letter of Credit (LC) / TT coordination, timely farmer disbursements, shipping line invoicing, and financial documentation.',
     contact: 'Accounts Desk: +91 99948 45296',
+  },
+  {
+    title: 'Packhouse & Quality Assurance Desk',
+    lead: 'Lead: Shanmugamani Anand · Facilities: Madurai & Tuticorin Packhouse Corridors',
+    scope: 'Supervises post-harvest cleaning, sizing calibrators, hydro-cooling/forced-air cooling, APEDA packaging compliance, and cold room storage.',
+    contact: 'Stringent Pre-dispatch Inspection Protocols',
   },
 ];
