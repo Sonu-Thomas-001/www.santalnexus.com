@@ -65,7 +65,7 @@ export default function Header() {
   const isProduceActive = pathname.startsWith('/products');
 
   return (
-    <header className={`floating-header-wrapper ${isScrolled ? 'is-scrolled' : ''}`} id="siteHeader">
+    <header className={`floating-header-wrapper ${isScrolled ? 'is-scrolled' : ''} ${mobileMenuOpen ? 'menu-is-open' : ''}`} id="siteHeader">
       <div className="floating-navbar-island">
         {/* Left: Brand Identity Lockup */}
         <div className="header-left-cluster">

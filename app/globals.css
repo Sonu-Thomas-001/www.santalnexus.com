@@ -812,6 +812,27 @@ button, input, select, textarea {
   .floating-header-wrapper {
     top: 8px;
     padding: 0 0.75rem;
+    transition: top 0.25s ease, padding 0.25s ease, background 0.25s ease;
+  }
+  .floating-header-wrapper.menu-is-open {
+    top: 0 !important;
+    padding: 0 !important;
+    background: #0C1E16 !important;
+  }
+  .floating-header-wrapper.menu-is-open .floating-navbar-island {
+    border-radius: 0 !important;
+    border-left: none !important;
+    border-right: none !important;
+    border-top: none !important;
+    border-bottom: 1px solid rgba(215, 180, 90, 0.25) !important;
+    background: #0C1E16 !important;
+    padding: 0.65rem 1rem !important;
+    box-shadow: none !important;
+  }
+  .floating-header-wrapper.menu-is-open .main-nav {
+    top: 60px !important;
+    height: calc(100vh - 60px) !important;
+    height: calc(100dvh - 60px) !important;
   }
   .floating-navbar-island {
     padding: 0.5rem 0.85rem;
@@ -9169,26 +9190,125 @@ a.escalation-contact-row:hover {
   .header-top-bar {
     display: none;
   }
+  /* Mobile Produce Catalog Accordion Sub-Menu */
   .agri-catalog-menu {
-    position: static;
-    transform: none;
-    width: 100%;
-    max-width: 100%;
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
-    box-shadow: none;
-    border: none;
-    padding: 0.5rem 0 0.5rem 1rem;
-    background: transparent;
-    display: none;
+    position: static !important;
+    transform: none !important;
+    left: auto !important;
+    top: auto !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    background: rgba(0, 0, 0, 0.35) !important;
+    border: 1px solid rgba(215, 180, 90, 0.22) !important;
+    border-radius: 12px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    visibility: hidden;
+    pointer-events: none;
+    box-shadow: none !important;
+    transition: max-height 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+                opacity 0.28s ease,
+                padding 0.35s ease,
+                margin 0.35s ease,
+                visibility 0.35s ease !important;
   }
   .nav-item-dropdown.dropdown-open .agri-catalog-menu {
-    display: block;
+    display: block !important;
+    max-height: 1400px !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+    transform: none !important;
+    padding: 1rem 0.85rem !important;
+    margin-top: 0.65rem !important;
   }
   .agri-catalog-grid {
-    grid-template-columns: 1fr;
-    gap: 1rem;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1.15rem !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .agri-catalog-highlight {
+    display: none !important;
+  }
+  .agri-catalog-col {
+    width: 100% !important;
+  }
+  .catalog-col-title {
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.4rem !important;
+    font-size: 0.78rem !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.08em !important;
+    color: var(--color-gold) !important;
+    border-bottom: 1px solid rgba(215, 180, 90, 0.18) !important;
+    padding-bottom: 0.4rem !important;
+    margin-bottom: 0.55rem !important;
+  }
+  .catalog-links {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0.45rem !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    list-style: none !important;
+    width: 100% !important;
+  }
+  .catalog-links > li {
+    width: 100% !important;
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  .catalog-links li a {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    padding: 0.55rem 0.75rem !important;
+    background: rgba(255, 255, 255, 0.04) !important;
+    border: 1px solid rgba(215, 180, 90, 0.12) !important;
+    border-radius: 8px !important;
+    text-decoration: none !important;
+    box-sizing: border-box !important;
+    transition: background 0.15s ease !important;
+  }
+  .catalog-links li a:hover,
+  .catalog-links li a:focus-visible {
+    background: rgba(215, 180, 90, 0.15) !important;
+    border-color: rgba(215, 180, 90, 0.35) !important;
+  }
+  .catalog-links li a strong {
+    font-size: 0.88rem !important;
+    font-weight: 600 !important;
+    color: #FFFFFF !important;
+    line-height: 1.3 !important;
+  }
+  .catalog-links li a span {
+    font-size: 0.74rem !important;
+    color: #9AB0A4 !important;
+    line-height: 1.25 !important;
+  }
+  .catalog-explore-btn-wrap {
+    margin-top: 0.65rem !important;
+    padding-top: 0.55rem !important;
+    border-top: 1px dashed rgba(215, 180, 90, 0.22) !important;
+  }
+  .catalog-all-link {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 0.4rem !important;
+    color: var(--color-gold) !important;
+    font-size: 0.85rem !important;
+    font-weight: 700 !important;
+    text-decoration: none !important;
   }
   .main-nav {
     position: fixed;
