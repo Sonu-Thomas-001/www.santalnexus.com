@@ -5,9 +5,9 @@ import ProductFilter from '@/components/ProductFilter';
 import { PRODUCE_CATEGORIES } from '@/data/products';
 
 export const metadata: Metadata = {
-  title: 'Our Products | Fresh Fruits & Vegetables Catalogue',
+  title: 'Fresh Produce Catalogue & Specs',
   description:
-    'Explore Santal Nexus produce catalogue: Indian Red Onions, G9 Cavendish Bananas, Green Chillies, Moringa Drumsticks, Pomegranates and Leafy Greens. International export packaging and seasonal specs.',
+    'Browse our export catalogue: Indian Red Onions, G9 Cavendish Bananas, Green Chillies, Moringa Drumsticks, and fresh seasonal produce.',
   alternates: {
     canonical: '/products',
   },
@@ -16,12 +16,13 @@ export const metadata: Metadata = {
     locale: 'en_IN',
     url: 'https://www.santalnexus.com/products',
     siteName: 'Santal Nexus',
-    title: 'Our Products | Fresh Fruits & Vegetables Catalogue | Santal Nexus',
+    title: 'Fresh Produce Catalogue & Specs | Santal Nexus',
     description:
-      'Explore Santal Nexus produce catalogue: Indian Red Onions, G9 Cavendish Bananas, Green Chillies, Moringa Drumsticks, Pomegranates and Leafy Greens.',
+      'Browse our export catalogue: Indian Red Onions, G9 Cavendish Bananas, Green Chillies, Moringa Drumsticks, and fresh seasonal produce.',
     images: [
       {
-        url: '/assets/images/og-image.jpg',
+        url: 'https://www.santalnexus.com/og-image.jpg',
+        secureUrl: 'https://www.santalnexus.com/og-image.jpg',
         width: 1200,
         height: 630,
         type: 'image/jpeg',
@@ -31,10 +32,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Our Products | Fresh Fruits & Vegetables Catalogue | Santal Nexus',
+    title: 'Fresh Produce Catalogue & Specs | Santal Nexus',
     description:
-      'Explore Santal Nexus produce catalogue: Indian Red Onions, G9 Cavendish Bananas, Green Chillies, Moringa Drumsticks, Pomegranates and Leafy Greens.',
-    images: ['/assets/images/og-image.jpg'],
+      'Browse our export catalogue: Indian Red Onions, G9 Cavendish Bananas, Green Chillies, Moringa Drumsticks, and fresh seasonal produce.',
+    images: ['https://www.santalnexus.com/og-image.jpg'],
   },
 };
 

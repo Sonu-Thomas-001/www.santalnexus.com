@@ -6,9 +6,9 @@ import FaqAccordion from '@/components/FaqAccordion';
 import { FAQ_ITEMS } from '@/data/faq';
 
 export const metadata: Metadata = {
-  title: 'Contact Us | Trade Inquiries & Commercial Desk',
+  title: 'Contact Commercial Trade Desk',
   description:
-    'Connect with Santal Nexus in Madurai, Tamil Nadu. Phone +91 99948 45296, official email info@santalnexus.com, direct WhatsApp, and trade enquiry desk.',
+    'Connect with the Santal Nexus trade desk in Madurai, India. Call +91 99948 45296 or email info@santalnexus.com for produce enquiries.',
   alternates: {
     canonical: '/contact',
   },
@@ -17,12 +17,13 @@ export const metadata: Metadata = {
     locale: 'en_IN',
     url: 'https://www.santalnexus.com/contact',
     siteName: 'Santal Nexus',
-    title: 'Contact Us | Trade Inquiries & Commercial Desk | Santal Nexus',
+    title: 'Contact Commercial Trade Desk | Santal Nexus',
     description:
-      'Connect with Santal Nexus in Madurai, Tamil Nadu. Phone +91 99948 45296, official email info@santalnexus.com, direct WhatsApp, and trade enquiry desk.',
+      'Connect with the Santal Nexus trade desk in Madurai, India. Call +91 99948 45296 or email info@santalnexus.com for produce enquiries.',
     images: [
       {
-        url: '/assets/images/og-image.jpg',
+        url: 'https://www.santalnexus.com/og-image.jpg',
+        secureUrl: 'https://www.santalnexus.com/og-image.jpg',
         width: 1200,
         height: 630,
         type: 'image/jpeg',
@@ -32,10 +33,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Contact Us | Trade Inquiries & Commercial Desk | Santal Nexus',
+    title: 'Contact Commercial Trade Desk | Santal Nexus',
     description:
-      'Connect with Santal Nexus in Madurai, Tamil Nadu. Phone +91 99948 45296, official email info@santalnexus.com, direct WhatsApp.',
-    images: ['/assets/images/og-image.jpg'],
+      'Connect with the Santal Nexus trade desk in Madurai, India. Call +91 99948 45296 or email info@santalnexus.com for produce enquiries.',
+    images: ['https://www.santalnexus.com/og-image.jpg'],
   },
 };
 

@@ -3,9 +3,9 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Terms of Service | Commercial Trading & Export Conditions',
+  title: 'Terms of Service',
   description:
-    'Commercial terms of service for fresh agricultural produce trading, Incoterms FOB/CIF, APEDA quality standards, maritime reefer logistics, and joint discharge inspection protocols with Santal Nexus.',
+    'Review the commercial terms, quality standards, and export conditions governing agricultural produce trade with Santal Nexus.',
   alternates: {
     canonical: '/terms-of-service',
   },
@@ -16,10 +16,11 @@ export const metadata: Metadata = {
     siteName: 'Santal Nexus',
     title: 'Terms of Service | Santal Nexus',
     description:
-      'Commercial terms of service for fresh agricultural produce trading, Incoterms FOB/CIF, APEDA quality standards, and maritime logistics with Santal Nexus.',
+      'Review the commercial terms, quality standards, and export conditions governing agricultural produce trade with Santal Nexus.',
     images: [
       {
-        url: '/assets/images/og-image.jpg',
+        url: 'https://www.santalnexus.com/og-image.jpg',
+        secureUrl: 'https://www.santalnexus.com/og-image.jpg',
         width: 1200,
         height: 630,
         type: 'image/jpeg',

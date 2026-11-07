@@ -3,9 +3,9 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Cookie Policy | Privacy Preferences & Tracking Transparency',
+  title: 'Cookie Policy',
   description:
-    'Santal Nexus Cookie Policy explaining how we utilize essential, analytical, and preference cookies on santalnexus.com with interactive privacy preference controls.',
+    'Understand how Santal Nexus uses essential and analytical cookies to ensure optimal performance on our produce trading portal.',
   alternates: {
     canonical: '/cookie-policy',
   },
@@ -16,10 +16,11 @@ export const metadata: Metadata = {
     siteName: 'Santal Nexus',
     title: 'Cookie Policy | Santal Nexus',
     description:
-      'Santal Nexus Cookie Policy explaining how we utilize essential, analytical, and preference cookies on santalnexus.com.',
+      'Understand how Santal Nexus uses essential and analytical cookies to ensure optimal performance on our produce trading portal.',
     images: [
       {
-        url: '/assets/images/og-image.jpg',
+        url: 'https://www.santalnexus.com/og-image.jpg',
+        secureUrl: 'https://www.santalnexus.com/og-image.jpg',
         width: 1200,
         height: 630,
         type: 'image/jpeg',

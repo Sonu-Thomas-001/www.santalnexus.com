@@ -4,9 +4,9 @@ import Link from 'next/link';
 import PartnerMarquee from '@/components/PartnerMarquee';
 
 export const metadata: Metadata = {
-  title: 'About Us | Trusted Partners in Global Fresh Produce',
+  title: 'About Us | Fresh Produce Exporter',
   description:
-    'Discover the story, mission, vision, and core operational values of Santal Nexus. Direct farm sourcing in Madurai, Tamil Nadu for domestic and international produce trade.',
+    'Discover Santal Nexus: direct farm sourcing, quality post-harvest grading, and dependable produce trading from Madurai, Tamil Nadu.',
   alternates: {
     canonical: '/about',
   },
@@ -15,25 +15,26 @@ export const metadata: Metadata = {
     locale: 'en_IN',
     url: 'https://www.santalnexus.com/about',
     siteName: 'Santal Nexus',
-    title: 'About Us | Trusted Partners in Global Fresh Produce | Santal Nexus',
+    title: 'About Us | Fresh Produce Exporter | Santal Nexus',
     description:
-      'Discover the story, mission, vision, and core operational values of Santal Nexus. Direct farm sourcing in Madurai, Tamil Nadu for domestic and international produce trade.',
+      'Discover Santal Nexus: direct farm sourcing, quality post-harvest grading, and dependable produce trading from Madurai, Tamil Nadu.',
     images: [
       {
-        url: '/assets/images/og-image.jpg',
+        url: 'https://www.santalnexus.com/og-image.jpg',
+        secureUrl: 'https://www.santalnexus.com/og-image.jpg',
         width: 1200,
         height: 630,
         type: 'image/jpeg',
-        alt: 'About Santal Nexus - Fresh Produce Trading & Farm Sourcing',
+        alt: 'About Santal Nexus - Fresh Produce Exporter',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'About Us | Trusted Partners in Global Fresh Produce | Santal Nexus',
+    title: 'About Us | Fresh Produce Exporter | Santal Nexus',
     description:
-      'Discover the story, mission, vision, and core operational values of Santal Nexus. Direct farm sourcing in Madurai, Tamil Nadu.',
-    images: ['/assets/images/og-image.jpg'],
+      'Discover Santal Nexus: direct farm sourcing, quality post-harvest grading, and dependable produce trading from Madurai, Tamil Nadu.',
+    images: ['https://www.santalnexus.com/og-image.jpg'],
   },
 };
 

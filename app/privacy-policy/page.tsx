@@ -3,9 +3,9 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy | Data Protection & Commercial Privacy',
+  title: 'Privacy Policy',
   description:
-    'Santal Nexus privacy policy detailing collection, storage, and cross-border processing of commercial inquiries, WhatsApp data, and export trade telematics in compliance with the DPDP Act and international standards.',
+    'Read the Santal Nexus privacy policy detailing the secure handling of trade inquiries, communications, and commercial data.',
   alternates: {
     canonical: '/privacy-policy',
   },
@@ -16,10 +16,11 @@ export const metadata: Metadata = {
     siteName: 'Santal Nexus',
     title: 'Privacy Policy | Santal Nexus',
     description:
-      'Santal Nexus privacy policy detailing collection, storage, and cross-border processing of commercial inquiries and export trade telematics.',
+      'Read the Santal Nexus privacy policy detailing the secure handling of trade inquiries, communications, and commercial data.',
     images: [
       {
-        url: '/assets/images/og-image.jpg',
+        url: 'https://www.santalnexus.com/og-image.jpg',
+        secureUrl: 'https://www.santalnexus.com/og-image.jpg',
         width: 1200,
         height: 630,
         type: 'image/jpeg',

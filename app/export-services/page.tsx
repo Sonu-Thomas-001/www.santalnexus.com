@@ -7,9 +7,9 @@ import { EXPORT_CORRIDORS, INCOTERMS, REEFER_SPECS } from '@/data/exportCorridor
 import { FAQ_ITEMS } from '@/data/faq';
 
 export const metadata: Metadata = {
-  title: 'Export Services & Cold-Chain Logistics | APEDA Compliant',
+  title: 'Export Services & Cold-Chain Logistics',
   description:
-    'Comprehensive cross-border agricultural logistics from Madurai & VOC Port Tuticorin to Malaysia, Singapore, Middle East & Europe. Reefer containers, phytosanitary clearance, Incoterms FOB/CIF, and commercial RFQs.',
+    'APEDA-compliant agricultural export logistics, cold-chain reefer handling, and FOB/CIF trade coordination from South India to global ports.',
   alternates: {
     canonical: '/export-services',
   },
@@ -18,12 +18,13 @@ export const metadata: Metadata = {
     locale: 'en_IN',
     url: 'https://www.santalnexus.com/export-services',
     siteName: 'Santal Nexus',
-    title: 'Export Services & Cold-Chain Logistics | APEDA Compliant | Santal Nexus',
+    title: 'Export Services & Cold-Chain | Santal Nexus',
     description:
-      'Comprehensive cross-border agricultural logistics from Madurai & VOC Port Tuticorin to Malaysia, Singapore, Middle East & Europe. Reefer containers, phytosanitary clearance, Incoterms FOB/CIF, and commercial RFQs.',
+      'APEDA-compliant agricultural export logistics, cold-chain reefer handling, and FOB/CIF trade coordination from South India to global ports.',
     images: [
       {
-        url: '/assets/images/og-image.jpg',
+        url: 'https://www.santalnexus.com/og-image.jpg',
+        secureUrl: 'https://www.santalnexus.com/og-image.jpg',
         width: 1200,
         height: 630,
         type: 'image/jpeg',
@@ -33,10 +34,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Export Services & Cold-Chain Logistics | APEDA Compliant | Santal Nexus',
+    title: 'Export Services & Cold-Chain | Santal Nexus',
     description:
-      'Comprehensive cross-border agricultural logistics from Madurai & VOC Port Tuticorin to Malaysia, Singapore, Middle East & Europe.',
-    images: ['/assets/images/og-image.jpg'],
+      'APEDA-compliant agricultural export logistics, cold-chain reefer handling, and FOB/CIF trade coordination from South India to global ports.',
+    images: ['https://www.santalnexus.com/og-image.jpg'],
   },
 };
 

@@ -41,11 +41,11 @@ const caveat = Caveat({
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.santalnexus.com'),
   title: {
-    default: 'Santal Nexus | Fresh Produce Trading & Global Trade Enquiries',
+    default: 'Santal Nexus | Fresh Produce Trading & Export',
     template: '%s | Santal Nexus',
   },
   description:
-    'Explore Santal Nexus, an India-based fresh fruits and vegetables trading business focused on B2B sourcing, supply coordination and international trade enquiries.',
+    'Santal Nexus is an India-based fresh produce trading enterprise specializing in direct farm sourcing, wholesale supply, and global exports.',
   applicationName: 'Santal Nexus',
   publisher: 'Santal Nexus',
   keywords: [
@@ -87,32 +87,26 @@ export const metadata: Metadata = {
     locale: 'en_IN',
     url: 'https://www.santalnexus.com/',
     siteName: 'Santal Nexus',
-    title: 'Santal Nexus | Fresh Produce Trading & Global Trade Enquiries',
+    title: 'Santal Nexus | Fresh Produce Trading & Export',
     description:
-      'Explore Santal Nexus, an India-based fresh fruits and vegetables trading business focused on B2B sourcing, supply coordination and international trade enquiries.',
+      'Santal Nexus is an India-based fresh produce trading enterprise specializing in direct farm sourcing, wholesale supply, and global exports.',
     images: [
       {
-        url: '/assets/images/og-image.jpg',
+        url: 'https://www.santalnexus.com/og-image.jpg',
+        secureUrl: 'https://www.santalnexus.com/og-image.jpg',
         width: 1200,
         height: 630,
         type: 'image/jpeg',
-        alt: 'Santal Nexus - Fresh Produce Trading & Export Logistics',
+        alt: 'Santal Nexus - Fresh Produce Trading & Export',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Santal Nexus | Fresh Produce Trading & Global Trade Enquiries',
+    title: 'Santal Nexus | Fresh Produce Trading & Export',
     description:
-      'Explore Santal Nexus, an India-based fresh fruits and vegetables trading business focused on B2B sourcing, supply coordination and international trade enquiries.',
-    images: [
-      {
-        url: '/assets/images/og-image.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Santal Nexus - Fresh Produce Trading & Export Logistics',
-      },
-    ],
+      'Santal Nexus is an India-based fresh produce trading enterprise specializing in direct farm sourcing, wholesale supply, and global exports.',
+    images: ['https://www.santalnexus.com/og-image.jpg'],
   },
 };
 
