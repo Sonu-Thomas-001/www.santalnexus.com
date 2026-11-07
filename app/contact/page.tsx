@@ -9,6 +9,34 @@ export const metadata: Metadata = {
   title: 'Contact Us | Trade Inquiries & Commercial Desk',
   description:
     'Connect with Santal Nexus in Madurai, Tamil Nadu. Phone +91 99948 45296, official email info@santalnexus.com, direct WhatsApp, and trade enquiry desk.',
+  alternates: {
+    canonical: '/contact',
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'en_IN',
+    url: 'https://www.santalnexus.com/contact',
+    siteName: 'Santal Nexus',
+    title: 'Contact Us | Trade Inquiries & Commercial Desk | Santal Nexus',
+    description:
+      'Connect with Santal Nexus in Madurai, Tamil Nadu. Phone +91 99948 45296, official email info@santalnexus.com, direct WhatsApp, and trade enquiry desk.',
+    images: [
+      {
+        url: '/assets/images/og-image.jpg',
+        width: 1200,
+        height: 630,
+        type: 'image/jpeg',
+        alt: 'Contact Santal Nexus Commercial Desk',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Contact Us | Trade Inquiries & Commercial Desk | Santal Nexus',
+    description:
+      'Connect with Santal Nexus in Madurai, Tamil Nadu. Phone +91 99948 45296, official email info@santalnexus.com, direct WhatsApp.',
+    images: ['/assets/images/og-image.jpg'],
+  },
 };
 
 export default function ContactPage() {

@@ -6,6 +6,27 @@ export const metadata: Metadata = {
   title: 'Privacy Policy | Data Protection & Commercial Privacy',
   description:
     'Santal Nexus privacy policy detailing collection, storage, and cross-border processing of commercial inquiries, WhatsApp data, and export trade telematics in compliance with the DPDP Act and international standards.',
+  alternates: {
+    canonical: '/privacy-policy',
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'en_IN',
+    url: 'https://www.santalnexus.com/privacy-policy',
+    siteName: 'Santal Nexus',
+    title: 'Privacy Policy | Santal Nexus',
+    description:
+      'Santal Nexus privacy policy detailing collection, storage, and cross-border processing of commercial inquiries and export trade telematics.',
+    images: [
+      {
+        url: '/assets/images/og-image.jpg',
+        width: 1200,
+        height: 630,
+        type: 'image/jpeg',
+        alt: 'Santal Nexus Privacy Policy',
+      },
+    ],
+  },
 };
 
 export default function PrivacyPolicyPage() {

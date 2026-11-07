@@ -7,6 +7,34 @@ export const metadata: Metadata = {
   title: 'About Us | Trusted Partners in Global Fresh Produce',
   description:
     'Discover the story, mission, vision, and core operational values of Santal Nexus. Direct farm sourcing in Madurai, Tamil Nadu for domestic and international produce trade.',
+  alternates: {
+    canonical: '/about',
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'en_IN',
+    url: 'https://www.santalnexus.com/about',
+    siteName: 'Santal Nexus',
+    title: 'About Us | Trusted Partners in Global Fresh Produce | Santal Nexus',
+    description:
+      'Discover the story, mission, vision, and core operational values of Santal Nexus. Direct farm sourcing in Madurai, Tamil Nadu for domestic and international produce trade.',
+    images: [
+      {
+        url: '/assets/images/og-image.jpg',
+        width: 1200,
+        height: 630,
+        type: 'image/jpeg',
+        alt: 'About Santal Nexus - Fresh Produce Trading & Farm Sourcing',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'About Us | Trusted Partners in Global Fresh Produce | Santal Nexus',
+    description:
+      'Discover the story, mission, vision, and core operational values of Santal Nexus. Direct farm sourcing in Madurai, Tamil Nadu.',
+    images: ['/assets/images/og-image.jpg'],
+  },
 };
 
 export default function AboutPage() {

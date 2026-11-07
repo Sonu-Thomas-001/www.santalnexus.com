@@ -7,6 +7,34 @@ export const metadata: Metadata = {
   title: 'Our Team | Leadership & Trade Specialists',
   description:
     'Meet the dedicated leadership, field agronomists, and export coordinators behind Santal Nexus. Founded by Bala Chellapandiyan to connect Indian fresh produce with global markets.',
+  alternates: {
+    canonical: '/team',
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'en_IN',
+    url: 'https://www.santalnexus.com/team',
+    siteName: 'Santal Nexus',
+    title: 'Our Team | Leadership & Trade Specialists | Santal Nexus',
+    description:
+      'Meet the dedicated leadership, field agronomists, and export coordinators behind Santal Nexus. Founded by Bala Chellapandiyan to connect Indian fresh produce with global markets.',
+    images: [
+      {
+        url: '/assets/images/og-image.jpg',
+        width: 1200,
+        height: 630,
+        type: 'image/jpeg',
+        alt: 'Santal Nexus Leadership and Operations Team',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Our Team | Leadership & Trade Specialists | Santal Nexus',
+    description:
+      'Meet the dedicated leadership, field agronomists, and export coordinators behind Santal Nexus.',
+    images: ['/assets/images/og-image.jpg'],
+  },
 };
 
 export default function TeamPage() {

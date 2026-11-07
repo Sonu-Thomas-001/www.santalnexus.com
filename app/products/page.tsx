@@ -8,6 +8,34 @@ export const metadata: Metadata = {
   title: 'Our Products | Fresh Fruits & Vegetables Catalogue',
   description:
     'Explore Santal Nexus produce catalogue: Indian Red Onions, G9 Cavendish Bananas, Green Chillies, Moringa Drumsticks, Pomegranates and Leafy Greens. International export packaging and seasonal specs.',
+  alternates: {
+    canonical: '/products',
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'en_IN',
+    url: 'https://www.santalnexus.com/products',
+    siteName: 'Santal Nexus',
+    title: 'Our Products | Fresh Fruits & Vegetables Catalogue | Santal Nexus',
+    description:
+      'Explore Santal Nexus produce catalogue: Indian Red Onions, G9 Cavendish Bananas, Green Chillies, Moringa Drumsticks, Pomegranates and Leafy Greens.',
+    images: [
+      {
+        url: '/assets/images/og-image.jpg',
+        width: 1200,
+        height: 630,
+        type: 'image/jpeg',
+        alt: 'Santal Nexus Fresh Fruits and Vegetables Catalogue',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Our Products | Fresh Fruits & Vegetables Catalogue | Santal Nexus',
+    description:
+      'Explore Santal Nexus produce catalogue: Indian Red Onions, G9 Cavendish Bananas, Green Chillies, Moringa Drumsticks, Pomegranates and Leafy Greens.',
+    images: ['/assets/images/og-image.jpg'],
+  },
 };
 
 export default function ProductsPage() {

@@ -46,6 +46,8 @@ export const metadata: Metadata = {
   },
   description:
     'Explore Santal Nexus, an India-based fresh fruits and vegetables trading business focused on B2B sourcing, supply coordination and international trade enquiries.',
+  applicationName: 'Santal Nexus',
+  publisher: 'Santal Nexus',
   keywords: [
     'fresh produce trading India',
     'fruits vegetables wholesale Madurai',
@@ -54,9 +56,25 @@ export const metadata: Metadata = {
     'Santal Nexus',
     'Cavendish Bananas export',
     'Indian Red Onions wholesale',
+    'APEDA fresh produce exporter',
+    'South India produce cold chain',
   ],
-  authors: [{ name: 'Santal Nexus' }],
+  authors: [{ name: 'Santal Nexus', url: 'https://www.santalnexus.com' }],
   creator: 'Santal Nexus',
+  alternates: {
+    canonical: '/',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
   icons: {
     icon: [
       { url: '/favicon.svg', type: 'image/svg+xml' },
@@ -74,10 +92,11 @@ export const metadata: Metadata = {
       'Explore Santal Nexus, an India-based fresh fruits and vegetables trading business focused on B2B sourcing, supply coordination and international trade enquiries.',
     images: [
       {
-        url: '/assets/images/fresh-produce-hero.jpg',
+        url: '/assets/images/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Santal Nexus Fresh Produce Trading',
+        type: 'image/jpeg',
+        alt: 'Santal Nexus - Fresh Produce Trading & Export Logistics',
       },
     ],
   },
@@ -86,7 +105,14 @@ export const metadata: Metadata = {
     title: 'Santal Nexus | Fresh Produce Trading & Global Trade Enquiries',
     description:
       'Explore Santal Nexus, an India-based fresh fruits and vegetables trading business focused on B2B sourcing, supply coordination and international trade enquiries.',
-    images: ['/assets/images/fresh-produce-hero.jpg'],
+    images: [
+      {
+        url: '/assets/images/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Santal Nexus - Fresh Produce Trading & Export Logistics',
+      },
+    ],
   },
 };
 

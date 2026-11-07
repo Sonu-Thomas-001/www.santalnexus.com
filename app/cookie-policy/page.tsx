@@ -6,6 +6,27 @@ export const metadata: Metadata = {
   title: 'Cookie Policy | Privacy Preferences & Tracking Transparency',
   description:
     'Santal Nexus Cookie Policy explaining how we utilize essential, analytical, and preference cookies on santalnexus.com with interactive privacy preference controls.',
+  alternates: {
+    canonical: '/cookie-policy',
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'en_IN',
+    url: 'https://www.santalnexus.com/cookie-policy',
+    siteName: 'Santal Nexus',
+    title: 'Cookie Policy | Santal Nexus',
+    description:
+      'Santal Nexus Cookie Policy explaining how we utilize essential, analytical, and preference cookies on santalnexus.com.',
+    images: [
+      {
+        url: '/assets/images/og-image.jpg',
+        width: 1200,
+        height: 630,
+        type: 'image/jpeg',
+        alt: 'Santal Nexus Cookie Policy',
+      },
+    ],
+  },
 };
 
 export default function CookiePolicyPage() {

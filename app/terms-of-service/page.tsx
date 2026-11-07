@@ -6,6 +6,27 @@ export const metadata: Metadata = {
   title: 'Terms of Service | Commercial Trading & Export Conditions',
   description:
     'Commercial terms of service for fresh agricultural produce trading, Incoterms FOB/CIF, APEDA quality standards, maritime reefer logistics, and joint discharge inspection protocols with Santal Nexus.',
+  alternates: {
+    canonical: '/terms-of-service',
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'en_IN',
+    url: 'https://www.santalnexus.com/terms-of-service',
+    siteName: 'Santal Nexus',
+    title: 'Terms of Service | Santal Nexus',
+    description:
+      'Commercial terms of service for fresh agricultural produce trading, Incoterms FOB/CIF, APEDA quality standards, and maritime logistics with Santal Nexus.',
+    images: [
+      {
+        url: '/assets/images/og-image.jpg',
+        width: 1200,
+        height: 630,
+        type: 'image/jpeg',
+        alt: 'Santal Nexus Terms of Service',
+      },
+    ],
+  },
 };
 
 export default function TermsOfServicePage() {

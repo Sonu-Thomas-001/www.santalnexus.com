@@ -10,6 +10,34 @@ export const metadata: Metadata = {
   title: 'Export Services & Cold-Chain Logistics | APEDA Compliant',
   description:
     'Comprehensive cross-border agricultural logistics from Madurai & VOC Port Tuticorin to Malaysia, Singapore, Middle East & Europe. Reefer containers, phytosanitary clearance, Incoterms FOB/CIF, and commercial RFQs.',
+  alternates: {
+    canonical: '/export-services',
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'en_IN',
+    url: 'https://www.santalnexus.com/export-services',
+    siteName: 'Santal Nexus',
+    title: 'Export Services & Cold-Chain Logistics | APEDA Compliant | Santal Nexus',
+    description:
+      'Comprehensive cross-border agricultural logistics from Madurai & VOC Port Tuticorin to Malaysia, Singapore, Middle East & Europe. Reefer containers, phytosanitary clearance, Incoterms FOB/CIF, and commercial RFQs.',
+    images: [
+      {
+        url: '/assets/images/og-image.jpg',
+        width: 1200,
+        height: 630,
+        type: 'image/jpeg',
+        alt: 'Santal Nexus Export Services and Cold-Chain Logistics',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Export Services & Cold-Chain Logistics | APEDA Compliant | Santal Nexus',
+    description:
+      'Comprehensive cross-border agricultural logistics from Madurai & VOC Port Tuticorin to Malaysia, Singapore, Middle East & Europe.',
+    images: ['/assets/images/og-image.jpg'],
+  },
 };
 
 export default function ExportServicesPage() {
