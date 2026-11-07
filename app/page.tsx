@@ -98,32 +98,37 @@ export default function HomePage() {
                 </p>
               </div>
 
+              {/* Founder & CEO Spotlight Section (Upper side of Our Mission) */}
+              <div className="about-founder-callout reveal-on-scroll" aria-label="Founder and CEO">
+                <div className="founder-callout-header">
+                  <span className="founder-callout-eyebrow">Founder &amp; CEO</span>
+                </div>
+                <div className="founder-callout-main">
+                  <div className="founder-callout-avatar">
+                    <img
+                      src="/assets/images/team/BalaChellapandiyan(Founder).jpeg"
+                      alt="Bala Chellapandiyan - Founder & CEO"
+                      width={64}
+                      height={64}
+                      loading="lazy"
+                    />
+                  </div>
+                  <div className="founder-callout-content">
+                    <p className="founder-callout-quote">
+                      &ldquo;Connecting Indian fresh produce with global markets on a foundation of trust, quality, and direct farmer partnerships.&rdquo;
+                    </p>
+                    <div className="founder-callout-author">
+                      <strong>Bala Chellapandiyan</strong> &bull; <span>Founder &amp; CEO</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
               <div className="about-mission-box">
                 <h4>Our Mission</h4>
                 <p>
                   To build dependable produce trading relationships through quality-oriented sourcing, professional coordination and responsible business practices.
                 </p>
-              </div>
-
-              {/* Founder Spotlight with Photo */}
-              <div className="about-founder-callout reveal-on-scroll">
-                <div className="founder-callout-avatar">
-                  <img
-                    src="/assets/images/team/BalaChellapandiyan(Founder).jpeg"
-                    alt="Bala Chellapandiyan - Founder & CEO"
-                    width={60}
-                    height={60}
-                    loading="lazy"
-                  />
-                </div>
-                <div className="founder-callout-content">
-                  <p className="founder-callout-quote">
-                    &ldquo;Connecting Indian fresh produce with global markets on a foundation of trust, quality, and direct farmer partnerships.&rdquo;
-                  </p>
-                  <div className="founder-callout-author">
-                    <strong>Bala Chellapandiyan</strong> &bull; <span>Founder &amp; CEO</span>
-                  </div>
-                </div>
               </div>
 
               <div>
