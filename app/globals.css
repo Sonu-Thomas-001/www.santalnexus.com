@@ -7315,35 +7315,18 @@ html.js-animations-active [data-reveal].is-revealed {
 /* Progress Console */
 .preloader-progress-console {
   width: 100%;
-  max-width: 360px;
-  margin-bottom: 1.75rem;
-}
-
-.preloader-status-row {
+  max-width: 300px;
+  margin: 0 auto;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  margin-bottom: 0.6rem;
-  font-family: var(--font-sans);
-  font-size: 0.78rem;
+  gap: 0.75rem;
 }
 
-.preloader-status-msg {
-  display: inline-flex;
+.preloader-percentage-wrap {
+  display: flex;
+  justify-content: center;
   align-items: center;
-  gap: 0.45rem;
-  color: rgba(255, 255, 255, 0.85);
-  font-weight: 500;
-  letter-spacing: 0.02em;
-}
-
-.preloader-live-pulse {
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background-color: #25D366;
-  box-shadow: 0 0 8px #25D366;
-  animation: pulseDot 1.4s infinite;
 }
 
 .preloader-percentage {
@@ -7351,7 +7334,8 @@ html.js-animations-active [data-reveal].is-revealed {
   font-size: 0.85rem;
   font-weight: 700;
   color: var(--color-gold);
-  letter-spacing: 0.05em;
+  letter-spacing: 0.06em;
+  opacity: 0.92;
 }
 
 .preloader-track-bar {

@@ -6,7 +6,6 @@ export default function Preloader() {
   const [visible, setVisible] = useState(true);
   const [fading, setFading] = useState(false);
   const [progress, setProgress] = useState(0);
-  const [statusText, setStatusText] = useState('Verifying Farm Sourcing Networks...');
 
   useEffect(() => {
     // Respect reduced motion
@@ -27,14 +26,6 @@ export default function Preloader() {
       const easedProgress = Math.floor((1 - Math.pow(1 - rawProgress, 3)) * 100);
 
       setProgress(easedProgress);
-
-      if (easedProgress < 40) {
-        setStatusText('Verifying Farm Sourcing Networks...');
-      } else if (easedProgress < 75) {
-        setStatusText('Calibrating VOC Port Cold-Chain Reefers...');
-      } else {
-        setStatusText('Santal Nexus • Trade Ready');
-      }
 
       if (rawProgress < 1) {
         requestAnimationFrame(updateProgress);
@@ -84,16 +75,8 @@ export default function Preloader() {
           </div>
         </div>
 
-        {/* Dynamic Progress Indicator */}
+        {/* Minimalist Progress Indicator */}
         <div className="preloader-progress-console">
-          <div className="preloader-status-row">
-            <span className="preloader-status-msg">
-              <span className="preloader-live-pulse"></span>
-              {statusText}
-            </span>
-            <span className="preloader-percentage">{progress}%</span>
-          </div>
-
           <div className="preloader-track-bar">
             <div
               className="preloader-fill-gauge"
@@ -102,27 +85,9 @@ export default function Preloader() {
               <span className="fill-gauge-spark"></span>
             </div>
           </div>
-        </div>
-
-        {/* Global Trade Trust Signals */}
-        <div className="preloader-trust-badges">
-          <span className="preloader-badge">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="13" height="13" aria-hidden="true">
-              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-              <path d="m9 12 2 2 4-4" />
-            </svg>
-            APEDA Registered
-          </span>
-          <span className="preloader-badge-sep">&bull;</span>
-          <span className="preloader-badge">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="13" height="13" aria-hidden="true">
-              <circle cx="12" cy="12" r="10" />
-              <polyline points="12 6 12 12 16 14" />
-            </svg>
-            VOC Port Tuticorin
-          </span>
-          <span className="preloader-badge-sep">&bull;</span>
-          <span className="preloader-badge">FSSAI Central Standard</span>
+          <div className="preloader-percentage-wrap">
+            <span className="preloader-percentage">{progress}%</span>
+          </div>
         </div>
       </div>
     </div>
