@@ -194,7 +194,9 @@ export default function TeamPage() {
               <article key={member.id} className="team-card reveal-on-scroll">
                 <div className="team-image-wrap">
                   <picture>
-                    <source srcSet={member.photoWebp} type="image/webp" />
+                    {member.photoWebp && member.photoWebp.endsWith('.webp') && (
+                      <source srcSet={member.photoWebp} type="image/webp" />
+                    )}
                     <img
                       src={member.photoJpg}
                       alt={`${member.name} - ${member.role}`}

@@ -62,8 +62,8 @@ export const TEAM_MEMBERS: TeamMember[] = [
     badge: 'ACCOUNTS & FINANCE',
     pillars: 'Finance | Billing | Settlements',
     bio: 'Mrs. Priya Shesan manages financial accounts, trade billing, commercial documentation, and banking coordination. She ensures financial accuracy, timely farmer settlements, and transparent commercial transactions for buyers and suppliers.',
-    photoWebp: '/assets/images/team/priya-shesan.png',
-    photoJpg: '/assets/images/team/priya-shesan.png',
+    photoWebp: '/assets/images/team/priya-shesan.jpeg',
+    photoJpg: '/assets/images/team/priya-shesan.jpeg',
     desk: 'Commercial Finance, Trade Settlements & Accounts Coordination',
   },
 ];
