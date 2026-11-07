@@ -271,17 +271,17 @@ export default function HomePage() {
                   <source srcSet="/assets/images/fresh-vegetables.webp" type="image/webp" />
                   <img src="/assets/images/fresh-vegetables.jpg" alt="Crisp fresh vegetables including shallots, drumsticks, chillies and tomatoes" width={1200} height={896} loading="lazy" />
                 </picture>
-                <span className="product-badge">Farm Staples &amp; Vegetables</span>
+                <span className="product-badge">Farm Vegetables</span>
               </div>
               <div className="product-body">
-                <h3>Fresh Regional Vegetables</h3>
-                <p>Direct farm-gate sourcing of Small Red Onions (Sambar Shallots), export-cut Moringa Drumsticks, G4 Green Chillies, and Gherkins calibrated to international buyer specifications.</p>
+                <h3>Regional Vegetables</h3>
+                <p>Direct farm-gate shallots, moringa drumsticks, and chillies graded for export.</p>
                 <div className="product-meta-pills">
-                  <span className="meta-pill">Madurai &amp; Dindigul Origin</span>
+                  <span className="meta-pill">Farm Sourced</span>
                   <span className="meta-pill">Graded &amp; Sorted</span>
                 </div>
                 <Link href="/products" className="product-action-btn" aria-label="View Farm Staples and Vegetables">
-                  <span>View Catalog Matrix</span>
+                  <span>View Products</span>
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                     <line x1="5" y1="12" x2="19" y2="12"></line>
                     <polyline points="12 5 19 12 12 19"></polyline>
@@ -296,17 +296,17 @@ export default function HomePage() {
                   <source srcSet="/assets/images/fresh-fruits.webp" type="image/webp" />
                   <img src="/assets/images/fresh-fruits.jpg" alt="Fresh tropical fruits including Cavendish G9 bananas, mangoes, and pomegranates" width={1200} height={896} loading="lazy" />
                 </picture>
-                <span className="product-badge">Tropical Orchard Fruits</span>
+                <span className="product-badge">Orchard Fruits</span>
               </div>
               <div className="product-body">
-                <h3>Tropical Orchard Fruits</h3>
-                <p>Premium Cavendish G9 Bananas (+13.5°C reefer calibrated), GI-tagged Alphonso &amp; Banganapalli Mangoes, Bhagwa Pomegranates, and crisp Taiwan Pink Guavas.</p>
+                <h3>Tropical Fruits</h3>
+                <p>Premium Cavendish G9 bananas, GI-tagged mangoes, and Bhagwa pomegranates.</p>
                 <div className="product-meta-pills">
                   <span className="meta-pill">Reefer Ready</span>
-                  <span className="meta-pill">Optical Sizing</span>
+                  <span className="meta-pill">Export Grade</span>
                 </div>
                 <Link href="/products" className="product-action-btn" aria-label="View Tropical Orchard Fruits">
-                  <span>View Catalog Matrix</span>
+                  <span>View Products</span>
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                     <line x1="5" y1="12" x2="19" y2="12"></line>
                     <polyline points="12 5 19 12 12 19"></polyline>
@@ -321,17 +321,17 @@ export default function HomePage() {
                   <source srcSet="/assets/images/seasonal-produce.webp" type="image/webp" />
                   <img src="/assets/images/seasonal-produce.jpg" alt="Fresh curry leaves, herbs and seasonal horticultural crops" width={1200} height={896} loading="lazy" />
                 </picture>
-                <span className="product-badge">Fresh Leafy Greens &amp; Herbs</span>
+                <span className="product-badge">Fresh Herbs</span>
               </div>
               <div className="product-body">
-                <h3>Leafy Greens &amp; Culinary Herbs</h3>
-                <p>Express morning harvest of high-aroma Curry Leaves, hydro-cooled Coriander bunches, Fresh Mint, and regional seasonal specialties dispatched for rapid air-cargo delivery.</p>
+                <h3>Leafy Greens &amp; Herbs</h3>
+                <p>Fresh morning-harvest curry leaves, coriander, and mint for express air-cargo.</p>
                 <div className="product-meta-pills">
-                  <span className="meta-pill">Air Cargo Dispatched</span>
+                  <span className="meta-pill">Air Cargo</span>
                   <span className="meta-pill">Hydro-Cooled</span>
                 </div>
                 <Link href="/products" className="product-action-btn" aria-label="View Leafy Greens and Herbs">
-                  <span>View Catalog Matrix</span>
+                  <span>View Products</span>
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                     <line x1="5" y1="12" x2="19" y2="12"></line>
                     <polyline points="12 5 19 12 12 19"></polyline>
@@ -346,17 +346,17 @@ export default function HomePage() {
                   <source srcSet="/assets/images/bulk-produce-crates.webp" type="image/webp" />
                   <img src="/assets/images/bulk-produce-crates.jpg" alt="Commercial produce crates, packing facility and container loading" width={1200} height={896} loading="lazy" />
                 </picture>
-                <span className="product-badge">Custom Sourcing &amp; Procurement</span>
+                <span className="product-badge">Bulk Sourcing</span>
               </div>
               <div className="product-body">
-                <h3>Commercial Bulk Procurement</h3>
-                <p>Dedicated contract farming aggregation, custom CFB ventilated master cartons, brand labeling, and full container load (FCL) coordination under standard Incoterms.</p>
+                <h3>Bulk Procurement</h3>
+                <p>FCL container aggregation with custom ventilated CFB cartons and global dispatch.</p>
                 <div className="product-meta-pills">
-                  <span className="meta-pill">FCL Reefer Containers</span>
+                  <span className="meta-pill">FCL Reefer</span>
                   <span className="meta-pill">FOB / CIF Trade</span>
                 </div>
                 <Link href="/contact" className="product-action-btn" aria-label="Enquire Bulk Procurement">
-                  <span>Enquire Container Load</span>
+                  <span>Enquire Bulk</span>
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                     <line x1="5" y1="12" x2="19" y2="12"></line>
                     <polyline points="12 5 19 12 12 19"></polyline>
