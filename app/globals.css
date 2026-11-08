@@ -3679,9 +3679,44 @@ html.js-animations-active [data-reveal].is-revealed {
   .product-assurance-strip,
   .services-grid,
   .why-us-grid,
-  .team-grid,
   .team-capability-strip {
     grid-template-columns: 1fr;
+  }
+
+  /* 2 Members in a row on small screens: 2 upside & 2 downside */
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: clamp(0.65rem, 2.5vw, 1rem);
+  }
+
+  .team-image-wrap {
+    height: 180px;
+  }
+
+  .team-body {
+    padding: 0.95rem 0.75rem;
+  }
+
+  .team-name {
+    font-size: 1.05rem !important;
+    margin-bottom: 0.25rem;
+  }
+
+  .team-badge {
+    font-size: 0.62rem;
+    padding: 0.2rem 0.55rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .team-pillars {
+    font-size: 0.68rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.35;
+  }
+
+  .team-bio {
+    font-size: 0.8rem;
+    line-height: 1.45;
   }
 
   .team-cap-item::after {
@@ -10129,9 +10164,12 @@ a.escalation-contact-row:hover {
   }
 }
 
-/* 5-Column Responsive Team Grid & Reveal Stagger */
-.team-grid {
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+/* 2x2 Balanced Team Grid on screens up to 1024px: 2 upside & 2 downside */
+@media (max-width: 1024px) {
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1.35rem;
+  }
 }
 
 .team-grid > :nth-child(5) {
