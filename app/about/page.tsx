@@ -224,16 +224,16 @@ export default function AboutPage() {
                     src="/assets/images/team/BalaChellapandiyan(Founder).jpeg"
                     alt="Bala Chellapandiyan - Founder and CEO of Santal Nexus"
                     width={480}
-                    height={420}
+                    height={460}
                     loading="lazy"
                   />
-                  <span className="founder-card-badge">Founder &amp; CEO</span>
+                  <span className="founder-card-badge">FOUNDER &amp; CEO &bull; EST. 2015</span>
                 </div>
                 <div className="founder-card-meta">
-                  <h3 className="founder-card-name">Bala Chellapandiyan</h3>
+                  <h3 className="founder-card-name">BALA CHELLAPANDIYAN</h3>
                   <p className="founder-card-role">Founder &amp; Chief Executive Officer</p>
                   <p className="founder-card-desk">
-                    Executive Leadership &bull; Direct Farm Sourcing &bull; Global Trade Partnerships
+                    Strategic Vision &bull; Global Trade Partnerships &bull; Agri-Commodities
                   </p>
                 </div>
               </div>
@@ -243,26 +243,49 @@ export default function AboutPage() {
             <div className="about-founder-content reveal-on-scroll">
               <div className="about-eyebrow-wrap">
                 <span className="gold-dash" aria-hidden="true"></span>
-                <span className="about-eyebrow">LEADERSHIP &amp; VISION</span>
+                <span className="about-eyebrow">FOUNDER &amp; LEADERSHIP</span>
               </div>
 
               <h2 className="about-founder-heading">
-                Rooted in Agriculture. Driven by Global Trust.
+                A Vision for Global Trade. A Commitment to Excellence.
               </h2>
-
-              <div className="founder-quote-callout">
-                <p>
-                  &ldquo;Agriculture is far more than trade for us; it is a sacred trust between the farmer who nurtures the soil in Tamil Nadu and the global family who savors the harvest thousands of miles away.&rdquo;
-                </p>
-              </div>
 
               <div className="about-founder-bio">
                 <p>
-                  With an enduring commitment to Indian agriculture and rural farming livelihoods, Bala Chellapandiyan founded Santal Nexus to connect South India&apos;s fertile harvest corridors directly with high-demand domestic and international markets.
+                  Bala Chellapandiyan is the Founder and Chief Executive Officer of Santal Nexus, leading the company&apos;s strategic vision, corporate development and ambition to establish a strong presence in the international agricultural commodities and fresh produce trading sector.
                 </p>
                 <p>
-                  Headquartered in Madurai, he steers strategic farm-gate procurement, strict sorting standards, and cold-chain integrity. Under his stewardship, Santal Nexus champions transparent trade relationships that guarantee equitable returns for local growers and dependable, export-grade produce for international partners.
+                  With a global business outlook and a commitment to professional excellence, he is focused on developing an internationally connected trading enterprise built on quality, reliability, integrity and long-term commercial partnerships.
                 </p>
+                <p>
+                  Under his leadership, Santal Nexus is dedicated to strengthening agricultural supply-chain networks, facilitating cross-border trade and creating sustainable business relationships between producers, suppliers, distributors and international markets.
+                </p>
+                <p>
+                  His business philosophy is founded on the belief that successful international trade requires more than the movement of products. It demands consistent quality standards, transparent business practices, dependable execution and a deep understanding of global market expectations.
+                </p>
+                <p>
+                  As the driving force behind Santal Nexus, he continues to shape the company&apos;s long-term growth strategy, expand its business horizons and build a corporate foundation capable of serving diverse markets with professionalism and confidence.
+                </p>
+              </div>
+
+              <div className="founder-vision-box">
+                <div className="founder-vision-header">
+                  <svg className="vision-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="2" y1="12" x2="22" y2="12"></line>
+                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                  </svg>
+                  <span>CORPORATE VISION</span>
+                </div>
+                <p className="founder-vision-text">
+                  &ldquo;To position Santal Nexus as a trusted international trading enterprise, connecting agricultural origins with global destinations through quality, integrity, operational excellence and enduring partnerships.&rdquo;
+                </p>
+              </div>
+
+              <div className="founder-callout-brand-signoff" style={{ marginTop: '1.25rem', marginBottom: '1.5rem' }}>
+                <span className="signoff-brand">SANTAL NEXUS</span>
+                <span className="signoff-sep">&bull;</span>
+                <span className="signoff-slogan">EXPANDING BEYOND BORDERS.</span>
               </div>
 
               <div className="founder-pillars-row">
