@@ -74,7 +74,93 @@ export default function HomePage() {
            ==================================================================== */}
       <PartnerMarquee />
 
+      
+
       {/* ====================================================================
+           SECTION 2C: FOUNDER & CEO LEADERSHIP SPOTLIGHT
+           ==================================================================== */}
+      <section className="section-padding founder-spotlight-section" id="founder" aria-label="Founder and Leadership">
+        <div className="container">
+          <div className="founder-spotlight-grid">
+            {/* Left Column: Big Portrait Card */}
+            <div className="founder-portrait-card reveal-on-scroll">
+              <div className="founder-portrait-frame">
+                <img
+                  src="/assets/images/team/BalaChellapandiyan(Founder).jpeg"
+                  alt="Bala Chellapandiyan - Founder &amp; CEO of Santal Nexus"
+                  width={420}
+                  height={460}
+                  className="founder-portrait-img"
+                  loading="lazy"
+                />
+                <span className="founder-portrait-badge">FOUNDER &amp; CEO</span>
+              </div>
+              <div className="founder-portrait-meta">
+                <h3 className="founder-portrait-name">BALA CHELLAPANDIYAN</h3>
+                <p className="founder-portrait-role">Founder &amp; Chief Executive Officer</p>
+                <p className="founder-portrait-company">SANTAL NEXUS &bull; ESTABLISHED 2015</p>
+                <div className="founder-portrait-tags">
+                  <span>Strategic Vision</span>
+                  <span>Agri-Commodities</span>
+                  <span>Global Trade</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Right Column: Narrative, Corporate Vision & Sign-off */}
+            <div className="founder-spotlight-content reveal-on-scroll">
+              <div className="section-eyebrow-wrap">
+                <span className="gold-dash" aria-hidden="true"></span>
+                <span className="section-eyebrow">FOUNDER &amp; EXECUTIVE LEADERSHIP</span>
+              </div>
+
+              <h2 className="founder-spotlight-heading">
+                A Vision for Global Trade. A Commitment to Excellence.
+              </h2>
+
+              <div className="founder-spotlight-bio">
+                <p>
+                  Bala Chellapandiyan is the Founder and Chief Executive Officer of Santal Nexus, leading the company&apos;s strategic vision, corporate development and ambition to establish a strong presence in the international agricultural commodities and fresh produce trading sector.
+                </p>
+                <p>
+                  With a global business outlook and a commitment to professional excellence, he is focused on developing an internationally connected trading enterprise built on quality, reliability, integrity and long-term commercial partnerships.
+                </p>
+                <p>
+                  Under his leadership, Santal Nexus is dedicated to strengthening agricultural supply-chain networks, facilitating cross-border trade and creating sustainable business relationships between producers, suppliers, distributors and international markets.
+                </p>
+                <p>
+                  His business philosophy is founded on the belief that successful international trade requires more than the movement of products. It demands consistent quality standards, transparent business practices, dependable execution and a deep understanding of global market expectations.
+                </p>
+                <p>
+                  As the driving force behind Santal Nexus, he continues to shape the company&apos;s long-term growth strategy, expand its business horizons and build a corporate foundation capable of serving diverse markets with professionalism and confidence.
+                </p>
+              </div>
+
+              <div className="founder-vision-box">
+                <div className="founder-vision-header">
+                  <svg className="vision-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="2" y1="12" x2="22" y2="12"></line>
+                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                  </svg>
+                  <span>CORPORATE VISION</span>
+                </div>
+                <p className="founder-vision-text">
+                  &ldquo;To position Santal Nexus as a trusted international trading enterprise, connecting agricultural origins with global destinations through quality, integrity, operational excellence and enduring partnerships.&rdquo;
+                </p>
+              </div>
+
+              <div className="founder-callout-brand-signoff">
+                <span className="signoff-brand">SANTAL NEXUS</span>
+                <span className="signoff-sep">&bull;</span>
+                <span className="signoff-slogan">EXPANDING BEYOND BORDERS.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+{/* ====================================================================
            SECTION 3: ABOUT SANTAL NEXUS
            ==================================================================== */}
       <section className="section-padding section-ivory" id="about" aria-label="About Santal Nexus">
@@ -94,77 +180,6 @@ export default function HomePage() {
                 <p>
                   We believe successful trading begins with understanding product requirements, communicating clearly and developing dependable long-term business relationships.
                 </p>
-              </div>
-
-              {/* Founder & CEO Spotlight Section (Upper side of Our Mission) */}
-              <div className="about-founder-callout reveal-on-scroll" aria-label="Founder and CEO Spotlight">
-                <div className="founder-callout-header">
-                  <span className="founder-callout-eyebrow">FOUNDER &amp; CEO</span>
-                  <span className="founder-callout-est">SANTAL NEXUS &bull; ESTABLISHED 2015</span>
-                </div>
-
-                <div className="founder-callout-main">
-                  <div className="founder-callout-avatar-col">
-                    <div className="founder-callout-avatar">
-                      <img
-                        src="/assets/images/team/BalaChellapandiyan(Founder).jpeg"
-                        alt="Bala Chellapandiyan - Founder &amp; CEO of Santal Nexus"
-                        width={220}
-                        height={240}
-                        loading="lazy"
-                      />
-                    </div>
-                    <div className="founder-callout-identity">
-                      <h3 className="founder-callout-name">BALA CHELLAPANDIYAN</h3>
-                      <p className="founder-callout-role">FOUNDER &amp; CEO</p>
-                      <p className="founder-callout-company">SANTAL NEXUS</p>
-                    </div>
-                  </div>
-
-                  <div className="founder-callout-content">
-                    <h4 className="founder-callout-tagline">
-                      A Vision for Global Trade. A Commitment to Excellence.
-                    </h4>
-
-                    <div className="founder-callout-bio">
-                      <p>
-                        Bala Chellapandiyan is the Founder and Chief Executive Officer of Santal Nexus, leading the company&apos;s strategic vision, corporate development and ambition to establish a strong presence in the international agricultural commodities and fresh produce trading sector.
-                      </p>
-                      <p>
-                        With a global business outlook and a commitment to professional excellence, he is focused on developing an internationally connected trading enterprise built on quality, reliability, integrity and long-term commercial partnerships.
-                      </p>
-                      <p>
-                        Under his leadership, Santal Nexus is dedicated to strengthening agricultural supply-chain networks, facilitating cross-border trade and creating sustainable business relationships between producers, suppliers, distributors and international markets.
-                      </p>
-                      <p>
-                        His business philosophy is founded on the belief that successful international trade requires more than the movement of products. It demands consistent quality standards, transparent business practices, dependable execution and a deep understanding of global market expectations.
-                      </p>
-                      <p>
-                        As the driving force behind Santal Nexus, he continues to shape the company&apos;s long-term growth strategy, expand its business horizons and build a corporate foundation capable of serving diverse markets with professionalism and confidence.
-                      </p>
-                    </div>
-
-                    <div className="founder-vision-box">
-                      <div className="founder-vision-header">
-                        <svg className="vision-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                          <circle cx="12" cy="12" r="10"></circle>
-                          <line x1="2" y1="12" x2="22" y2="12"></line>
-                          <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
-                        </svg>
-                        <span>CORPORATE VISION</span>
-                      </div>
-                      <p className="founder-vision-text">
-                        &ldquo;To position Santal Nexus as a trusted international trading enterprise, connecting agricultural origins with global destinations through quality, integrity, operational excellence and enduring partnerships.&rdquo;
-                      </p>
-                    </div>
-
-                    <div className="founder-callout-brand-signoff">
-                      <span className="signoff-brand">SANTAL NEXUS</span>
-                      <span className="signoff-sep">&bull;</span>
-                      <span className="signoff-slogan">EXPANDING BEYOND BORDERS.</span>
-                    </div>
-                  </div>
-                </div>
               </div>
 
               <div className="about-mission-box">

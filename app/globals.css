@@ -10177,6 +10177,176 @@ a.escalation-contact-row:hover {
 }
 
 
+
+/* ==========================================================================
+   FOUNDER & EXECUTIVE LEADERSHIP SPOTLIGHT SECTION (STANDALONE SECTION)
+   ========================================================================== */
+.founder-spotlight-section {
+  background-color: var(--color-white);
+  border-bottom: 1px solid var(--color-border);
+  position: relative;
+}
+
+.founder-spotlight-grid {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: clamp(2.5rem, 5vw, 4.5rem);
+  align-items: start;
+}
+
+.founder-portrait-card {
+  background: #FFFFFF;
+  border: 1px solid rgba(215, 180, 90, 0.35);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: 0 12px 36px rgba(16, 39, 29, 0.08), 0 2px 8px rgba(0, 0, 0, 0.04);
+  position: sticky;
+  top: calc(var(--header-height) + 1.5rem);
+}
+
+.founder-portrait-frame {
+  position: relative;
+  width: 100%;
+  height: 380px;
+  background: var(--color-ivory);
+  overflow: hidden;
+}
+
+.founder-portrait-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.founder-portrait-card:hover .founder-portrait-img {
+  transform: scale(1.02);
+}
+
+.founder-portrait-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: rgba(16, 39, 29, 0.88);
+  backdrop-filter: blur(8px);
+  color: var(--color-gold-light);
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(215, 180, 90, 0.45);
+}
+
+.founder-portrait-meta {
+  padding: 1.5rem 1.6rem;
+  text-align: center;
+  border-top: 1px solid rgba(215, 180, 90, 0.25);
+  background: #FCFBF7;
+}
+
+.founder-portrait-name {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  letter-spacing: 0.04em;
+  margin-bottom: 0.25rem;
+  text-transform: uppercase;
+}
+
+.founder-portrait-role {
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  color: var(--color-gold-dark);
+  text-transform: uppercase;
+  margin-bottom: 0.25rem;
+}
+
+.founder-portrait-company {
+  font-size: 0.76rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  letter-spacing: 0.08em;
+  margin-bottom: 0.85rem;
+}
+
+.founder-portrait-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.4rem;
+}
+
+.founder-portrait-tags span {
+  font-size: 0.7rem;
+  font-weight: 600;
+  background: var(--color-white);
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--radius-full);
+}
+
+.founder-spotlight-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.founder-spotlight-heading {
+  font-family: var(--font-serif);
+  font-size: clamp(1.75rem, 3.2vw, 2.5rem);
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--color-primary);
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.founder-spotlight-bio {
+  display: flex;
+  flex-direction: column;
+  gap: 0.95rem;
+  margin-bottom: 1.5rem;
+}
+
+.founder-spotlight-bio p {
+  font-size: 1.02rem;
+  line-height: 1.75;
+  color: var(--color-text);
+  margin: 0;
+}
+
+@media (max-width: 991px) {
+  .founder-spotlight-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  .founder-portrait-card {
+    max-width: 440px;
+    margin: 0 auto;
+    width: 100%;
+    position: static;
+  }
+}
+
+@media (max-width: 640px) {
+  .founder-portrait-frame {
+    height: 300px;
+  }
+  .founder-spotlight-heading {
+    font-size: 1.5rem;
+  }
+  .founder-spotlight-bio p {
+    font-size: 0.95rem;
+  }
+}
+
 /* ==========================================================================
    CREATIVE MARQUEES & LIVE TICKERS
    ========================================================================== */
