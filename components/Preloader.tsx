@@ -66,8 +66,8 @@ export default function Preloader() {
                 src="/assets/logos/santal-nexus-dark.png"
                 alt="Santal Nexus"
                 className="preloader-logo-img"
-                width={260}
-                height={72}
+                width={280}
+                height={85}
                 priority-loading="true"
               />
             </picture>
