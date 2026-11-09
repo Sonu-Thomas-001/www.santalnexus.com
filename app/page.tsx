@@ -69,10 +69,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ====================================================================
-           SECTION 2B: TRUSTED PARTNERS & CUSTOMER LIST (SCROLLING LOGO MARQUEE)
-           ==================================================================== */}
-      <PartnerMarquee />
+
 
       
 
@@ -832,6 +829,11 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* ====================================================================
+           SECTION 9B: TRUSTED PARTNERS & CUSTOMER LIST (SCROLLING LOGO MARQUEE)
+           ==================================================================== */}
+      <PartnerMarquee />
 
       <BrandRibbonMarquee />
 
