@@ -41,7 +41,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
     badge: 'PURCHASE & PROCUREMENT',
     pillars: 'Sourcing | Farm Clusters | Quality Intake',
     bio: 'Ashish Bhosale manages direct procurement across regional farming belts. He works closely with grower networks to schedule harvests, oversee quality intake grading, and ensure fair, transparent pricing for farming communities.',
-    photoWebp: '/assets/images/team/ashish-bhosale.jpeg',
+    photoWebp: '/assets/images/team/ashish-bhosale.webp',
     photoJpg: '/assets/images/team/ashish-bhosale.jpeg',
     desk: 'Farm Procurement, Regional Clusters & Grower Alliances',
   },
