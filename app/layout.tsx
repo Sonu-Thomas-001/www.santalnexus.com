@@ -5,7 +5,7 @@ export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
 };
-import { Plus_Jakarta_Sans, Playfair_Display, Caveat } from 'next/font/google';
+import { Plus_Jakarta_Sans, Caveat } from 'next/font/google';
 import './globals.css';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -19,16 +19,8 @@ import OfflineIndicator from '@/components/OfflineIndicator';
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
-  variable: '--font-jakarta',
-  display: 'swap',
-});
-
-const playfairDisplay = Playfair_Display({
-  subsets: ['latin'],
   weight: ['400', '500', '600', '700', '800'],
-  style: ['normal', 'italic'],
-  variable: '--font-playfair',
+  variable: '--font-jakarta',
   display: 'swap',
 });
 
@@ -150,7 +142,7 @@ export default function RootLayout({
     <html
       lang="en-IN"
       suppressHydrationWarning
-      className={`${plusJakartaSans.variable} ${playfairDisplay.variable} ${caveat.variable}`}
+      className={`${plusJakartaSans.variable} ${caveat.variable}`}
     >
       <head>
         <script

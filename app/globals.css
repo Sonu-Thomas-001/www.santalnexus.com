@@ -28,7 +28,7 @@
   --color-success: #2E7D32;          /* Form validation success */
 
   /* Typography */
-  --font-serif: var(--font-playfair), 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --font-serif: var(--font-jakarta), 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   --font-sans: var(--font-jakarta), 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   --font-accent: var(--font-caveat), 'Caveat', cursive;
 
@@ -9824,9 +9824,10 @@ a.escalation-contact-row:hover {
 }
 
 .founder-quote-callout p {
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   font-size: clamp(1.05rem, 1.4vw, 1.2rem);
-  font-style: italic;
+  font-style: normal;
+  font-weight: 500;
   color: var(--color-primary);
   line-height: 1.6;
   margin: 0;
@@ -10064,8 +10065,9 @@ a.escalation-contact-row:hover {
 }
 
 .founder-vision-text {
-  font-family: var(--font-serif);
-  font-style: italic;
+  font-family: var(--font-sans);
+  font-style: normal;
+  font-weight: 500;
   font-size: 1rem;
   line-height: 1.6;
   color: var(--color-primary);
